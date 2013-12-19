@@ -1,9 +1,9 @@
 Flat
 ====
-Author: YoArts
-Author URL: http://www.yoarts.com
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+* Author: YoArts
+* Author URL: http://www.yoarts.com
+* License: GNU General Public License v3.0
+* License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Description
 ----
