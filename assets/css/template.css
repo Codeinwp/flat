@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+@import url(http://fonts.googleapis.com/css?family=Yesteryear);
 .clearfix {
   *zoom: 1;
 }
@@ -6036,15 +6038,25 @@ img {
 .widget-area ol {
   margin: 0 0 0 15px;
 }
-#masthead .site-title {
-  height: 80px;
-  margin: 0;
-  background: url(../img/logo.png) no-repeat center;
-  text-indent: -9999px;
+#masthead hgroup {
   border-bottom: 1px solid #444;
 }
+#masthead .site-title {
+  font-family: "Yesteryear";
+  line-height: 80px;
+  margin: 0;
+  text-align: center;
+}
+#masthead .site-title a {
+  display: block;
+}
 #masthead .site-description {
-  display: none;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+  border-top: 1px solid #444;
+  line-height: 20px;
 }
 #primary {
   width: 820px;

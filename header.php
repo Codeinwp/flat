@@ -16,12 +16,9 @@
 <div id="page" class="clearfix">
 	<div id="secondary">
 		<header id="masthead" class="site-header" role="banner">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<hgroup>
-					<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				</hgroup>
-			</a>
+			<hgroup>
+				<?php flat_logo(); ?>
+			</hgroup>
 
 			<nav id="site-navigation" class="navigation main-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'container' => false ) ); ?>

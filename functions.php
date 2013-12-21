@@ -78,15 +78,12 @@ function flat_wp_title( $title, $sep ) {
 	if ( is_feed() )
 		return $title;
 
-	// Add the site name.
 	$title .= get_bloginfo( 'name' );
 
-	// Add the site description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
 	if ( $site_description && ( is_home() || is_front_page() ) )
 		$title = "$title $sep $site_description";
 
-	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
 		$title = "$title $sep " . sprintf( __( 'Page %s', 'flat' ), max( $paged, $page ) );
 
@@ -97,8 +94,6 @@ add_filter( 'wp_title', 'flat_wp_title', 10, 2 );
 if ( ! function_exists( 'flat_post_nav' ) ) :
 function flat_post_nav() {
     global $post;
-
-    // Don't print empty markup if there's nowhere to navigate.
     $previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
     $next     = get_adjacent_post( false, '', false );
 
@@ -112,120 +107,11 @@ function flat_post_nav() {
             <?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'flat' ) ); ?>
             <?php next_post_link( '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'flat' ) ); ?>
 
-        </div><!-- .nav-links -->
-    </nav><!-- .navigation -->
+        </div>
+    </nav>
     <?php
 }
 endif;
-/*
-add_filter( 'post_gallery', 'flat_post_gallery', 10, 2 );
-function flat_featured_gallery() {
-    $pattern = get_shortcode_regex();
 
-    if ( preg_match( "/$pattern/s", get_the_content(), $match ) && 'gallery' == $match[2] ) {
-        echo do_shortcode_tag( $match );
-    }
-}
-
-function flat_post_gallery() {
-    global $post, $wp_locale;
-
-    static $instance = 0;
-    $instance++;
-
-    // We're trusting author input, so let's at least make sure it looks like a valid orderby statement
-    if ( isset( $attr['orderby'] ) ) {
-        $attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
-        if ( !$attr['orderby'] )
-            unset( $attr['orderby'] );
-    }
-    if(isset($attr)) {
-        extract(shortcode_atts(array(
-            'order'      => 'ASC',
-            'orderby'    => 'menu_order ID',
-            'id'         => $post->ID,
-            'itemtag'    => 'div',
-            'icontag'    => 'div',
-            'captiontag' => 'div',
-            'columns'    => 3,
-            'size'       => 'full',
-            'include'    => '',
-            'exclude'    => ''
-        ), $attr));
-    }
-    
-    $id = intval($id);
-    if ( 'RAND' == $order )
-        $orderby = 'none';
-
-    if ( !empty($include) ) {
-        $include = preg_replace( '/[^0-9,]+/', '', $include );
-        $_attachments = get_posts( array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
-
-        $attachments = array();
-        foreach ( $_attachments as $key => $val ) {
-            $attachments[$val->ID] = $_attachments[$key];
-        }
-    } elseif ( !empty($exclude) ) {
-        $exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
-        $attachments = get_children( array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
-    } else {
-        $attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
-    }
-
-    if ( empty($attachments) )
-        return '';
-
-    if ( is_feed() ) {
-        $output = "\n";
-        foreach ( $attachments as $att_id => $attachment )
-            $output .= wp_get_attachment_link($att_id, $size, true) . "\n";
-        return $output;
-    }
-
-    $itemtag = tag_escape($itemtag);
-    $captiontag = tag_escape($captiontag);
-    $columns = intval($columns);
-    $itemwidth = $columns > 0 ? floor(100/$columns) : 100;
-    $float = is_rtl() ? 'right' : 'left';
-
-    $selector = "gallery-{$instance}";
-
-    $output = apply_filters('gallery_style', '');
-
-    $output.= "<div id='$selector' class='galleryid-{$id} gallery carousel slide'>";
-    $output.= "<div class='carousel-inner'>";
-
-    $i = 0;
-    foreach ( $attachments as $id => $attachment ) {
-        $link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
-
-        if($i==0) {
-            $output .= "<{$itemtag} class='item active'>";
-        } else {
-            $output .= "<{$itemtag} class='item'>";
-        }
-        
-        $output .= "
-            <{$icontag} class='gallery-icon'>
-                $link
-            </{$icontag}>";
-        if ( $captiontag && trim($attachment->post_excerpt) ) {
-            $output .= "
-                <{$captiontag} class='carousel-caption'>
-                " . wptexturize($attachment->post_excerpt) . "
-                </{$captiontag}>";
-        }
-        $output .= "</{$itemtag}>";
-
-        $i++;
-    }
-
-    $output .= "
-            </div>
-            <a class='carousel-control left' href='#$selector' data-slide='prev'>&lsaquo;</a>
-            <a class='carousel-control right' href='#$selector' data-slide='next'>&rsaquo;</a>
-        </div>\n";
-
-    return $output;
-}*/
+// Add Theme Customizer functionality.
+require get_template_directory() . '/inc/customizer.php';

@@ -246,16 +246,28 @@ img {
 }
 
 #masthead {
-	.site-title {
-		height: 80px;
-		margin: 0;
-		background: url(../img/logo.png) no-repeat center;
-		text-indent: -9999px;
+	hgroup {
 		border-bottom: 1px solid #444;
 	}
 
+	.site-title {
+		font-family: "Yesteryear";
+		line-height: 80px;
+		margin: 0;
+		text-align: center;
+	}
+
+	.site-title a {
+		display: block;
+	}
+
 	.site-description {
-		display: none;
+		font-size: 14px;
+		text-align: center;
+		padding: 10px 0;
+		margin: 0;
+		border-top: 1px solid #444;
+		line-height: 20px;
 	}
 }
 
