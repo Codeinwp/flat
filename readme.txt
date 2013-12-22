@@ -21,6 +21,10 @@ Icon Fonts: Font Awesome - http://fortawesome.github.io/Font-Awesome/ - Copyrigh
 
 Changelog
 ----
+1.0.3
+* Tweak: Enqueue html5js, respond via a function callback on functions.php.
+* Tweak: Textdomain on customizer.php
+
 1.0.2
 * New: Customize: Logo, Favicon, Custom Codes
 
@@ -29,6 +33,7 @@ Fix bugs as reviewed from wordpress.org
 
 * New: Translation ready
 * Tweak: Tables styling
+* Tweak: Image Alignment
 * Fix: Vertical image overly stretched
 * Fix: Horizontal image overly stretched
 * Fix: Gallery post format

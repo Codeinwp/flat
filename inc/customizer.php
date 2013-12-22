@@ -10,7 +10,7 @@ class Flat_Textarea_Custom_Control extends WP_Customize_Control {
   public $statuses;
   public function __construct( $manager, $id, $args = array() ) {
 
-  $this->statuses = array( '' => __( 'Default', 'dw-minion' ) );
+  $this->statuses = array( '' => __( 'Default', 'flat' ) );
     parent::__construct( $manager, $id, $args );
   }
 
@@ -35,7 +35,7 @@ function flat_customize_register( $wp_customize ) {
     'type' => 'option',
   ));
   $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'logo', array(
-    'label' => __('Site Logo', 'dw-minion'),
+    'label' => __('Site Logo', 'flat'),
     'section' => 'title_tagline',
     'settings' => 'flat_theme_options[logo]',
   )));
@@ -59,14 +59,14 @@ function flat_customize_register( $wp_customize ) {
     'type' => 'option',
   ));
   $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'favicon', array(
-    'label' => __('Site Favicon', 'dw-minion'),
+    'label' => __('Site Favicon', 'flat'),
     'section' => 'title_tagline',
     'settings' => 'flat_theme_options[favicon]',
   )));
 
   // CUSTOM CODE --------------------------------------------------------------------------------------
   $wp_customize->add_section('flat_custom_code', array(
-    'title'    => __('Custom Code', 'dw-minion'),
+    'title'    => __('Custom Code', 'flat'),
     'priority' => 200,
   ));
   $wp_customize->add_setting('flat_theme_options[header_code]', array(
@@ -75,7 +75,7 @@ function flat_customize_register( $wp_customize ) {
       'type' => 'option',
   ));
   $wp_customize->add_control( new Flat_Textarea_Custom_Control($wp_customize, 'header_code', array(
-    'label'    => __('Header Code (Meta tags, CSS, etc ...)', 'dw-minion'),
+    'label'    => __('Header Code', 'flat'),
     'section'  => 'flat_custom_code',
     'settings' => 'flat_theme_options[header_code]',
   )));
@@ -85,7 +85,7 @@ function flat_customize_register( $wp_customize ) {
     'type' => 'option',
   ));
   $wp_customize->add_control( new Flat_Textarea_Custom_Control($wp_customize, 'footer_code', array(
-    'label'    => __('Footer Code (Analytics, etc ...)', 'dw-minion'),
+    'label'    => __('Footer Code', 'flat'),
     'section'  => 'flat_custom_code',
     'settings' => 'flat_theme_options[footer_code]'
   )));
