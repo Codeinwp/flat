@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title><?php wp_title( '~', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -10,16 +10,23 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="clearfix">
-	<div id="secondary">
-		<header id="masthead" class="site-header" role="banner">
-			<hgroup>
-				<?php flat_logo(); ?>
-			</hgroup>
-
-			<nav id="site-navigation" class="navigation main-navigation" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'container' => false ) ); ?>
-			</nav>
-		</header>
-		<?php get_sidebar(); ?>
-	</div>
+<div id="page">
+	<div class="container">
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div id="secondary" class="col-lg-3">
+				<header id="masthead" class="site-header" role="banner">
+					<hgroup>
+						<?php flat_logo(); ?>
+					</hgroup>
+					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas"><i class="fa fa-gear"></i></button>
+					<button type="button" class="btn btn-link hidden-lg toggle-navigation" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
+					<nav id="site-navigation" class="navigation main-navigation navbar-collapse collapse" role="navigation">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'container' => false ) ); ?>
+					</nav>
+				</header>
+				
+				<div class="sidebar-offcanvas">
+					<?php get_sidebar(); ?>
+				</div>
+			</div>
+			<div id="primary" class="content-area col-lg-9">

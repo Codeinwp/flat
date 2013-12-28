@@ -15,12 +15,22 @@ Flat is built with the following resources:
 
 Code based on DW Minion http://www.designwall.com/wordpress/themes/dw-minion/ - Copyright: DesignWall, http://www.designwall.com/
 
-Bootstrap 2.3.2 http://getbootstrap.com/2.3.2/ - Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
+Bootstrap 3.0.3 http://getbootstrap.com/ - Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
 
-Icon Fonts: Font Awesome - http://fortawesome.github.io/Font-Awesome/ - Copyright: Dave Gandy, twitter.com/davegandy
+Icon Fonts: Font Awesome 4.0.3 - http://fortawesome.github.io/Font-Awesome/ - Copyright: Dave Gandy, twitter.com/davegandy
+
+Default Custom Background (Located in /assets/img/default-background.png) - http://graphicburger.com/5-blurred-backgrounds-vol-1/ - Copyright: Graphic Burger, http://graphicburger.com/ - Liscense Info: http://graphicburger.com/license/
 
 Changelog
 ----
+1.1.0
+* New: Upgrade Bootrap to 3.0.3
+* New: Upgrade FontAwesome to 4.0.3
+* New: Responsive Applied
+* New: Centered Web pages instead of left-aligned
+* New: Add theme support: Custom Background
+* Tweak: Display title of Archive Pages
+
 1.0.3
 * Tweak: Enqueue html5js, respond via a function callback on functions.php.
 * Tweak: Textdomain on customizer.php

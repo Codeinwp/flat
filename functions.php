@@ -12,6 +12,15 @@ function flat_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 820, 480, true );
 	add_filter( 'use_default_gallery_style', '__return_false' );
+
+	$custom_background_support = array(
+		'default-color'          => '',
+		'default-image'          => get_template_directory_uri() . '/assets/img/default-background.jpg',
+		'wp-head-callback'       => '_custom_background_cb',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => ''
+	);
+	add_theme_support( 'custom-background', $custom_background_support );
 }
 add_action( 'after_setup_theme', 'flat_setup' );
 
@@ -19,8 +28,8 @@ function flat_scripts_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 	wp_enqueue_style( 'flat-style', get_stylesheet_uri() );
-    wp_enqueue_script( 'flat-bootstrap-transition', get_template_directory_uri() . '/inc/bootstrap/js/bootstrap-transition.js', array( 'jquery' ), '20130419', true );
-    wp_enqueue_script( 'flat-bootstrap-carousel', get_template_directory_uri() . '/inc/bootstrap/js/bootstrap-carousel.js', array( 'jquery' ), '20130419', true );
+	wp_enqueue_script( 'flat-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap-3.0.3.min.js', array( 'jquery' ), '3.0.3', true );
+    wp_enqueue_script( 'flat-functions', get_template_directory_uri() . '/assets/js/functions.js', array( 'jquery', 'flat-bootstrap' ), '20131228', true );
 }
 add_action( 'wp_enqueue_scripts', 'flat_scripts_styles' );
 
@@ -66,10 +75,10 @@ function paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<i class="icon-chevron-left"></i>', 'flat' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<i class="fa fa-chevron-left"></i>', 'flat' ) ); ?></div>
 			<?php endif; ?>
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( '<i class="icon-chevron-right"></i>', 'flat' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( '<i class="fa fa-chevron-right"></i>', 'flat' ) ); ?></div>
 			<?php endif; ?>
 			<div class="nav-current-page"><?php echo sprintf( __( 'Page %1$s of %2$s', 'flat' ), $paged, $wp_query->max_num_pages ) ?></div>
 		
