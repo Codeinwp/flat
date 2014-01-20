@@ -15,9 +15,9 @@
 		<div class="row row-offcanvas row-offcanvas-left">
 			<div id="secondary" class="col-lg-3">
 				<header id="masthead" class="site-header" role="banner">
-					<hgroup>
+					<div class="hgroup">
 						<?php flat_logo(); ?>
-					</hgroup>
+					</div>
 					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas"><i class="fa fa-gear"></i></button>
 					<button type="button" class="btn btn-link hidden-lg toggle-navigation" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
 					<nav id="site-navigation" class="navigation main-navigation navbar-collapse collapse" role="navigation">
