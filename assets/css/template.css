@@ -7861,7 +7861,7 @@ input#submit .badge {
     background: #333;
   }
 }
-#masthead hgroup {
+#masthead .hgroup {
   border-bottom: 1px solid #444;
 }
 #masthead .site-title {

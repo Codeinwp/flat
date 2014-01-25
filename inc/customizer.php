@@ -107,7 +107,10 @@ function flat_get_theme_option( $option_name, $default = '' ) {
  * Change Favicon
  */
 function flat_favicon() {
-  echo '<link type="image/x-icon" href="'.flat_get_theme_option('favicon').'" rel="shortcut icon">';
+  $iconPath = flat_get_theme_option('favicon');
+  if( !empty($iconPath) ) {
+    echo '<link type="image/x-icon" href="'.$iconPath.'" rel="shortcut icon">';
+  }
 }
 add_action( 'wp_head', 'flat_favicon' );
 
