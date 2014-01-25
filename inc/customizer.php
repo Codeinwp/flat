@@ -107,7 +107,7 @@ function flat_get_theme_option( $option_name, $default = '' ) {
  * Change Favicon
  */
 function flat_favicon() {
-  $iconPath = flat_get_theme_option('favicon');
+  $iconPath = esc_url(flat_get_theme_option('favicon'));
   if( !empty($iconPath) ) {
     echo '<link type="image/x-icon" href="'.$iconPath.'" rel="shortcut icon">';
   }
@@ -119,7 +119,7 @@ add_action( 'wp_head', 'flat_favicon' );
  */
 function flat_logo() {
   $header_display = (flat_get_theme_option( 'header_display', 'site_title') == 'site_title') ? 'display-title' : 'display-logo';
-  $logo = flat_get_theme_option( 'logo' );
+  $logo = esc_url(flat_get_theme_option( 'logo' ));
   $tagline = get_bloginfo( 'description' );
 
   echo '<h1 class="site-title '.$header_display.'"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">';
@@ -138,7 +138,7 @@ function flat_logo() {
  * Header Code
  */
 function flat_custom_header_code() {
-  echo flat_get_theme_option( 'header_code' );
+  echo esc_html(flat_get_theme_option( 'header_code' ));
 }
 add_action('wp_head', 'flat_custom_header_code');
 
@@ -146,6 +146,6 @@ add_action('wp_head', 'flat_custom_header_code');
  * Footer Code
  */
 function flat_custom_footer_code() {
-  echo flat_get_theme_option( 'footer_code' );
+  echo esc_html(flat_get_theme_option( 'footer_code' ));
 }
 add_action('wp_footer', 'flat_custom_footer_code');
