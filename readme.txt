@@ -13,16 +13,22 @@ Resources
 ----
 Flat is built with the following resources:
 
-Code based on DW Minion http://www.designwall.com/wordpress/themes/dw-minion/ - Copyright: DesignWall, http://www.designwall.com/
+Code based on DW Minion http://www.designwall.com/wordpress/themes/dw-minion/ - Copyright: DesignWall, http://www.designwall.com/ - License under GPL v3.0: http://www.gnu.org/licenses/gpl-3.0.html
 
 Bootstrap 3.0.3 http://getbootstrap.com/ - Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
 
-Icon Fonts: Font Awesome 4.0.3 - http://fortawesome.github.io/Font-Awesome/ - Copyright: Dave Gandy, twitter.com/davegandy
+Bootstrap 2.3.2 http://getbootstrap.com/2.3.2/ - Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat - License under CC BY 3.0: http://creativecommons.org/licenses/by/3.0/
 
-Default Custom Background (Located in /assets/img/default-background.png) - http://graphicburger.com/5-blurred-backgrounds-vol-1/ - Copyright: Graphic Burger, http://graphicburger.com/ - Liscense Info: http://graphicburger.com/license/
+Icon Fonts: Font Awesome - http://fortawesome.github.io/Font-Awesome/ - Copyright: Dave Gandy, twitter.com/davegandy - Font Awesome licensed under SIL OFL 1.1: http://scripts.sil.org/OFL - Code licensed under MIT License: http://opensource.org/licenses/mit-license.html - Documentation licensed under CC BY 3.0: http://creativecommons.org/licenses/by/3.0/
 
 Changelog
 ----
+1.1.1 (Developing)
+* Tweak: Explicit declaration of resource license in Readme file
+* Tweak: Rename paging_nav() as flat_paging_nav()
+* Tweak: Favicon disabled by default
+* Tweak: Options escaped on output
+
 1.1.0
 * New: Upgrade Bootrap to 3.0.3
 * New: Upgrade FontAwesome to 4.0.3
