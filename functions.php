@@ -66,7 +66,7 @@ function flat_entry_meta( $show_sep = true ) {
     echo '<span class="comments-link">'.comments_popup_link( __( '0 Comment', 'flat' ), __( '1 Comment', 'flat' ), __( '% Comments', 'flat' ) ) . '</span>';
 }
 
-function paging_nav() {
+function flat_paging_nav() {
 	global $wp_query, $paged;
 
 	if ( $wp_query->max_num_pages < 2 && ( is_home() || is_archive() || is_search() ) )
