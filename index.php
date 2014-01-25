@@ -6,7 +6,7 @@
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php endwhile; ?>
 
-				<?php paging_nav(); ?>
+				<?php flat_paging_nav(); ?>
 
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
