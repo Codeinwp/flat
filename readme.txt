@@ -23,7 +23,7 @@ Icon Fonts: Font Awesome - http://fortawesome.github.io/Font-Awesome/ - Copyrigh
 
 Changelog
 ----
-1.1.1 (Developing)
+1.1.1
 * Tweak: Explicit declaration of resource license in Readme file
 * Tweak: Rename paging_nav() as flat_paging_nav()
 * Tweak: Favicon disabled by default
