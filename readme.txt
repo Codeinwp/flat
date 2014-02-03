@@ -23,7 +23,10 @@ Icon Fonts: Font Awesome - http://fortawesome.github.io/Font-Awesome/ - Copyrigh
 
 Changelog
 ----
-1.1.1 (Developing)
+1.2.0
+* New: Upgrade Bootstrap to 3.1.0
+
+1.1.1
 * Tweak: Explicit declaration of resource license in Readme file
 * Tweak: Rename paging_nav() as flat_paging_nav()
 * Tweak: Favicon disabled by default
@@ -45,7 +48,7 @@ Changelog
 * New: Customize: Logo, Favicon, Custom Codes
 
 1.0.1
-Fix bugs as reviewed from wordpress.org
+* Fix bugs as reviewed from wordpress.org
 
 * New: Translation ready
 * Tweak: Tables styling
@@ -58,4 +61,4 @@ Fix bugs as reviewed from wordpress.org
 * Fix: Remove wp-toolbar check on header.php
 
 1.0.0
-Initial Release
+* Initial Release
