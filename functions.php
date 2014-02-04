@@ -54,14 +54,15 @@ function flat_widgets_init() {
 add_action( 'widgets_init', 'flat_widgets_init' );
 
 function flat_entry_meta( $show_sep = true ) {
-    echo '<span class="byline"><span class="author vcard"><a class="url fn n" href="'.esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ).'" rel="author">'.get_the_author().'</a></span></span>';
-    if( $show_sep == true ) echo '<span class="sep">&middot;</span>';
-    $categories_list = get_the_category_list( __( ', ', 'flat' ) );
-    if ( $categories_list ) {
-        echo '<span class="categories-links">' . $categories_list . '</span>';
-        if( $show_sep == true ) echo '<span class="sep">&middot;</span>';
-    }
-    echo '<time class="entry-date" datetime="' . esc_attr( get_the_date( 'c' ) ) . '">' . esc_html( get_the_date() ) . '</time>';
+    // Set up and print post meta information.
+	printf( __('<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> by <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>', 'flat'),
+		esc_url( get_permalink() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		get_the_author()
+	);
+
     if( $show_sep == true ) echo '<span class="sep">&middot;</span>';
     echo '<span class="comments-link">'.comments_popup_link( __( '0 Comment', 'flat' ), __( '1 Comment', 'flat' ), __( '% Comments', 'flat' ) ) . '</span>';
 }

@@ -13,18 +13,28 @@ Resources
 ----
 Flat is built with the following resources:
 
-Code based on DW Minion http://www.designwall.com/wordpress/themes/dw-minion/ - Copyright: DesignWall, http://www.designwall.com/ - License under GPL v3.0: http://www.gnu.org/licenses/gpl-3.0.html
+Code based on DW Minion
+	- http://www.designwall.com/wordpress/themes/dw-minion/
+	- Copyright: DesignWall, http://www.designwall.com/
+	- License under GPL v3.0: http://www.gnu.org/licenses/gpl-3.0.html
 
-Bootstrap 3.0.3 http://getbootstrap.com/ - Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
+Bootstrap 3.1.0
+	- http://getbootstrap.com/
+	- Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
 
-Bootstrap 2.3.2 http://getbootstrap.com/2.3.2/ - Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat - License under CC BY 3.0: http://creativecommons.org/licenses/by/3.0/
-
-Icon Fonts: Font Awesome - http://fortawesome.github.io/Font-Awesome/ - Copyright: Dave Gandy, twitter.com/davegandy - Font Awesome licensed under SIL OFL 1.1: http://scripts.sil.org/OFL - Code licensed under MIT License: http://opensource.org/licenses/mit-license.html - Documentation licensed under CC BY 3.0: http://creativecommons.org/licenses/by/3.0/
+Icon Fonts: Font Awesome
+	- http://fortawesome.github.io/Font-Awesome/
+	- Copyright: Dave Gandy, twitter.com/davegandy
+	- Font Awesome licensed under SIL OFL 1.1: http://scripts.sil.org/OFL
+	- Code licensed under MIT License: http://opensource.org/licenses/mit-license.html
 
 Changelog
 ----
 1.2.0
 * New: Upgrade Bootstrap to 3.1.0
+* Tweak: Heading font family changed to "Roboto Slab"
+* Tweak: Content font-family changed to "Roboto"
+* Tweak: Site Description font-family changed to "Roboto Condensed"
 
 1.1.1
 * Tweak: Explicit declaration of resource license in Readme file

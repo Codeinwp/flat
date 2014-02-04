@@ -1,9 +1,4 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-	<div class="entry-thumbnail">
-		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'flat' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>
-	</div>
-	<?php endif; ?>
 
 	<header class="entry-header">
 		<?php if ( is_single() ) : ?>
@@ -18,13 +13,19 @@
 		</div>
 	</header>
 
+	<?php if ( has_post_thumbnail() && ! post_password_required() && ! is_single() ) : ?>
+	<div class="entry-thumbnail">
+		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'flat' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>
+	</div>
+	<?php endif; ?>
+
 	<?php if ( is_search() ) : ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div>
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">...</span>', 'flat' ) ); ?>
+		<?php the_content( __( 'Continue reading', 'flat' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'flat' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 	</div>
 	<?php endif; ?>
