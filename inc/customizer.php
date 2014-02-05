@@ -43,6 +43,7 @@ function flat_customize_register( $wp_customize ) {
     'default'        => 'site_title',
     'capability'     => 'edit_theme_options',
     'type'           => 'option',
+    'sanitize_callback' => 'flat_sanitize_header_display',
   ));
   $wp_customize->add_control( 'header_display', array(
     'settings' => 'flat_theme_options[header_display]',
@@ -93,6 +94,16 @@ function flat_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'flat_customize_register' );
 
 /**
+ * Sanitize Settings
+ */
+function flat_sanitize_header_display( $header_display ) {
+  if ( ! in_array( $header_display, array( 'site_title', 'site_logo' ) ) ) {
+    $header_display = 'site_title';
+  }
+  return $header_display;
+}
+
+/**
  * Get Theme Options
  */
 function flat_get_theme_option( $option_name, $default = '' ) {
@@ -138,7 +149,7 @@ function flat_logo() {
  * Header Code
  */
 function flat_custom_header_code() {
-  echo esc_html(flat_get_theme_option( 'header_code' ));
+  echo flat_get_theme_option( 'header_code' );
 }
 add_action('wp_head', 'flat_custom_header_code');
 
@@ -146,6 +157,6 @@ add_action('wp_head', 'flat_custom_header_code');
  * Footer Code
  */
 function flat_custom_footer_code() {
-  echo esc_html(flat_get_theme_option( 'footer_code' ));
+  echo flat_get_theme_option( 'footer_code' );
 }
 add_action('wp_footer', 'flat_custom_footer_code');

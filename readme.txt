@@ -9,6 +9,19 @@ Description
 ----
 Flat is a Personal WordPress Theme design & developed by [YoArts](http://www.yoarts.com). We like to say that Flat is both beautiful and charming at the same time.
 
+Features list
+----
+ - Flat Design
+ - Responsive Web Design
+ - Off-Canvas Sidebar
+ - Customizable Blur Background
+ - Twitter Bootstrap 3.1.0
+ - Font Awesome 4.0.3
+ - Write on HTML5 / LESS
+ - Compatible up to WordPress 3.8.1
+ - Customize: Logo, Favicon, Custom Codes
+ - Translation Ready
+
 Resources
 ----
 Flat is built with the following resources:
@@ -27,6 +40,10 @@ Icon Fonts: Font Awesome
 	- Copyright: Dave Gandy, twitter.com/davegandy
 	- Font Awesome licensed under SIL OFL 1.1: http://scripts.sil.org/OFL
 	- Code licensed under MIT License: http://opensource.org/licenses/mit-license.html
+
+5 Blurred Backgrounds Vol.1
+	- http://graphicburger.com/5-blurred-backgrounds-vol-1/
+	- License: http://graphicburger.com/license/
 
 Changelog
 ----
