@@ -4,28 +4,6 @@
  */
 include_once ABSPATH . 'wp-includes/class-wp-customize-control.php';
 
-class Flat_Textarea_Custom_Control extends WP_Customize_Control {
-
-  public $type = 'textarea';
-  public $statuses;
-  public function __construct( $manager, $id, $args = array() ) {
-
-  $this->statuses = array( '' => __( 'Default', 'flat' ) );
-    parent::__construct( $manager, $id, $args );
-  }
-
-  public function render_content() {
-    ?>
-    <label>
-      <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-      <textarea class="large-text" cols="20" rows="5" <?php $this->link(); ?>>
-        <?php echo esc_textarea( $this->value() ); ?>
-      </textarea>
-    </label>
-    <?php
-  }
-}
-
 /**
  * Register Customize
  */
@@ -63,32 +41,6 @@ function flat_customize_register( $wp_customize ) {
     'label' => __('Site Favicon', 'flat'),
     'section' => 'title_tagline',
     'settings' => 'flat_theme_options[favicon]',
-  )));
-
-  // CUSTOM CODE --------------------------------------------------------------------------------------
-  $wp_customize->add_section('flat_custom_code', array(
-    'title'    => __('Custom Code', 'flat'),
-    'priority' => 200,
-  ));
-  $wp_customize->add_setting('flat_theme_options[header_code]', array(
-      'default' => '',
-      'capability' => 'edit_theme_options',
-      'type' => 'option',
-  ));
-  $wp_customize->add_control( new Flat_Textarea_Custom_Control($wp_customize, 'header_code', array(
-    'label'    => __('Header Code', 'flat'),
-    'section'  => 'flat_custom_code',
-    'settings' => 'flat_theme_options[header_code]',
-  )));
-  $wp_customize->add_setting('flat_theme_options[footer_code]', array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'type' => 'option',
-  ));
-  $wp_customize->add_control( new Flat_Textarea_Custom_Control($wp_customize, 'footer_code', array(
-    'label'    => __('Footer Code', 'flat'),
-    'section'  => 'flat_custom_code',
-    'settings' => 'flat_theme_options[footer_code]'
   )));
 }
 add_action( 'customize_register', 'flat_customize_register' );
@@ -144,19 +96,3 @@ function flat_logo() {
   if($tagline)
     echo '<h2 class="site-description">'.$tagline.'</h2>';
 }
-
-/**
- * Header Code
- */
-function flat_custom_header_code() {
-  echo flat_get_theme_option( 'header_code' );
-}
-add_action('wp_head', 'flat_custom_header_code');
-
-/**
- * Footer Code
- */
-function flat_custom_footer_code() {
-  echo flat_get_theme_option( 'footer_code' );
-}
-add_action('wp_footer', 'flat_custom_footer_code');

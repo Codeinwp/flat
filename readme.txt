@@ -47,6 +47,12 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
+1.2.1
+* New: Add author bio on Author Archive
+* New: Add taxonomy description on Archive pages
+* Tweak: Style for Disqus comment
+* Tweak: Remove custom Header & Footer code on Customizer
+
 1.2.0
 * New: Upgrade Bootstrap to 3.1.0
 * Tweak: Heading font family changed to "Roboto Slab"
