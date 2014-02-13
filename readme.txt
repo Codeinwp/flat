@@ -47,6 +47,9 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
+1.2.2
+* New: Add copyright information
+
 1.2.1
 * New: Add author bio on Author Archive
 * New: Add taxonomy description on Archive pages
