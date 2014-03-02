@@ -15,7 +15,7 @@ Features list
  - Responsive Web Design
  - Off-Canvas Sidebar
  - Customizable Blur Background
- - Twitter Bootstrap 3.1.0
+ - Twitter Bootstrap 3.1.1
  - Font Awesome 4.0.3
  - Write on HTML5 / LESS
  - Compatible up to WordPress 3.8.1
@@ -31,7 +31,7 @@ Code based on DW Minion
 	- Copyright: DesignWall, http://www.designwall.com/
 	- License under GPL v3.0: http://www.gnu.org/licenses/gpl-3.0.html
 
-Bootstrap 3.1.0
+Bootstrap 3.1.1
 	- http://getbootstrap.com/
 	- Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
 
@@ -47,6 +47,15 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
+1.2.4
+* New: Upgrade Bootstrap to 3.1.1
+* New: Support Sub-Menu on Primary Navigation
+* Tweak: Fix Pagination Direction
+* Tweak: Link the CSS files directly instead of import
+* Tweak: Added a filter on showing credits in footer
+* Tweak: Content width change to 750px
+* Tweak: Not do anything with title, SEO is best handled by WordPress SEO by Yoast: https://yoast.com/wordpress-seo-plugin-theme-integration-guide/#head
+
 1.2.3
 * Tweak: Remove Author URL from Credit link
 

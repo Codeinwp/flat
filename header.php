@@ -19,8 +19,8 @@
 						<?php flat_logo(); ?>
 					</div>
 					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas"><i class="fa fa-gear"></i></button>
-					<button type="button" class="btn btn-link hidden-lg toggle-navigation" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
-					<nav id="site-navigation" class="navigation main-navigation navbar-collapse collapse" role="navigation">
+					<button type="button" class="btn btn-link hidden-lg toggle-navigation"><i class="fa fa-bars"></i></button>
+					<nav id="site-navigation" class="navigation main-navigation" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'container' => false ) ); ?>
 					</nav>
 				</header>
