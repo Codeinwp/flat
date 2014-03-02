@@ -76,11 +76,13 @@ function flat_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<i class="fa fa-chevron-left"></i>', 'flat' ) ); ?></div>
+				<div class="nav-next"><?php next_posts_link( __( '<i class="fa fa-chevron-right"></i>', 'flat' ) ); ?></div>
 			<?php endif; ?>
+
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( '<i class="fa fa-chevron-right"></i>', 'flat' ) ); ?></div>
+				<div class="nav-previous"><?php previous_posts_link( __( '<i class="fa fa-chevron-left"></i>', 'flat' ) ); ?></div>
 			<?php endif; ?>
+
 			<div class="nav-current-page"><?php echo sprintf( __( 'Page %1$s of %2$s', 'flat' ), $paged, $wp_query->max_num_pages ) ?></div>
 		
 		</div>
