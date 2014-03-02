@@ -29,9 +29,23 @@ function flat_scripts_styles() {
 		wp_enqueue_script( 'comment-reply' );
 	wp_enqueue_style( 'flat-style', get_template_directory_uri() . '/assets/css/template.css' );
 	wp_enqueue_script( 'flat-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap-3.1.0.min.js', array( 'jquery' ), '3.1.0', true );
-    wp_enqueue_script( 'flat-functions', get_template_directory_uri() . '/assets/js/functions.js', array( 'jquery', 'flat-bootstrap' ), '20131228', true );
 }
 add_action( 'wp_enqueue_scripts', 'flat_scripts_styles' );
+
+function flat_inline_js() {
+?>
+	<script>
+	(function($){
+		$(document).ready(function() {
+			$('[data-toggle=offcanvas]').click(function(){
+				$('.row-offcanvas').toggleClass('active');
+			});
+		});
+	})(jQuery);
+	</script>
+<?php
+}
+add_action( 'wp_footer', 'flat_inline_js' );
 
 function flat_ie_support_header() {
     echo '<!--[if lt IE 9]>'. "\n";
