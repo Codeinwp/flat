@@ -9,6 +9,7 @@
     });
 
     $('#site-navigation .sub-menu').before('<i class="fa fa-caret-right"></i>');
+    $('#site-navigation .children').before('<i class="fa fa-caret-right"></i>');
 
     $('#site-navigation .fa').click(function() {
       $(this).toggleClass('open').next('ul').slideToggle(300);

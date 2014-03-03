@@ -16,20 +16,15 @@ table {
 	.table();
 }
 
-.form-control {
+select {
+	.form-control();
 	box-shadow: none !important;
-	border-width: 2px;
-	border-color: @gray-lighter;
-	min-height: 40px;
-	padding: @padding-base-horizontal;
-	-webkit-appearance: none;
 
 	&:focus {
 		border-color: @gray-light !important;
 	}
 }
 
-select,
 textarea,
 input[type="text"],
 input[type="password"],
@@ -46,6 +41,33 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
 	.form-control();
+	box-shadow: none !important;
+	border-width: 2px;
+	border-color: @gray-lighter;
+	min-height: 40px;
+	padding: @padding-base-horizontal;
+	-webkit-appearance: none;
+
+	&:focus {
+		border-color: @gray-light !important;
+	}
+}
+
+textarea {
+	min-height: 120px;
+}
+
+.checkbox,
+.radio {
+	font-weight: normal;
+}
+
+.checkbox input {
+	margin-top: 6px;
+}
+
+.radio input {
+	margin-top: 5px;
 }
 
 img {
@@ -61,6 +83,14 @@ img {
 input#submit {
 	.btn();
 	.btn-primary();
+}
+
+.nav-tabs {
+	margin-bottom: 15px;
+}
+
+.panel-title {
+	font-size: @font-size-base;
 }
 
 .wp-caption {
@@ -444,7 +474,8 @@ input#submit {
 		outline: none !important;
 	}
 
-	.menu-item-has-children .fa {
+	.menu-item-has-children .fa,
+	.page_item_has_children .fa {
 		float: right;
 		font-size: 14px;
 		width: 40px;
@@ -462,7 +493,8 @@ input#submit {
 		}
 	}
 
-	.sub-menu {
+	.sub-menu,
+	.children {
 		display: none;
 		border-top: 1px solid #444;
 		background: #222;
@@ -471,10 +503,12 @@ input#submit {
 			border-bottom: none;
 		}
 
-		.sub-menu {
+		.sub-menu,
+		.children {
 			background: #111;
 
-			.sub-menu {
+			.sub-menu,
+			.children {
 				background: #000;
 			}
 		}

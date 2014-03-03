@@ -47,6 +47,11 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
+1.2.5
+* Tweak: Children menu of Pages Navigation
+* Tweak: Style for input, checkbox, radio, select, tab, accordion
+* Tweak: Wrap up the JavaScript code as comment of @ashfame
+
 1.2.4
 * New: Upgrade Bootstrap to 3.1.1
 * New: Support Sub-Menu on Primary Navigation
