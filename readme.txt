@@ -47,6 +47,13 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
+1.2.6
+* New: Change content width to 720px
+* Tweak: Re-style table
+* Tweak: Add border-radius for elements
+* Tweak: Page navigation
+* Fix: Style break when comment off
+
 1.2.5
 * Tweak: Children menu of Pages Navigation
 * Tweak: Style for input, checkbox, radio, select, tab, accordion

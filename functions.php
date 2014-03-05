@@ -1,6 +1,6 @@
 <?php 
 if ( ! isset( $content_width ) )
-	$content_width = 750;
+	$content_width = 720;
 
 function flat_setup() {
     load_theme_textdomain( 'flat', get_template_directory() . '/languages' );
