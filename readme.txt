@@ -19,7 +19,7 @@ Features list
  - Font Awesome 4.0.3
  - Write on HTML5 / LESS
  - Compatible up to WordPress 3.8.1
- - Customize: Logo, Favicon, Custom Codes
+ - Customize: Logo, Favicon
  - Translation Ready
 
 Resources
