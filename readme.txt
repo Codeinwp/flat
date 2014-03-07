@@ -19,7 +19,7 @@ Features list
  - Font Awesome 4.0.3
  - Write on HTML5 / LESS
  - Compatible up to WordPress 3.8.1
- - Customize: Logo, Favicon
+ - Customize: Logo, Favicon, Sidebar Background Color
  - Translation Ready
 
 Resources
@@ -47,6 +47,9 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
+1.2.7
+* Add: Sidebar Background Color to Customize
+
 1.2.6
 * New: Change content width to 720px
 * Tweak: Re-style table

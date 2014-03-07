@@ -42,6 +42,19 @@ function flat_customize_register( $wp_customize ) {
     'section' => 'title_tagline',
     'settings' => 'flat_theme_options[favicon]',
   )));
+
+  $wp_customize->add_setting('flat_theme_options[sidebar_background_color]', array(
+    'capability' => 'edit_theme_options',
+    'type' => 'option',
+    'default' => '#333',
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'sidebar_background_color', array(
+    'label' => __('Sidebar Background Color', 'flat'),
+    'section' => 'colors',
+    'settings' => 'flat_theme_options[sidebar_background_color]',
+  )));
+
+  
 }
 add_action( 'customize_register', 'flat_customize_register' );
 
@@ -76,6 +89,17 @@ function flat_favicon() {
   }
 }
 add_action( 'wp_head', 'flat_favicon' );
+
+/**
+ * Change Sidebar Background Color
+ */
+function flat_sidebar_background_color() {
+  $sidebar_background_color = flat_get_theme_option('sidebar_background_color');
+  if( !empty($sidebar_background_color) ) {
+    echo '<style type="text/css">#page:before, .sidebar-offcanvas, #secondary { background-color: '.$sidebar_background_color.'; }</style>';
+  }
+}
+add_action( 'wp_head', 'flat_sidebar_background_color' );
 
 /**
  * Display Logo

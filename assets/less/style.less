@@ -254,11 +254,22 @@ input#submit {
 
 #page {
 	max-width: 1200px;
-	background: url(../img/sidebar-bg.gif) repeat-y #fff;
 	margin: 0 auto;
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 300px;
+		background: #333;
+	}
 
 	@media (max-width: @grid-float-breakpoint-max) {
-		background: none;
+		&:before {
+			display: none;
+		}
 
 		> .container {
 			background: #333;
@@ -270,7 +281,7 @@ input#submit {
 
 #masthead {
 	.hgroup {
-		border-bottom: 1px solid #444;
+		border-bottom: 1px solid rgba(255,255,255,.1);
 	}
 
 	.site-title {
@@ -282,7 +293,7 @@ input#submit {
 		text-align: center;
 
 		@media (max-width: @grid-float-breakpoint-max) {
-			border-bottom: 1px solid #444;
+			border-bottom: 1px solid rgba(255,255,255,.1);
 			padding: 15px 0;
 		}
 	}
@@ -316,14 +327,14 @@ input#submit {
 
 #secondary {
 	position: relative;
-	color: @gray-light;
+	color: rgba(255,255,255,.5);
 	padding: 0;
 
 	@media screen and (max-width: @grid-float-breakpoint-max) {
 		background: #333;
 
 		#main-sidebar {
-			border-right: 1px solid #444;
+			border-right: 1px solid rgba(255,255,255,.1);
 		}
 	}
 
@@ -343,7 +354,7 @@ input#submit {
 
 	.widget {
 		padding: 25px;
-		border-bottom: 1px solid #444;
+		border-bottom: 1px solid rgba(255,255,255,.1);
 		font-size: 14px;
 	}
 
@@ -362,7 +373,7 @@ input#submit {
 		margin-top: -41px;
 		width: 40px;
 		height: 40px;
-		border-color: #444;
+		border-color: rgba(255,255,255,.1);
 		border-width: 0 1px 0 0;
 		border-style: solid;
 		color: #fff;
@@ -442,11 +453,11 @@ input#submit {
 	}
 
 	li {
-		border-bottom: 1px solid #444;
+		border-bottom: 1px solid rgba(255,255,255,.1);
 		display: block;
 
 		&.fa:before {
-			border-right: 1px solid #444;
+			border-right: 1px solid rgba(255,255,255,.1);
 			display: block;
 			float: left;
 			height: 40px;
@@ -469,7 +480,7 @@ input#submit {
 
 	a:hover,
 	a:focus {
-		color: #666;
+		color: rgba(255,255,255,.5);
 	}
 
 	.toggle-sidebar {
@@ -477,7 +488,7 @@ input#submit {
 		color: #fff;
 		width: 40px;
 		height: 40px;
-		border-right: 1px solid #444;
+		border-right: 1px solid rgba(255,255,255,.1);
 		outline: none !important;
 	}
 
@@ -503,8 +514,8 @@ input#submit {
 	.sub-menu,
 	.children {
 		display: none;
-		border-top: 1px solid #444;
-		background: #222;
+		border-top: 1px solid rgba(255,255,255,.1);
+		background: rgba(0,0,0,.1);
 
 		li:last-child {
 			border-bottom: none;
@@ -512,11 +523,12 @@ input#submit {
 
 		.sub-menu,
 		.children {
-			background: #111;
+			background: rgba(0,0,0,.3);
+			border-top: none;
 
 			.sub-menu,
 			.children {
-				background: #000;
+				background: rgba(0,0,0,.5);
 			}
 		}
 	}
@@ -524,7 +536,7 @@ input#submit {
 	.current-menu-item,
 	.current-menu-parent,
 	.current-menu-ancestor {
-		> a { color: #666; }
+		> a { color: rgba(255,255,255,.5) }
 	}
 
 	.current-menu-parent,
