@@ -31,6 +31,12 @@ select {
 	}
 }
 
+blockquote {
+	padding: 0 20px;
+	font-size: @font-size-base;
+	color: @gray-light;
+}
+
 textarea,
 input[type="text"],
 input[type="password"],
@@ -51,7 +57,6 @@ input[type="color"] {
 	border-width: 2px;
 	border-color: @gray-lighter;
 	min-height: 40px;
-	padding: @padding-base-horizontal;
 	-webkit-appearance: none;
 
 	&:focus {
@@ -111,7 +116,7 @@ input#submit {
 
 .wp-caption-text {
 	font-size: @font-size-small;
-	margin: 0;
+	margin: 5px 0;
 }
 
 .carousel-caption {

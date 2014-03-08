@@ -10,8 +10,11 @@ function flat_setup() {
 	add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status' ) );
 	register_nav_menu( 'primary', __( 'Navigation Menu', 'flat' ) );
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 820, 480, true );
+	set_post_thumbnail_size( 720, 360, true );
 	add_filter( 'use_default_gallery_style', '__return_false' );
+
+	// This theme styles the visual editor to resemble the theme style.
+	add_editor_style( array( 'assets/css/editor-style.css' ) );
 
 	$custom_background_support = array(
 		'default-color'          => '',

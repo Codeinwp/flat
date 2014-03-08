@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700);
+
+body {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #555;
+}
+
+a {
+  color: #428bca;
+  text-decoration: none;
+  outline: 0!important;
+}
+
+a:hover,
+a:focus {
+  color: #2a6496;
+}
+
+p {
+  margin: 0 0 13px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab";
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1, h2, h3 {
+  margin-top: 26px;
+  margin-bottom: 13px;
+}
+
+h4, h5, h6 {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+h1 { font-size: 36px; }
+
+h2 { font-size: 30px; }
+
+h3 { font-size: 24px; }
+
+h4 { font-size: 18px; }
+
+h5 { font-size: 16px; }
+
+h6 { font-size: 14px; }
+
+blockquote {
+  padding: 0 20px;
+  font-size: 16px;
+  color: #999;
+  margin: 0 0 26px;
+  border-left: 5px solid #eee;
+}
+
+.wp-caption {
+  background: none;
+  border-radius: 0;
+}
+
+.wp-caption-dd {
+  padding: 5px 0;
+  font-size: 12px;
+}
