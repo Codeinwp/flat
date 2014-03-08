@@ -7,14 +7,16 @@ Flat
 
 Description
 ----
-Flat is a Personal WordPress Theme design & developed by [YoArts](http://www.yoarts.com). We like to say that Flat is both beautiful and charming at the same time.
+Flat is a WordPress Blog Theme designed by YoArts. We like to say that Flat is both beautiful and charming at the same time.
 
 Features list
 ----
- - Flat Design
- - Responsive Web Design
- - Off-Canvas Sidebar
- - Customizable Blur Background
+ - Charmingly Flat and Minimalist design
+ - Responsive Layout
+ - Off-Canvas Sidebar on Handheld Devices
+ - Custom Background
+ - Custom Sidebar Color
+ - Editor Style
  - Twitter Bootstrap 3.1.1
  - Font Awesome 4.0.3
  - Write on HTML5 / LESS
