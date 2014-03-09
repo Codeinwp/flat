@@ -42,7 +42,6 @@ function flat_customize_register( $wp_customize ) {
     'section' => 'title_tagline',
     'settings' => 'flat_theme_options[favicon]',
   )));
-
   $wp_customize->add_setting('flat_theme_options[sidebar_background_color]', array(
     'capability' => 'edit_theme_options',
     'type' => 'option',
@@ -53,8 +52,23 @@ function flat_customize_register( $wp_customize ) {
     'section' => 'colors',
     'settings' => 'flat_theme_options[sidebar_background_color]',
   )));
-
-  
+  $wp_customize->add_setting('flat_theme_options[background_size]', array(
+    'default'        => 'cover',
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+    'sanitize_callback' => 'flat_sanitize_background_size',
+  ));
+  $wp_customize->add_control( 'background_size', array(
+    'settings' => 'flat_theme_options[background_size]',
+    'label'   => 'Background size',
+    'section' => 'background_image',
+    'type'    => 'radio',
+    'choices'    => array(
+      'cover' => 'Cover',
+      'contain' => 'Contain',
+      'initial' => 'Initial',
+    ),
+  ));
 }
 add_action( 'customize_register', 'flat_customize_register' );
 
@@ -66,6 +80,13 @@ function flat_sanitize_header_display( $header_display ) {
     $header_display = 'site_title';
   }
   return $header_display;
+}
+
+function flat_sanitize_background_size( $background_size ) {
+  if ( ! in_array( $background_size, array( 'cover', 'contain', 'initial' ) ) ) {
+    $background_size = 'cover';
+  }
+  return $background_size;
 }
 
 /**
@@ -91,15 +112,22 @@ function flat_favicon() {
 add_action( 'wp_head', 'flat_favicon' );
 
 /**
- * Change Sidebar Background Color
+ * Custom CSS
  */
-function flat_sidebar_background_color() {
+function flat_custom_css() {
+  $custom_style = '<style type="text/css">';
   $sidebar_background_color = flat_get_theme_option('sidebar_background_color');
   if( !empty($sidebar_background_color) ) {
-    echo '<style type="text/css">#page:before, .sidebar-offcanvas, #secondary { background-color: '.$sidebar_background_color.'; }</style>';
+    $custom_style.= '#page:before, .sidebar-offcanvas, #secondary { background-color: '.$sidebar_background_color.'; }';
   }
+  $background_size = flat_get_theme_option('background_size');
+  if( !empty($background_size) ) {
+    $custom_style.= 'body { background-size: '.$background_size.'; }';
+  }
+  $custom_style.= '</style>';
+  echo $custom_style;
 }
-add_action( 'wp_head', 'flat_sidebar_background_color' );
+add_action( 'wp_head', 'flat_custom_css' );
 
 /**
  * Display Logo
