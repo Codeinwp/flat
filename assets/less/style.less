@@ -54,13 +54,16 @@ input[type="tel"],
 input[type="color"] {
 	.form-control();
 	box-shadow: none !important;
-	border-width: 2px;
 	border-color: @gray-lighter;
 	min-height: 40px;
 	-webkit-appearance: none;
 
 	&:focus {
 		border-color: @gray-light !important;
+	}
+
+	#secondary & {
+		border: none;
 	}
 }
 
@@ -426,19 +429,23 @@ input#submit {
 	padding: 0;
 
 	.page-title {
-		margin: 0 60px;
+		padding: 20px 90px;
+		margin: 0;
 		border-bottom: 1px solid @gray-lighter;
-		padding: 20px 0;
 		font-size: @font-size-base;
 		font-family: @font-family-condensed;
 		color: @gray-light;
 
+		@media (max-width: @screen-md-max) {
+			padding: 20px 125px;
+		}
+
 		@media (max-width: @screen-sm-max) {
-			margin: 0 40px;
+			padding: 20px 60px;
 		}
 
 		@media (max-width: @screen-xs-max) {
-			margin: 0 15px;
+			padding: 20px 30px;
 		}
 	}
 }
@@ -559,6 +566,11 @@ input#submit {
 			display: block;
 		}
 	}
+}
+
+.page-content {
+	padding: 90px;
+	border-bottom: 1px solid @gray-lighter;
 }
 
 .hentry {
@@ -778,6 +790,7 @@ input#submit {
 
 #comments {
 	padding: 90px;
+	border-bottom: 1px solid @gray-lighter;
 
 	@media (max-width: @screen-md-max) {
 		padding: 60px 125px;
@@ -962,7 +975,6 @@ input#submit {
 	text-align: center;
 	padding: 30px;
 	font-size: @font-size-small;
-	border-top: 1px solid @gray-lighter;
 }
 
 #disqus_thread {
@@ -973,11 +985,7 @@ input#submit {
 	margin: 0;
 
 	.field {
-		height: 40px;
 		width: 100%;
-		padding: 10px 15px;
-		margin: 0;
-		border: none;
 		.box-sizing(border-box);
 	}
 
