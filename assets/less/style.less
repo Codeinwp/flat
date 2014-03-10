@@ -513,36 +513,43 @@ input#submit {
 		height: 40px;
 		text-align: center;
 		line-height: 40px;
-
-		&:hover {
-			color: #fff;
-			cursor: pointer;
-		}
-
-		&.open {
-			.rotate(90deg);
-		}
+		.transition(all .1s linear);
 	}
 
 	.sub-menu,
 	.children {
-		display: none;
-		border-top: 1px solid rgba(255,255,255,.1);
+		overflow: hidden;
 		background: rgba(0,0,0,.1);
+		max-height: 0;
+		.transition(all .3s linear);
 
 		li:last-child {
 			border-bottom: none;
 		}
 
+		li:first-child {
+			border-top: 1px solid rgba(255,255,255,.1);
+		}
+
 		.sub-menu,
 		.children {
 			background: rgba(0,0,0,.3);
-			border-top: none;
 
 			.sub-menu,
 			.children {
 				background: rgba(0,0,0,.5);
 			}
+		}
+	}
+
+	li:hover {
+		> .sub-menu,
+		> .children {
+			max-height: 1000px;
+		}
+
+		> .fa {
+			.rotate(90deg);
 		}
 	}
 
