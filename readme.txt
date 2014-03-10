@@ -53,6 +53,8 @@ Changelog
 * Add: Editor Style
 * Tweak: The text is croped on Text Input (Firefox)
 * Tweak: Style of Blockquote & Image Caption
+* Tweak: Open sub-menu by hover instead of click
+* Fix: 404 and Search Results Issue
 
 1.2.7
 * Add: Sidebar Background Color to Customize
