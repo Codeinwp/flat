@@ -10,5 +10,15 @@
 
     $('#site-navigation .sub-menu').before('<i class="fa fa-caret-right"></i>');
     $('#site-navigation .children').before('<i class="fa fa-caret-right"></i>');
+
+    if(!!('ontouchstart' in window)){
+      $('#site-navigation .fa').click(function() {
+        $(this).toggleClass('open').next('ul').slideToggle(300);
+      });
+    } else {
+      $('#site-navigation li').hover(function() {
+        $(this).children('.fa').toggleClass('open').next('ul').slideToggle(300);
+      });
+    }
   });
 })(jQuery);
