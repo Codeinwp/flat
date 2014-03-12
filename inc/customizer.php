@@ -119,6 +119,7 @@ function flat_custom_css() {
   $sidebar_background_color = flat_get_theme_option('sidebar_background_color');
   if( !empty($sidebar_background_color) ) {
     $custom_style.= '#page:before, .sidebar-offcanvas, #secondary { background-color: '.$sidebar_background_color.'; }';
+    $custom_style.= '@media (max-width: 1199px) { #page > .container { background-color: '.$sidebar_background_color.'; } }';
   }
   $background_size = flat_get_theme_option('background_size');
   if( !empty($background_size) ) {
