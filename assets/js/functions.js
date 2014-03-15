@@ -12,12 +12,12 @@
     $('#site-navigation .children').before('<i class="fa fa-caret-right"></i>');
 
     if(!!('ontouchstart' in window)){
-      $('#site-navigation .fa').click(function() {
+      $('#site-navigation .menu-item-has-children .fa').click(function() {
         $(this).toggleClass('open').next('ul').slideToggle(300);
       });
     } else {
-      $('#site-navigation li').hover(function() {
-        $(this).children('.fa').toggleClass('open').next('ul').slideToggle(300);
+      $('#site-navigation .menu-item-has-children').not('.current-menu-parent').not('.current-menu-ancestor').hover(function() {
+        $(this).children('.fa').toggleClass('open').next('ul').stop(true, true).slideToggle(300);
       });
     }
   });
