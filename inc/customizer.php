@@ -31,7 +31,6 @@ function flat_customize_register( $wp_customize ) {
     'choices'    => array(
       'site_title' => 'Site Title',
       'site_logo' => 'Site Logo',
-      'both_title_logo' => 'Both Title & Logo',
     ),
   ));
   $wp_customize->add_setting('flat_theme_options[favicon]', array(
@@ -77,7 +76,7 @@ add_action( 'customize_register', 'flat_customize_register' );
  * Sanitize Settings
  */
 function flat_sanitize_header_display( $header_display ) {
-  if ( ! in_array( $header_display, array( 'site_title', 'site_logo', 'both_title_logo' ) ) ) {
+  if ( ! in_array( $header_display, array( 'site_title', 'site_logo' ) ) ) {
     $header_display = 'site_title';
   }
   return $header_display;
@@ -135,24 +134,14 @@ add_action( 'wp_head', 'flat_custom_css' );
  * Display Logo
  */
 function flat_logo() {
-  $header_display = flat_get_theme_option( 'header_display', 'site_title' );
-
-  if($header_display == 'both_title_logo') {
-    $header_class = 'display-title-logo';
-  } else if ($header_display == 'site_logo') {
-    $header_class = 'display-logo';
-  } else {
-    $header_class = 'display-title';
-  }
-
+  $header_display = (flat_get_theme_option( 'header_display', 'site_title') == 'site_title') ? 'display-title' : 'display-logo';
   $logo = esc_url(flat_get_theme_option( 'logo' ));
   $tagline = get_bloginfo( 'description' );
 
-  echo '<h1 class="site-title '.$header_class.'"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">';
-  if ( $header_class != 'display-title' ) {
+  echo '<h1 class="site-title '.$header_display.'"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">';
+  if ($header_display == 'display-logo') {
     echo '<img alt="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" src="'.$logo.'" />';
-  }
-  if ( $header_class != 'display-logo' ) {
+  } else {
     echo get_bloginfo( 'name' );
   }
   echo '</a></h1>';
