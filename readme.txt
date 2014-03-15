@@ -49,6 +49,9 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
+1.2.9
+* Fix: Dropdown menu bug: http://wordpress.org/support/topic/dropdown-menu-bug
+
 1.2.8
 * Add: Editor Style
 * Tweak: The text is croped on Text Input (Firefox)
