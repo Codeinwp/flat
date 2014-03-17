@@ -55,12 +55,11 @@ input[type="color"] {
 	.form-control();
 	box-shadow: none !important;
 	border-color: @gray-lighter;
-	border-width: 2px;
 	min-height: 40px;
 	-webkit-appearance: none;
 
 	&:focus {
-		border-color: @brand-primary !important;
+		border-color: @gray-light !important;
 	}
 
 	#secondary & {
@@ -92,24 +91,7 @@ img {
 
 .btn {
 	outline: none !important;
-	border-width: 0 0 2px;
-}
-
-.button-variant(@color; @background; @border) {
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  .open .dropdown-toggle& {
-    color: @color;
-    background-color: lighten(@background, 5%);
-        border-color: lighten(@border, 5%);
-  }
-
-  &:active,
-  &.active {
-    background-color: lighten(@border, 5%);
-  }
+	border: none;
 }
 
 input#submit {
@@ -376,10 +358,6 @@ input#submit {
 		color: @gray-light;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
-		color: rgba(255,255,255,.3);
-	}
-
 	ul, ol {
 		margin: 0 0 0 15px;
 		padding: 0;
@@ -393,7 +371,7 @@ input#submit {
 
 	.widget-title {
 		text-transform: uppercase;
-		color: rgba(255,255,255,.3);
+		color: @gray-light;
 		font-family: @font-family-condensed;
 		font-size: @font-size-small;
 		line-height: 20px;
@@ -598,7 +576,7 @@ input#submit {
 
 .hentry {
 	border-bottom: 1px solid @gray-lighter;
-	padding: 80px 90px;
+	padding: 90px;
 	position: relative;
 
 	@media (max-width: @screen-md-max) {
@@ -829,6 +807,7 @@ input#submit {
 
 	.comments-title {
 		margin: 0;
+		color: @brand-warning;
 		font-size: @font-size-base;
 		line-height: 20px;
 		text-transform: uppercase;
@@ -958,6 +937,7 @@ input#submit {
 
 	#reply-title {
 		margin: 0 0 20px;
+		color: @brand-warning;
 		font-size: @font-size-base;
 		line-height: 20px;
 		text-transform: uppercase;

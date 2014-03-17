@@ -49,10 +49,6 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
-1.2.10
-* Tweak: Buttons, Input style
-* Tweak: 
-
 1.2.9
 * Fix: Dropdown menu bug: http://wordpress.org/support/topic/dropdown-menu-bug
 
