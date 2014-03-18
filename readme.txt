@@ -50,9 +50,11 @@ Icon Fonts: Font Awesome
 Changelog
 ----
 1.2.10
+* Fix: Broken site-nav children menu
 * Tweak: Buttons, Input, Alert style
 
 1.2.9
+* Add: Option to use both title & logo
 * Fix: Dropdown menu bug: http://wordpress.org/support/topic/dropdown-menu-bug
 
 1.2.8

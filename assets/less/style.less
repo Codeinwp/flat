@@ -571,12 +571,17 @@ input#submit {
 
 	.current-menu-item,
 	.current-menu-parent,
-	.current-menu-ancestor {
+	.current-menu-ancestor,
+	.current_page_item,
+	.current_page_parent,
+	.current_page_ancestor {
 		> a { color: rgba(255,255,255,.5) }
 	}
 
 	.current-menu-parent,
-	.current-menu-ancestor {
+	.current-menu-ancestor,
+	.current_page_parent,
+	.current_page_ancestor {
 		> .fa {
 			.rotate(90deg);
 
@@ -585,7 +590,8 @@ input#submit {
 			}
 		}
 
-		> .sub-menu {
+		> .sub-menu,
+		> .children {
 			display: block;
 		}
 	}
