@@ -22,6 +22,7 @@ Features list
  - Write on HTML5 / LESS
  - Compatible up to WordPress 3.8.1
  - Customize: Logo, Favicon, Sidebar Background Color
+ - Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
  - Translation Ready
 
 Resources
@@ -49,6 +50,12 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
+1.2.11
+* New: Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
+* Tweak: Change Font-Family of Site Title from "Yesteryear" to "Amatic SC"
+* Tweak: Change body font-weight from 400 to 300
+* Tweak: Change heading font-weight from 500 to 300
+
 1.2.10
 * Fix: Broken site-nav children menu
 * Tweak: Buttons, Input, Alert style

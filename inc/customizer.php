@@ -12,6 +12,27 @@ function flat_customize_register( $wp_customize ) {
     'capability' => 'edit_theme_options',
     'type' => 'option',
   ));
+  $wp_customize->add_setting('flat_theme_options[site_title_font_family]', array(
+    'default'        => 'yesteryear',
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+  ));
+  $wp_customize->add_control( 'site_title_font_family', array(
+    'settings' => 'flat_theme_options[site_title_font_family]',
+    'label' => __('Site Title Font Family', 'flat'),
+    'section' => 'title_tagline',
+    'type'    => 'select',
+    'choices'    => array(
+      'Amatic SC' => 'Amatic SC',
+      'Yesteryear' => 'Yesteryear',
+      'Pacifico' => 'Pacifico',
+      'Dancing Script' => 'Dancing Script',
+      'Satisfy' => 'Satisfy',
+      'Handlee' => 'Handlee',
+      'Lobster' => 'Lobster',
+      'Lobster Two' => 'Lobster Two'
+    ),
+  ));
   $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'logo', array(
     'label' => __('Site Logo', 'flat'),
     'section' => 'title_tagline',
@@ -68,6 +89,69 @@ function flat_customize_register( $wp_customize ) {
       'cover' => 'Cover',
       'contain' => 'Contain',
       'initial' => 'Initial',
+    ),
+  ));
+  $wp_customize->add_section('typography', array(
+    'title'    => __('Typography', 'flat'),
+    'priority' => 50,
+  ));
+  $wp_customize->add_setting('flat_theme_options[global_font_family]', array(
+    'default'        => 'Roboto',
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+  ));
+  $wp_customize->add_control( 'global_font_family', array(
+    'settings' => 'flat_theme_options[global_font_family]',
+    'label' => __('Global Font Family', 'flat'),
+    'section' => 'typography',
+    'type'    => 'select',
+    'choices'    => array(
+      'Roboto' => 'Roboto',
+      'Lato' => 'Lato',
+      'Droid Sans' => 'Droid Sans',
+      'Open Sans' => 'Open Sans',
+      'PT Sans' => 'PT Sans',
+      'Source Sans Pro' => 'Source Sans Pro'
+    ),
+  ));
+
+  $wp_customize->add_setting('flat_theme_options[heading_font_family]', array(
+    'default'        => 'Roboto Slab',
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+  ));
+  $wp_customize->add_control( 'heading_font_family', array(
+    'settings' => 'flat_theme_options[heading_font_family]',
+    'label' => __('Heading Font Family', 'flat'),
+    'section' => 'typography',
+    'type'    => 'select',
+    'choices'    => array(
+      'Roboto Slab' => 'Roboto Slab',
+      'Droid Serif' => 'Droid Serif',
+      'Lora' => 'Lora',
+      'Bitter' => 'Bitter',
+      'Arvo' => 'Arvo',
+      'PT Serif' => 'PT Serif',
+      'Rokkitt' => 'Rokkitt'
+    ),
+  ));
+  $wp_customize->add_setting('flat_theme_options[sub_heading_font_family]', array(
+    'default'        => 'Roboto Condensed',
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+  ));
+  $wp_customize->add_control( 'sub_heading_font_family', array(
+    'settings' => 'flat_theme_options[sub_heading_font_family]',
+    'label' => __('Sub-Heading Font Family', 'flat'),
+    'section' => 'typography',
+    'type'    => 'select',
+    'choices'    => array(
+      'Roboto Condensed' => 'Roboto Condensed',
+      'Open Sans Condensed' => 'Open Sans Condensed',
+      'PT Sans Narrow' => 'PT Sans Narrow',
+      'Dosis' => 'Dosis',
+      'Abel' => 'Abel',
+      'News Cycle' => 'News Cycle'
     ),
   ));
 }
@@ -130,6 +214,44 @@ function flat_custom_css() {
   echo $custom_style;
 }
 add_action( 'wp_head', 'flat_custom_css' );
+
+/**
+ * Custom Font
+ */
+function flat_custom_font() {
+  $site_title_font_family = flat_get_theme_option('site_title_font_family');
+  $global_font_family = flat_get_theme_option('global_font_family');
+  $heading_font_family = flat_get_theme_option('heading_font_family');
+  $sub_heading_font_family = flat_get_theme_option('sub_heading_font_family');
+
+  if( !empty($site_title_font_family) || !empty($global_font_family) || !empty($heading_font_family) || !empty($sub_heading_font_family) ) {
+    $font_import = '';
+    $font_style = '';
+    if( !empty($site_title_font_family) && $site_title_font_family != 'Amatic SC' ) {
+      $font_import.= '|'.$site_title_font_family;
+      $font_style.= "#masthead .site-title {font-family:".$site_title_font_family."}";
+    }
+
+    if( !empty($global_font_family) && $global_font_family != 'Roboto' ) {
+      $font_import.= '|'.$global_font_family;
+      $font_style.= "body {font-family:".$global_font_family."}";
+    }
+
+    if( !empty($heading_font_family) && $heading_font_family != 'Roboto Slab' ) {
+      $font_import.= '|'.$heading_font_family;
+      $font_style.= "h1,h2,h3,h4,h5,h6 {font-family:".$heading_font_family."}";
+    }
+
+    if( !empty($sub_heading_font_family) && $sub_heading_font_family != 'Roboto Condensed' ) {
+      $font_import.= '|'.$sub_heading_font_family;
+      $font_style.= "#masthead .site-description, .hentry .entry-meta {font-family:".$sub_heading_font_family."}";
+    }
+
+    echo str_replace('family=|', 'family=', "<link href='http://fonts.googleapis.com/css?family=".str_replace(' ', '+', $font_import)."' rel='stylesheet' type='text/css'>");
+    echo "<style type='text/css'>".$font_style."</style>";
+  }
+}
+add_action( 'wp_head', 'flat_custom_font' );
 
 /**
  * Display Logo
