@@ -247,8 +247,11 @@ function flat_custom_font() {
       $font_style.= "#masthead .site-description, .hentry .entry-meta {font-family:".$sub_heading_font_family."}";
     }
 
-    echo str_replace('family=|', 'family=', "<link href='http://fonts.googleapis.com/css?family=".str_replace(' ', '+', $font_import)."' rel='stylesheet' type='text/css'>");
-    echo "<style type='text/css'>".$font_style."</style>";
+    if( !empty($font_import) ) {
+      echo str_replace('family=|', 'family=', "<link href='http://fonts.googleapis.com/css?family=".str_replace(' ', '+', $font_import)."' rel='stylesheet' type='text/css'>");
+      echo "<style type='text/css'>".$font_style."</style>";
+    }
+    
   }
 }
 add_action( 'wp_head', 'flat_custom_font' );
