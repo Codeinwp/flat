@@ -2,12 +2,13 @@ Flat
 ====
 * Author: YoArts
 * Author URL: http://www.yoarts.com
+* Contributer: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
 * License: GNU General Public License v3.0
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Description
 ----
-Flat is a WordPress Blog Theme designed by YoArts. We like to say that Flat is both beautiful and charming at the same time.
+Flat is a WordPress Blog Theme designed by YoArts. We would like to say that Flat is both beautiful and charming at the same time.
 
 Features list
 ----
@@ -23,7 +24,7 @@ Features list
  - Compatible up to WordPress 3.8.1
  - Customize: Logo, Favicon, Sidebar Background Color
  - Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
- - Translation Ready
+ - Translation Ready (Language available: English, German)
 
 Resources
 ----
@@ -50,6 +51,10 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
+1.2.12
+* Add: German translation (Contribute by @kevinpapst)
+* Tweak: Prevent error on default font selection (Contribute by @abovethewater)
+
 1.2.11
 * New: Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
 * Tweak: Change Font-Family of Site Title from "Yesteryear" to "Amatic SC"
@@ -89,11 +94,11 @@ Changelog
 1.2.4
 * New: Upgrade Bootstrap to 3.1.1
 * New: Support Sub-Menu on Primary Navigation
-* Tweak: Fix Pagination Direction
+* Tweak: Fix Pagination Direction (Contribute by @ashfame)
 * Tweak: Link the CSS files directly instead of import
-* Tweak: Added a filter on showing credits in footer
+* Tweak: Added a filter on showing credits in footer (Contribute by @ashfame)
 * Tweak: Content width change to 750px
-* Tweak: Not do anything with title, SEO is best handled by WordPress SEO by Yoast: https://yoast.com/wordpress-seo-plugin-theme-integration-guide/#head
+* Tweak: Not do anything with title, SEO is best handled by WordPress SEO by Yoast: https://yoast.com/wordpress-seo-plugin-theme-integration-guide/#head  (Contribute by @ashfame)
 
 1.2.3
 * Tweak: Remove Author URL from Credit link
@@ -118,6 +123,7 @@ Changelog
 * Tweak: Rename paging_nav() as flat_paging_nav()
 * Tweak: Favicon disabled by default
 * Tweak: Options escaped on output
+* Tweak: Validate in W3C (Contribute by @ghost)
 
 1.1.0
 * New: Upgrade Bootrap to 3.0.3
