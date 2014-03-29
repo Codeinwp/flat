@@ -52,6 +52,7 @@ Icon Fonts: Font Awesome
 Changelog
 ----
 1.2.12
+* Tweak: Radio & Checkbox style
 * Add: German translation (Contribute by @kevinpapst)
 * Tweak: Prevent error on default font selection (Contribute by @abovethewater)
 
