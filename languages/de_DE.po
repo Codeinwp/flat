@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
 "POT-Creation-Date: 2014-03-29 16:37+0700\n"
-"PO-Revision-Date: 2014-03-29 16:42+0700\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2014-03-30 14:49+0100\n"
+"Last-Translator: Kevin Papst <kpapst@gmx.net>\n"
 "Language-Team: YoArts <hi@yoarts.com>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -128,7 +128,7 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Es sieht so aus, als könnten wir nicht finden wonach Sie gesucht haben. "
+"Es sieht so aus, als könnten wir nicht finden was Sie aufgerufen haben. "
 "Vielleicht können Sie ja danach suchen."
 
 #: ../content.php:8 ../content.php:18
@@ -218,35 +218,35 @@ msgstr "Beitrags-Navigation"
 
 #: ../inc/customizer.php:22
 msgid "Site Title Font Family"
-msgstr ""
+msgstr "Seitenname Schriftart"
 
 #: ../inc/customizer.php:37
 msgid "Site Logo"
-msgstr ""
+msgstr "Seiten Logo"
 
 #: ../inc/customizer.php:63
 msgid "Site Favicon"
-msgstr ""
+msgstr "Seiten Favicon"
 
 #: ../inc/customizer.php:73
 msgid "Sidebar Background Color"
-msgstr ""
+msgstr "Sidebar Hintergrundfarbe"
 
 #: ../inc/customizer.php:95
 msgid "Typography"
-msgstr ""
+msgstr "Typografie"
 
 #: ../inc/customizer.php:105
 msgid "Global Font Family"
-msgstr ""
+msgstr "Globale Schriftart"
 
 #: ../inc/customizer.php:125
 msgid "Heading Font Family"
-msgstr ""
+msgstr "Überschriften Schriftart"
 
 #: ../inc/customizer.php:145
 msgid "Sub-Heading Font Family"
-msgstr ""
+msgstr "Untertitel Schriftart"
 
 #: ../page.php:13
 msgid "Continue reading <span class=\"meta-nav\">...</span>"
