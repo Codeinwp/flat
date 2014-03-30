@@ -13,13 +13,15 @@
 		</div>
 	</header>
 
-	<?php if ( has_post_thumbnail() && ! post_password_required() && ! is_single() ) : ?>
-	<div class="entry-thumbnail">
-		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'flat' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>
-	</div>
-	<?php endif; ?>
+	<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+		<?php if ( ! is_single() && flat_get_theme_option('archive_featured_image') == 'display' ) { ?>
+			<div class="entry-thumbnail"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'flat' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a></div>
+		<?php } else if ( is_single() && flat_get_theme_option('single_featured_image') == 'display' ) { ?>
+			<div class="entry-thumbnail"><?php the_post_thumbnail(); ?></div>
+		<?php } ?>
+  <?php endif; ?>
 
-	<?php if ( is_search() ) : ?>
+	<?php if ( is_search() || ( !is_single() && flat_get_theme_option('archive_content') == 'excerpt' ) ) : ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div>

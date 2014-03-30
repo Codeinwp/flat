@@ -154,6 +154,55 @@ function flat_customize_register( $wp_customize ) {
       'News Cycle' => 'News Cycle'
     ),
   ));
+	$wp_customize->add_section('layout', array(
+		'title'    => __('Layout', 'flat'),
+		'priority' => 70,
+	));
+	$wp_customize->add_setting('flat_theme_options[single_featured_image]', array(
+		'default'        => 'hide',
+		'capability'     => 'edit_theme_options',
+		'type'           => 'option',
+	));
+	$wp_customize->add_control('single_featured_image', array(
+		'settings' => 'flat_theme_options[single_featured_image]',
+		'label' => __('Featured image single page', 'flat'),
+		'section' => 'layout',
+		'type'    => 'select',
+		'choices'    => array(
+			'display' => 'Display',
+			'hide' => 'Do not display',
+		),
+	));
+	$wp_customize->add_setting('flat_theme_options[archive_featured_image]', array(
+		'default'        => 'display',
+		'capability'     => 'edit_theme_options',
+		'type'           => 'option',
+	));
+	$wp_customize->add_control('archive_featured_image', array(
+		'settings' => 'flat_theme_options[archive_featured_image]',
+		'label' => __('Featured image archive page', 'flat'),
+		'section' => 'layout',
+		'type'    => 'select',
+		'choices'    => array(
+			'display' => 'Display',
+			'hide' => 'Do not display',
+		),
+	));
+	$wp_customize->add_setting('flat_theme_options[archive_content]', array(
+		'default'        => 'full',
+		'capability'     => 'edit_theme_options',
+		'type'           => 'option',
+	));
+	$wp_customize->add_control('archive_content', array(
+		'settings' => 'flat_theme_options[archive_content]',
+		'label' => __('Preview on archive page', 'flat'),
+		'section' => 'layout',
+		'type'    => 'select',
+		'choices'    => array(
+			'full' => 'Full content',
+			'excerpt' => 'Excerpt',
+		),
+	));
 }
 add_action( 'customize_register', 'flat_customize_register' );
 
