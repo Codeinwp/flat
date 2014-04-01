@@ -1,0 +1,254 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Flat\n"
+"POT-Creation-Date: 2014-03-29 16:24+0700\n"
+"PO-Revision-Date: 2014-03-31 14:15+0100\n"
+"Last-Translator: Wolforg <contact@wolforg.eu>\n"
+"Language-Team: Wolforg <contact@wolforg.eu>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:3
+msgid "Not Found"
+msgstr "Non Trouvé"
+
+#: ../404.php:5
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Il semble que rien ne se trouve à cet endroit. Essayer une recherche ?"
+
+#: ../archive.php:5
+#, php-format
+msgid "Category: %s"
+msgstr "Catégorie : %s"
+
+#: ../archive.php:8
+#, php-format
+msgid "Tag: %s"
+msgstr "Mot-clé : %s"
+
+#: ../archive.php:13
+#, php-format
+msgid "Author: %s"
+msgstr "Auteur : %s"
+
+#: ../archive.php:18
+#, php-format
+msgid "Day: %s"
+msgstr "Jour : %s"
+
+#: ../archive.php:21
+#, php-format
+msgid "Month: %s"
+msgstr "Mois : %s"
+
+#: ../archive.php:24
+#, php-format
+msgid "Year: %s"
+msgstr "Année : %s"
+
+#: ../archive.php:27
+msgid "Asides"
+msgstr "Annonces"
+
+#: ../archive.php:30
+msgid "Images"
+msgstr "Images"
+
+#: ../archive.php:33
+msgid "Videos"
+msgstr "Vidéos"
+
+#: ../archive.php:36
+msgid "Quotes"
+msgstr "Citations"
+
+#: ../archive.php:39
+msgid "Links"
+msgstr "Liens"
+
+#: ../archive.php:42
+#: ../sidebar.php:5
+msgid "Archives"
+msgstr "Archives"
+
+#: ../archive.php:60
+#: ../author-bio.php:6
+#, php-format
+msgid "About %s"
+msgstr "A propos de %s"
+
+#: ../author-bio.php:10
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Voir tous les articles par %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../comments.php:26
+msgid "Comment navigation"
+msgstr "Navigation Commentaires"
+
+#: ../comments.php:27
+msgid "&larr; Older Comments"
+msgstr "&laquo; Commentaires plus Anciens"
+
+#: ../comments.php:28
+msgid "Newer Comments &rarr;"
+msgstr "Commentaires plus Récents &raquo;"
+
+#: ../comments.php:33
+msgid "Comments are closed."
+msgstr "Commentaires clos."
+
+#: ../content-none.php:1
+msgid "Nothing Found"
+msgstr "Rien de trouvé"
+
+#: ../content-none.php:6
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Prêt à publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
+
+#: ../content-none.php:10
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Désolé, mais rien ne correspond à votre recherche."
+
+#: ../content-none.php:15
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Nous ne trouvons pas ce que vous recherchez. Essayez une recherche"
+
+#: ../content.php:8
+#: ../content.php:18
+#, php-format
+msgid "Permalink to %s"
+msgstr "Lien permanent pour %s"
+
+#: ../content.php:28
+msgid "Continue reading"
+msgstr "Lire la suite &laquo;"
+
+#: ../content.php:29
+#: ../page.php:15
+msgid "Pages:"
+msgstr "Pages :"
+
+#: ../content.php:34
+msgid " "
+msgstr " "
+
+#: ../footer.php:4
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: ../footer.php:4
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Fièrement propulsé par %s."
+
+#: ../footer.php:5
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Thème : %1$ par %2$s. Traduction : <a href=\"http://www.wptrads.com\" target= _blank>Wp Trads</a>."
+
+#: ../functions.php:11
+msgid "Navigation Menu"
+msgstr "Menu de navigation"
+
+#: ../functions.php:48
+msgid "Main Widget Area"
+msgstr "Zone Widget Principale"
+
+#: ../functions.php:50
+msgid "Appears in the sidebar section of the site"
+msgstr "Affiché dans la barre du site"
+
+#: ../functions.php:61
+#, php-format
+msgid "<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> by <span class=\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" rel=\"author\">%5$s</a></span></span>"
+msgstr "<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> par <span class=\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" rel=\"author\">%5$s</a></span></span>"
+
+#: ../functions.php:70
+msgid "0 Comment"
+msgstr "1 commentaire"
+
+#: ../functions.php:70
+msgid "1 Comment"
+msgstr "1 Commentaire"
+
+#: ../functions.php:70
+msgid "% Comments"
+msgstr "% Commentaires"
+
+#: ../functions.php:82
+msgid "<i class=\"fa fa-chevron-right\"></i>"
+msgstr "<i class=\"fa fa-chevron-right\"></i>"
+
+#: ../functions.php:86
+msgid "<i class=\"fa fa-chevron-left\"></i>"
+msgstr "<i class=\"fa fa-chevron-left\"></i>"
+
+#: ../functions.php:89
+#, php-format
+msgid "Page %1$s of %2$s"
+msgstr "Page %1$s sur %2$s"
+
+#: ../functions.php:106
+msgid "Post navigation"
+msgstr "Navigation Article"
+
+#: ../inc/customizer.php:22
+msgid "Site Title Font Family"
+msgstr "Famille Police Titre Site"
+
+#: ../inc/customizer.php:37
+msgid "Site Logo"
+msgstr "Logo Site"
+
+#: ../inc/customizer.php:63
+msgid "Site Favicon"
+msgstr "Favicon Site"
+
+#: ../inc/customizer.php:73
+msgid "Sidebar Background Color"
+msgstr "Couleur Fond Barre"
+
+#: ../inc/customizer.php:95
+msgid "Typography"
+msgstr "Typographie"
+
+#: ../inc/customizer.php:105
+msgid "Global Font Family"
+msgstr "Famille de police globale"
+
+#: ../inc/customizer.php:125
+msgid "Heading Font Family"
+msgstr "Famille Police En-tête"
+
+#: ../inc/customizer.php:145
+msgid "Sub-Heading Font Family"
+msgstr "Famille Police Sous-titre"
+
+#: ../page.php:13
+msgid "Continue reading <span class=\"meta-nav\">...</span>"
+msgstr "Lire la suite <span class=\"meta-nav\">...</span>"
+
+#: ../search.php:4
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de Recherche pour : %s"
+
+#: ../searchform.php:2
+msgid "Search"
+msgstr "Rechercher"
+
+#: ../sidebar.php:12
+msgid "Meta"
+msgstr "Meta"
+

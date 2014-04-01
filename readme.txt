@@ -24,7 +24,7 @@ Features list
  - Compatible up to WordPress 3.8.1
  - Customize: Logo, Favicon, Sidebar Background Color
  - Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
- - Translation Ready (Language available: English, German)
+ - Translation Ready (Language available: English, German, French)
 
 Resources
 ----
@@ -51,6 +51,9 @@ Icon Fonts: Font Awesome
 
 Changelog
 ----
+1.2.13
+* Add: French translation (Contribute by Didier)
+
 1.2.12
 * Tweak: Radio & Checkbox style
 * Add: German translation (Contribute by @kevinpapst)
