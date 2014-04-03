@@ -1,20 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-03-29 16:24+0700\n"
-"PO-Revision-Date: 2014-03-31 14:15+0100\n"
-"Last-Translator: Wolforg <contact@wolforg.eu>\n"
+"POT-Creation-Date: 2014-04-03 19:09+0700\n"
+"PO-Revision-Date: 2014-04-03 19:57+0700\n"
+"Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: Wolforg <contact@wolforg.eu>\n"
-"Language: en_US\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: FRANCE\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:3
@@ -75,13 +74,11 @@ msgstr "Citations"
 msgid "Links"
 msgstr "Liens"
 
-#: ../archive.php:42
-#: ../sidebar.php:5
+#: ../archive.php:42 ../sidebar.php:5
 msgid "Archives"
 msgstr "Archives"
 
-#: ../archive.php:60
-#: ../author-bio.php:6
+#: ../archive.php:60 ../author-bio.php:6
 #, php-format
 msgid "About %s"
 msgstr "A propos de %s"
@@ -113,19 +110,24 @@ msgstr "Rien de trouvé"
 
 #: ../content-none.php:6
 #, php-format
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Prêt à publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
 
 #: ../content-none.php:10
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr "Désolé, mais rien ne correspond à votre recherche."
 
 #: ../content-none.php:15
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr "Nous ne trouvons pas ce que vous recherchez. Essayez une recherche"
 
-#: ../content.php:8
-#: ../content.php:18
+#: ../content.php:8 ../content.php:18
 #, php-format
 msgid "Permalink to %s"
 msgstr "Lien permanent pour %s"
@@ -134,8 +136,7 @@ msgstr "Lien permanent pour %s"
 msgid "Continue reading"
 msgstr "Lire la suite &laquo;"
 
-#: ../content.php:29
-#: ../page.php:15
+#: ../content.php:29 ../page.php:15
 msgid "Pages:"
 msgstr "Pages :"
 
@@ -155,7 +156,7 @@ msgstr "Fièrement propulsé par %s."
 #: ../footer.php:5
 #, php-format
 msgid "Theme: %1$s by %2$s."
-msgstr "Thème : %1$ par %2$s. Traduction : <a href=\"http://www.wptrads.com\" target= _blank>Wp Trads</a>."
+msgstr "Thème: %1s par %2$s."
 
 #: ../functions.php:11
 msgid "Navigation Menu"
@@ -171,8 +172,16 @@ msgstr "Affiché dans la barre du site"
 
 #: ../functions.php:61
 #, php-format
-msgid "<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> by <span class=\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" rel=\"author\">%5$s</a></span></span>"
-msgstr "<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> par <span class=\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" rel=\"author\">%5$s</a></span></span>"
+msgid ""
+"<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class="
+"\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> by <span class="
+"\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
+"rel=\"author\">%5$s</a></span></span>"
+msgstr ""
+"<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class="
+"\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> par <span class="
+"\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
+"rel=\"author\">%5$s</a></span></span>"
 
 #: ../functions.php:70
 msgid "0 Comment"
@@ -202,6 +211,14 @@ msgstr "Page %1$s sur %2$s"
 #: ../functions.php:106
 msgid "Post navigation"
 msgstr "Navigation Article"
+
+#: ../header.php:21
+msgid "<i class=\"fa fa-gear\"></i>"
+msgstr ""
+
+#: ../header.php:22
+msgid "<i class=\"fa fa-bars\"></i>"
+msgstr ""
 
 #: ../inc/customizer.php:22
 msgid "Site Title Font Family"
@@ -251,4 +268,3 @@ msgstr "Rechercher"
 #: ../sidebar.php:12
 msgid "Meta"
 msgstr "Meta"
-

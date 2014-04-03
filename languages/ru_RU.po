@@ -1,152 +1,153 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-04-03 19:08+0700\n"
-"PO-Revision-Date: 2014-04-03 19:09+0700\n"
+"POT-Creation-Date: 2014-04-03 19:07+0700\n"
+"PO-Revision-Date: 2014-04-03 19:56+0700\n"
 "Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: YoArts <hi@yoarts.com>\n"
-"Language: de_DE\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:3
 msgid "Not Found"
-msgstr "Nicht gefunden"
+msgstr "Ничего не найдено"
 
 #: ../404.php:5
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Es sieht so aus, als könnte hier nichts gefunden werden. Vielleicht "
-"versuchen Sie es mit einer Suche?"
+"Похоже, ничего не было найдено по этому адресу. Может быть, попробовать "
+"поиск?"
 
 #: ../archive.php:5
 #, php-format
 msgid "Category: %s"
-msgstr "Alle Artikel zum Thema \"%s\""
+msgstr "Категория: %s"
 
 #: ../archive.php:8
 #, php-format
 msgid "Tag: %s"
-msgstr "Anhänger: %s"
+msgstr "Тег: %s"
 
 #: ../archive.php:13
 #, php-format
 msgid "Author: %s"
-msgstr "Autor: %s"
+msgstr "Автор: %s"
 
 #: ../archive.php:18
 #, php-format
 msgid "Day: %s"
-msgstr "Tag: %s"
+msgstr "День: %s"
 
 #: ../archive.php:21
 #, php-format
 msgid "Month: %s"
-msgstr "Monat: %s"
+msgstr "Месяц: %s"
 
 #: ../archive.php:24
 #, php-format
 msgid "Year: %s"
-msgstr "Jahr: %s"
+msgstr "Год: %s"
 
 #: ../archive.php:27
 msgid "Asides"
-msgstr "Asides"
+msgstr "Резервы"
 
 #: ../archive.php:30
 msgid "Images"
-msgstr "Bilder"
+msgstr "Изображение"
 
 #: ../archive.php:33
 msgid "Videos"
-msgstr "Videos"
+msgstr "Видео"
 
 #: ../archive.php:36
 msgid "Quotes"
-msgstr "Zitate"
+msgstr "Кавычки"
 
 #: ../archive.php:39
 msgid "Links"
-msgstr "Links"
+msgstr "Ссылки"
 
 #: ../archive.php:42 ../sidebar.php:5
 msgid "Archives"
-msgstr "Archive"
+msgstr "Архивы"
 
 #: ../archive.php:60 ../author-bio.php:6
 #, php-format
 msgid "About %s"
-msgstr "Über %s"
+msgstr "Об %s"
 
 #: ../author-bio.php:10
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Zeige alle Beiträge von %s an <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Просмотр всех публикаций %s <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../comments.php:26
 msgid "Comment navigation"
-msgstr "Kommentar Navigation"
+msgstr "Навигация по комментариям"
 
 #: ../comments.php:27
 msgid "&larr; Older Comments"
-msgstr "&larr; Ältere Kommentare"
+msgstr "&larr; Старые комментарии"
 
 #: ../comments.php:28
 msgid "Newer Comments &rarr;"
-msgstr "Neuere Kommentare &rarr;"
+msgstr "Новые комментарии &rarr;"
 
 #: ../comments.php:33
 msgid "Comments are closed."
-msgstr "Kommentare sind geschlossen."
+msgstr "Комментарии закрыты."
 
 #: ../content-none.php:1
 msgid "Nothing Found"
-msgstr "Es wurde nichts gefunden"
+msgstr "Ничего не найдено"
 
 #: ../content-none.php:6
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Bereit für Dein erstes Posting? <a href=\"%1$s\">Hier gehts los</a>."
+msgstr ""
+"Готовы опубликовать свой первый пост? <a href=\"%1$s\">Get started here</a>."
 
 #: ../content-none.php:10
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Entschuldigung, aber es wurde nichts gefunden, was zu ihrer Suchanfrage "
-"passt. Bitte versuchen Sie es mit einem anderen Suchbegriff."
+"Извините, но нет ничего соответствующего условиям поиска. Пожалуйста, "
+"попробуйте еще раз используя другие ключевые слова."
 
 #: ../content-none.php:15
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Es sieht so aus, als könnten wir nicht finden was Sie aufgerufen haben. "
-"Vielleicht können Sie ja danach suchen."
+"Кажется, мы не можем найти то, что вы ищете. Возможно, поиск может помочь."
 
 #: ../content.php:8 ../content.php:18
 #, php-format
 msgid "Permalink to %s"
-msgstr "Permalink zu %s"
+msgstr "Постоянная ссылка на %s"
 
 #: ../content.php:28
 msgid "Continue reading"
-msgstr "Weiterlesen"
+msgstr "Продолжить чтение"
 
 #: ../content.php:29 ../page.php:15
 msgid "Pages:"
-msgstr "Seiten:"
+msgstr "Страницы:"
 
 #: ../content.php:34
 msgid " "
-msgstr " "
+msgstr ""
 
 #: ../footer.php:4
 msgid "http://wordpress.org/"
@@ -155,24 +156,24 @@ msgstr "http://wordpress.org/"
 #: ../footer.php:4
 #, php-format
 msgid "Proudly powered by %s"
-msgstr "Proudly powered by %s"
+msgstr "Сайт работает на %s"
 
 #: ../footer.php:5
 #, php-format
 msgid "Theme: %1$s by %2$s."
-msgstr "Thema: %1$s von %2$s."
+msgstr "Тема: %1$s Автор: %2$s."
 
 #: ../functions.php:11
 msgid "Navigation Menu"
-msgstr "Navigations-Menü"
+msgstr "Основное меню"
 
 #: ../functions.php:48
 msgid "Main Widget Area"
-msgstr "Haupt Widgetbereich"
+msgstr "Основная область для виджетов"
 
 #: ../functions.php:50
 msgid "Appears in the sidebar section of the site"
-msgstr "Taucht in der Sidebar der Seite auf"
+msgstr "Появится в разделе боковой панели сайта"
 
 #: ../functions.php:61
 #, php-format
@@ -183,21 +184,21 @@ msgid ""
 "rel=\"author\">%5$s</a></span></span>"
 msgstr ""
 "<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class="
-"\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> von <span class="
+"\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> Автор <span class="
 "\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
 "rel=\"author\">%5$s</a></span></span>"
 
 #: ../functions.php:70
 msgid "0 Comment"
-msgstr "Noch kein Kommentar"
+msgstr "0 Комментарий"
 
 #: ../functions.php:70
 msgid "1 Comment"
-msgstr "1 Kommentar"
+msgstr "1 Комментарий"
 
 #: ../functions.php:70
 msgid "% Comments"
-msgstr "% Kommentare"
+msgstr "% Комментарий"
 
 #: ../functions.php:82
 msgid "<i class=\"fa fa-chevron-right\"></i>"
@@ -210,11 +211,11 @@ msgstr "<i class=\"fa fa-chevron-left\"></i>"
 #: ../functions.php:89
 #, php-format
 msgid "Page %1$s of %2$s"
-msgstr "Seite %1$s von %2$s"
+msgstr "Страница %1$s of %2$s"
 
 #: ../functions.php:106
 msgid "Post navigation"
-msgstr "Beitrags-Navigation"
+msgstr "Пост навигаций"
 
 #: ../header.php:21
 msgid "<i class=\"fa fa-gear\"></i>"
@@ -226,55 +227,49 @@ msgstr ""
 
 #: ../inc/customizer.php:22
 msgid "Site Title Font Family"
-msgstr "Seitenname Schriftart"
+msgstr "Шрифт заголовка сайта"
 
 #: ../inc/customizer.php:37
 msgid "Site Logo"
-msgstr "Seiten Logo"
+msgstr "Логотип сайта"
 
 #: ../inc/customizer.php:63
 msgid "Site Favicon"
-msgstr "Seiten Favicon"
+msgstr "Иконка сайта"
 
 #: ../inc/customizer.php:73
 msgid "Sidebar Background Color"
-msgstr "Sidebar Hintergrundfarbe"
+msgstr "Цвет фона боковой панели"
 
 #: ../inc/customizer.php:95
 msgid "Typography"
-msgstr "Typografie"
+msgstr "Типографика"
 
 #: ../inc/customizer.php:105
 msgid "Global Font Family"
-msgstr "Globale Schriftart"
+msgstr "Основной шрифт"
 
 #: ../inc/customizer.php:125
 msgid "Heading Font Family"
-msgstr "Überschriften Schriftart"
+msgstr "Шрифт заголовков"
 
 #: ../inc/customizer.php:145
 msgid "Sub-Heading Font Family"
-msgstr "Untertitel Schriftart"
+msgstr "Шрифт подзаголовков"
 
 #: ../page.php:13
 msgid "Continue reading <span class=\"meta-nav\">...</span>"
-msgstr "Weiterlesen <span class=\"meta-nav\">...</span>"
+msgstr "Продолжить чтение <span class=\"meta-nav\">...</span>"
 
 #: ../search.php:4
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Suchergebnisse für: %s"
+msgstr "Результаты поиска для: %s"
 
 #: ../searchform.php:2
 msgid "Search"
-msgstr "Suche"
+msgstr "Поиск"
 
 #: ../sidebar.php:12
 msgid "Meta"
-msgstr "Meta"
-
-#~ msgid "Semantic Personal Publishing Platform"
-#~ msgstr "Semantic Personal Publishing Platform"
-
-#~ msgid "Page %s"
-#~ msgstr "Seite %s"
+msgstr "Мета"

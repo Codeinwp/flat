@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-03-29 16:24+0700\n"
-"PO-Revision-Date: 2014-03-29 16:24+0700\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-04-03 19:08+0700\n"
+"PO-Revision-Date: 2014-04-03 19:08+0700\n"
+"Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: YoArts <hi@yoarts.com>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -203,6 +203,14 @@ msgstr ""
 
 #: ../functions.php:106
 msgid "Post navigation"
+msgstr ""
+
+#: ../header.php:21
+msgid "<i class=\"fa fa-gear\"></i>"
+msgstr ""
+
+#: ../header.php:22
+msgid "<i class=\"fa fa-bars\"></i>"
 msgstr ""
 
 #: ../inc/customizer.php:22

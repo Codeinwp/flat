@@ -24,7 +24,7 @@ Features list
  - Compatible up to WordPress 3.8.1
  - Customize: Logo, Favicon, Sidebar Background Color
  - Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
- - Translation Ready (Language available: English, German, French)
+ - Translation Ready (Language available: English, German, French, Russian)
 
 Resources
 ----
@@ -49,8 +49,21 @@ Icon Fonts: Font Awesome
 	- http://graphicburger.com/5-blurred-backgrounds-vol-1/
 	- License: http://graphicburger.com/license/
 
+Contributers
+----
+	- Фарух Джапаркулов
+	- Didier: http://www.wptrads.com/theme/flat-2/
+	- abovethewater: https://github.com/abovethewater
+	- Kevin Papst: https://github.com/kevinpapst
+	- Ashfame: https://github.com/ashfame
+
 Changelog
 ----
+1.2.14
+* Tweak: Gear & Bars icons translatable (As Request of Swaroop)
+* Tweak: Add "Open Sans Condensed" to Heading font family list
+* Add: Russian translation (Contribute by Фарух Джапаркулов)
+
 1.2.13
 * Add: French translation (Contribute by Didier)
 
