@@ -154,55 +154,80 @@ function flat_customize_register( $wp_customize ) {
       'News Cycle' => 'News Cycle'
     ),
   ));
-	$wp_customize->add_section('layout', array(
-		'title'    => __('Layout', 'flat'),
-		'priority' => 70,
+	$wp_customize->add_section('layout_single', array(
+		'title'    => __('Single Post', 'flat'),
+		'priority' => 110,
 	));
 	$wp_customize->add_setting('flat_theme_options[single_featured_image]', array(
-		'default'        => 'hide',
+		'default'        => '1',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
 	));
-	$wp_customize->add_control('single_featured_image', array(
-		'settings' => 'flat_theme_options[single_featured_image]',
-		'label' => __('Featured image single page', 'flat'),
-		'section' => 'layout',
-		'type'    => 'select',
-		'choices'    => array(
-			'display' => 'Display',
-			'hide' => 'Do not display',
-		),
-	));
+    $wp_customize->add_control('single_featured_image', array(
+        'label'      => __('Show Featured Image', 'flat'),
+        'section'    => 'layout_single',
+        'settings'   => 'flat_theme_options[single_featured_image]',
+        'type'       => 'checkbox'
+    ) );
+    $wp_customize->add_setting('flat_theme_options[single_metadata]', array(
+        'default'        => '1',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+    ));
+    $wp_customize->add_control('single_metadata', array(
+        'label'      => __('Show Metadata', 'flat'),
+        'section'    => 'layout_single',
+        'settings'   => 'flat_theme_options[single_metadata]',
+        'type'       => 'checkbox'
+    ) );
+    $wp_customize->add_setting('flat_theme_options[single_author_box]', array(
+        'default'        => '1',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+    ));
+    $wp_customize->add_control('single_author_box', array(
+        'label'      => __('Show Author Box', 'flat'),
+        'section'    => 'layout_single',
+        'settings'   => 'flat_theme_options[single_author_box]',
+        'type'       => 'checkbox'
+    ) );
+    $wp_customize->add_section('layout_archive', array(
+        'title'    => __('Archive Pages', 'flat'),
+        'priority' => 100,
+    ));
 	$wp_customize->add_setting('flat_theme_options[archive_featured_image]', array(
-		'default'        => 'display',
+        'default'        => '',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
 	));
-	$wp_customize->add_control('archive_featured_image', array(
-		'settings' => 'flat_theme_options[archive_featured_image]',
-		'label' => __('Featured image archive page', 'flat'),
-		'section' => 'layout',
-		'type'    => 'select',
-		'choices'    => array(
-			'display' => 'Display',
-			'hide' => 'Do not display',
-		),
-	));
-	$wp_customize->add_setting('flat_theme_options[archive_content]', array(
-		'default'        => 'full',
-		'capability'     => 'edit_theme_options',
-		'type'           => 'option',
-	));
-	$wp_customize->add_control('archive_content', array(
-		'settings' => 'flat_theme_options[archive_content]',
-		'label' => __('Preview on archive page', 'flat'),
-		'section' => 'layout',
-		'type'    => 'select',
-		'choices'    => array(
-			'full' => 'Full content',
-			'excerpt' => 'Excerpt',
-		),
-	));
+    $wp_customize->add_control('archive_featured_image', array(
+        'label'      => __('Show Featured Image', 'flat'),
+        'section'    => 'layout_archive',
+        'settings'   => 'flat_theme_options[archive_featured_image]',
+        'type'       => 'checkbox'
+    ) );
+    $wp_customize->add_setting('flat_theme_options[archive_metadata]', array(
+        'default'        => '1',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+    ));
+    $wp_customize->add_control('archive_metadata', array(
+        'label'      => __('Show Metadata', 'flat'),
+        'section'    => 'layout_archive',
+        'settings'   => 'flat_theme_options[archive_metadata]',
+        'type'       => 'checkbox'
+    ));
+    $wp_customize->add_setting('flat_theme_options[archive_content]', array(
+        'default'        => '1',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+    ));
+    $wp_customize->add_control('archive_content', array(
+        'label'      => __('Show Full Content', 'flat'),
+        'section'    => 'layout_archive',
+        'settings'   => 'flat_theme_options[archive_content]',
+        'type'       => 'checkbox'
+    ));
 }
 add_action( 'customize_register', 'flat_customize_register' );
 
