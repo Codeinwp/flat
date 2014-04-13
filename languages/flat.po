@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-04-03 19:08+0700\n"
-"PO-Revision-Date: 2014-04-03 19:08+0700\n"
+"POT-Creation-Date: 2014-04-13 21:52+0700\n"
+"PO-Revision-Date: 2014-04-13 21:52+0700\n"
 "Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: YoArts <hi@yoarts.com>\n"
 "Language: en_US\n"
@@ -124,21 +124,21 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: ../content.php:8 ../content.php:18
-#, php-format
-msgid "Permalink to %s"
-msgstr ""
-
-#: ../content.php:28
+#: ../content-single.php:14 ../content.php:17
 msgid "Continue reading"
 msgstr ""
 
-#: ../content.php:29 ../page.php:15
+#: ../content-single.php:15 ../content.php:18 ../page.php:15
 msgid "Pages:"
 msgstr ""
 
-#: ../content.php:34
+#: ../content-single.php:19
 msgid " "
+msgstr ""
+
+#: ../content.php:4 ../content.php:11
+#, php-format
+msgid "Permalink to %s"
 msgstr ""
 
 #: ../footer.php:4
@@ -159,15 +159,15 @@ msgstr ""
 msgid "Navigation Menu"
 msgstr ""
 
-#: ../functions.php:48
+#: ../functions.php:49
 msgid "Main Widget Area"
 msgstr ""
 
-#: ../functions.php:50
+#: ../functions.php:51
 msgid "Appears in the sidebar section of the site"
 msgstr ""
 
-#: ../functions.php:61
+#: ../functions.php:62
 #, php-format
 msgid ""
 "<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class="
@@ -176,40 +176,40 @@ msgid ""
 "rel=\"author\">%5$s</a></span></span>"
 msgstr ""
 
-#: ../functions.php:70
+#: ../functions.php:71
 msgid "0 Comment"
 msgstr ""
 
-#: ../functions.php:70
+#: ../functions.php:71
 msgid "1 Comment"
 msgstr ""
 
-#: ../functions.php:70
+#: ../functions.php:71
 msgid "% Comments"
 msgstr ""
 
-#: ../functions.php:82
+#: ../functions.php:83
 msgid "<i class=\"fa fa-chevron-right\"></i>"
 msgstr ""
 
-#: ../functions.php:86
+#: ../functions.php:87
 msgid "<i class=\"fa fa-chevron-left\"></i>"
 msgstr ""
 
-#: ../functions.php:89
+#: ../functions.php:90
 #, php-format
 msgid "Page %1$s of %2$s"
 msgstr ""
 
-#: ../functions.php:106
+#: ../functions.php:107
 msgid "Post navigation"
 msgstr ""
 
-#: ../header.php:21
+#: ../header.php:22
 msgid "<i class=\"fa fa-gear\"></i>"
 msgstr ""
 
-#: ../header.php:22
+#: ../header.php:23
 msgid "<i class=\"fa fa-bars\"></i>"
 msgstr ""
 
@@ -241,8 +241,32 @@ msgstr ""
 msgid "Heading Font Family"
 msgstr ""
 
-#: ../inc/customizer.php:145
+#: ../inc/customizer.php:146
 msgid "Sub-Heading Font Family"
+msgstr ""
+
+#: ../inc/customizer.php:159
+msgid "Single Post"
+msgstr ""
+
+#: ../inc/customizer.php:168 ../inc/customizer.php:205
+msgid "Show Featured Image"
+msgstr ""
+
+#: ../inc/customizer.php:179 ../inc/customizer.php:216
+msgid "Show Metadata"
+msgstr ""
+
+#: ../inc/customizer.php:190
+msgid "Show Author Box"
+msgstr ""
+
+#: ../inc/customizer.php:196
+msgid "Archive Pages"
+msgstr ""
+
+#: ../inc/customizer.php:227
+msgid "Show Full Content"
 msgstr ""
 
 #: ../page.php:13

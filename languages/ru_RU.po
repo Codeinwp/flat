@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-04-03 19:07+0700\n"
-"PO-Revision-Date: 2014-04-03 19:56+0700\n"
+"POT-Creation-Date: 2014-04-13 21:56+0700\n"
+"PO-Revision-Date: 2014-04-13 21:56+0700\n"
 "Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: YoArts <hi@yoarts.com>\n"
 "Language: ru\n"
@@ -132,22 +132,22 @@ msgid ""
 msgstr ""
 "Кажется, мы не можем найти то, что вы ищете. Возможно, поиск может помочь."
 
-#: ../content.php:8 ../content.php:18
-#, php-format
-msgid "Permalink to %s"
-msgstr "Постоянная ссылка на %s"
-
-#: ../content.php:28
+#: ../content-single.php:14 ../content.php:17
 msgid "Continue reading"
 msgstr "Продолжить чтение"
 
-#: ../content.php:29 ../page.php:15
+#: ../content-single.php:15 ../content.php:18 ../page.php:15
 msgid "Pages:"
 msgstr "Страницы:"
 
-#: ../content.php:34
+#: ../content-single.php:19
 msgid " "
 msgstr ""
+
+#: ../content.php:4 ../content.php:11
+#, php-format
+msgid "Permalink to %s"
+msgstr "Постоянная ссылка на %s"
 
 #: ../footer.php:4
 msgid "http://wordpress.org/"
@@ -167,15 +167,15 @@ msgstr "Тема: %1$s Автор: %2$s."
 msgid "Navigation Menu"
 msgstr "Основное меню"
 
-#: ../functions.php:48
+#: ../functions.php:49
 msgid "Main Widget Area"
 msgstr "Основная область для виджетов"
 
-#: ../functions.php:50
+#: ../functions.php:51
 msgid "Appears in the sidebar section of the site"
 msgstr "Появится в разделе боковой панели сайта"
 
-#: ../functions.php:61
+#: ../functions.php:62
 #, php-format
 msgid ""
 "<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class="
@@ -188,40 +188,40 @@ msgstr ""
 "\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
 "rel=\"author\">%5$s</a></span></span>"
 
-#: ../functions.php:70
+#: ../functions.php:71
 msgid "0 Comment"
 msgstr "0 Комментарий"
 
-#: ../functions.php:70
+#: ../functions.php:71
 msgid "1 Comment"
 msgstr "1 Комментарий"
 
-#: ../functions.php:70
+#: ../functions.php:71
 msgid "% Comments"
 msgstr "% Комментарий"
 
-#: ../functions.php:82
+#: ../functions.php:83
 msgid "<i class=\"fa fa-chevron-right\"></i>"
 msgstr "<i class=\"fa fa-chevron-right\"></i>"
 
-#: ../functions.php:86
+#: ../functions.php:87
 msgid "<i class=\"fa fa-chevron-left\"></i>"
 msgstr "<i class=\"fa fa-chevron-left\"></i>"
 
-#: ../functions.php:89
+#: ../functions.php:90
 #, php-format
 msgid "Page %1$s of %2$s"
 msgstr "Страница %1$s of %2$s"
 
-#: ../functions.php:106
+#: ../functions.php:107
 msgid "Post navigation"
 msgstr "Пост навигаций"
 
-#: ../header.php:21
+#: ../header.php:22
 msgid "<i class=\"fa fa-gear\"></i>"
 msgstr ""
 
-#: ../header.php:22
+#: ../header.php:23
 msgid "<i class=\"fa fa-bars\"></i>"
 msgstr ""
 
@@ -253,9 +253,34 @@ msgstr "Основной шрифт"
 msgid "Heading Font Family"
 msgstr "Шрифт заголовков"
 
-#: ../inc/customizer.php:145
+#: ../inc/customizer.php:146
 msgid "Sub-Heading Font Family"
 msgstr "Шрифт подзаголовков"
+
+#: ../inc/customizer.php:159
+msgid "Single Post"
+msgstr ""
+
+#: ../inc/customizer.php:168 ../inc/customizer.php:205
+msgid "Show Featured Image"
+msgstr ""
+
+#: ../inc/customizer.php:179 ../inc/customizer.php:216
+msgid "Show Metadata"
+msgstr ""
+
+#: ../inc/customizer.php:190
+msgid "Show Author Box"
+msgstr ""
+
+#: ../inc/customizer.php:196
+#, fuzzy
+msgid "Archive Pages"
+msgstr "Архивы"
+
+#: ../inc/customizer.php:227
+msgid "Show Full Content"
+msgstr ""
 
 #: ../page.php:13
 msgid "Continue reading <span class=\"meta-nav\">...</span>"

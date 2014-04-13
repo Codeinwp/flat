@@ -4,136 +4,140 @@ msgstr ""
 "POT-Creation-Date: 2014-04-13 21:56+0700\n"
 "PO-Revision-Date: 2014-04-13 21:56+0700\n"
 "Last-Translator: Thanh Luu <hi@yoarts.com>\n"
-"Language-Team: Wolforg <contact@wolforg.eu>\n"
-"Language: fr\n"
+"Language-Team: YoArts <hi@yoarts.com>\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:3
 msgid "Not Found"
-msgstr "Non Trouvé"
+msgstr "No encontrado"
 
 #: ../404.php:5
 msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr "Il semble que rien ne se trouve à cet endroit. Essayer une recherche ?"
+msgstr ""
+"Parece que no hay nada en esta ubicación. ¿Probar quizá con una búsqueda?"
 
 #: ../archive.php:5
 #, php-format
 msgid "Category: %s"
-msgstr "Catégorie : %s"
+msgstr "Categoría: %s"
 
 #: ../archive.php:8
 #, php-format
 msgid "Tag: %s"
-msgstr "Mot-clé : %s"
+msgstr "Etiqueta: %s"
 
 #: ../archive.php:13
 #, php-format
 msgid "Author: %s"
-msgstr "Auteur : %s"
+msgstr "Autor: %s"
 
 #: ../archive.php:18
 #, php-format
 msgid "Day: %s"
-msgstr "Jour : %s"
+msgstr "Día: %s"
 
 #: ../archive.php:21
 #, php-format
 msgid "Month: %s"
-msgstr "Mois : %s"
+msgstr "Mes: %s"
 
 #: ../archive.php:24
 #, php-format
 msgid "Year: %s"
-msgstr "Année : %s"
+msgstr "Año: %s"
 
 #: ../archive.php:27
 msgid "Asides"
-msgstr "Annonces"
+msgstr "Anuncios"
 
 #: ../archive.php:30
 msgid "Images"
-msgstr "Images"
+msgstr "Imágenes"
 
 #: ../archive.php:33
 msgid "Videos"
-msgstr "Vidéos"
+msgstr "Videos"
 
 #: ../archive.php:36
 msgid "Quotes"
-msgstr "Citations"
+msgstr "Citas"
 
 #: ../archive.php:39
 msgid "Links"
-msgstr "Liens"
+msgstr "Enlaces"
 
 #: ../archive.php:42 ../sidebar.php:5
 msgid "Archives"
-msgstr "Archives"
+msgstr "Archivo"
 
 #: ../archive.php:60 ../author-bio.php:6
 #, php-format
 msgid "About %s"
-msgstr "A propos de %s"
+msgstr "Acerca de %s"
 
 #: ../author-bio.php:10
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Voir tous les articles par %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+"Ver todos las publicaciones por %s <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../comments.php:26
 msgid "Comment navigation"
-msgstr "Navigation Commentaires"
+msgstr "Navegación entre comentarios"
 
 #: ../comments.php:27
 msgid "&larr; Older Comments"
-msgstr "&laquo; Commentaires plus Anciens"
+msgstr "&larr; Comentarios más antiguos"
 
 #: ../comments.php:28
 msgid "Newer Comments &rarr;"
-msgstr "Commentaires plus Récents &raquo;"
+msgstr "Comentarios más nuevos &rarr;"
 
 #: ../comments.php:33
 msgid "Comments are closed."
-msgstr "Commentaires clos."
+msgstr "Los comentarios están cerrados."
 
 #: ../content-none.php:1
 msgid "Nothing Found"
-msgstr "Rien de trouvé"
+msgstr "No se encontró nada"
 
 #: ../content-none.php:6
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Prêt à publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
+"¿Listo para tu primera publicación? <a href=\"%1$s\">Comienza aquí</a>."
 
 #: ../content-none.php:10
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "Désolé, mais rien ne correspond à votre recherche."
+msgstr ""
+"Lo sentimos, pero nada coincidió con tus términos de búsqueda. Por favor, "
+"vuelve a intentarlo con diferentes palabras clave."
 
 #: ../content-none.php:15
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr "Nous ne trouvons pas ce que vous recherchez. Essayez une recherche"
+msgstr ""
+"Parece que no podemos encontrar lo que estás buscando. Quizá una búsqueda "
+"pueda ayudar."
 
 #: ../content-single.php:14 ../content.php:17
 msgid "Continue reading"
-msgstr "Lire la suite &laquo;"
+msgstr "Continuar leyendo"
 
 #: ../content-single.php:15 ../content.php:18 ../page.php:15
 msgid "Pages:"
-msgstr "Pages :"
+msgstr "Páginas:"
 
 #: ../content-single.php:19
 msgid " "
@@ -142,7 +146,7 @@ msgstr " "
 #: ../content.php:4 ../content.php:11
 #, php-format
 msgid "Permalink to %s"
-msgstr "Lien permanent pour %s"
+msgstr "Enlace permanente a %s"
 
 #: ../footer.php:4
 msgid "http://wordpress.org/"
@@ -151,24 +155,24 @@ msgstr "http://wordpress.org/"
 #: ../footer.php:4
 #, php-format
 msgid "Proudly powered by %s"
-msgstr "Fièrement propulsé par %s."
+msgstr "Con la tecnología de %s"
 
 #: ../footer.php:5
 #, php-format
 msgid "Theme: %1$s by %2$s."
-msgstr "Thème: %1s par %2$s."
+msgstr "Tema: %1$s por %2$s."
 
 #: ../functions.php:11
 msgid "Navigation Menu"
-msgstr "Menu de navigation"
+msgstr "Menú de navegación"
 
 #: ../functions.php:49
 msgid "Main Widget Area"
-msgstr "Zone Widget Principale"
+msgstr "Área de widgets principal"
 
 #: ../functions.php:51
 msgid "Appears in the sidebar section of the site"
-msgstr "Affiché dans la barre du site"
+msgstr "Aparece en la barra lateral del sitio"
 
 #: ../functions.php:62
 #, php-format
@@ -179,21 +183,21 @@ msgid ""
 "rel=\"author\">%5$s</a></span></span>"
 msgstr ""
 "<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class="
-"\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> par <span class="
+"\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> por <span class="
 "\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
 "rel=\"author\">%5$s</a></span></span>"
 
 #: ../functions.php:71
 msgid "0 Comment"
-msgstr "1 commentaire"
+msgstr "0 comentarios"
 
 #: ../functions.php:71
 msgid "1 Comment"
-msgstr "1 Commentaire"
+msgstr "1 comentario"
 
 #: ../functions.php:71
 msgid "% Comments"
-msgstr "% Commentaires"
+msgstr "% comentarios"
 
 #: ../functions.php:83
 msgid "<i class=\"fa fa-chevron-right\"></i>"
@@ -206,51 +210,51 @@ msgstr "<i class=\"fa fa-chevron-left\"></i>"
 #: ../functions.php:90
 #, php-format
 msgid "Page %1$s of %2$s"
-msgstr "Page %1$s sur %2$s"
+msgstr "Página %1$s de %2$s"
 
 #: ../functions.php:107
 msgid "Post navigation"
-msgstr "Navigation Article"
+msgstr "Navegación entre publicaciones"
 
 #: ../header.php:22
 msgid "<i class=\"fa fa-gear\"></i>"
-msgstr ""
+msgstr "<i class=\"fa fa-gear\"></i>"
 
 #: ../header.php:23
 msgid "<i class=\"fa fa-bars\"></i>"
-msgstr ""
+msgstr "<i class=\"fa fa-bars\"></i>"
 
 #: ../inc/customizer.php:22
 msgid "Site Title Font Family"
-msgstr "Famille Police Titre Site"
+msgstr "Familia de fuentes del título del sitio"
 
 #: ../inc/customizer.php:37
 msgid "Site Logo"
-msgstr "Logo Site"
+msgstr "Logo del sitio"
 
 #: ../inc/customizer.php:63
 msgid "Site Favicon"
-msgstr "Favicon Site"
+msgstr "Favicon del sitio"
 
 #: ../inc/customizer.php:73
 msgid "Sidebar Background Color"
-msgstr "Couleur Fond Barre"
+msgstr "Color de fondo de la barra lateral"
 
 #: ../inc/customizer.php:95
 msgid "Typography"
-msgstr "Typographie"
+msgstr "Tipografía"
 
 #: ../inc/customizer.php:105
 msgid "Global Font Family"
-msgstr "Famille de police globale"
+msgstr "Familia de fuentes global"
 
 #: ../inc/customizer.php:125
 msgid "Heading Font Family"
-msgstr "Famille Police En-tête"
+msgstr "Familia de fuentes del título"
 
 #: ../inc/customizer.php:146
 msgid "Sub-Heading Font Family"
-msgstr "Famille Police Sous-titre"
+msgstr "Familia de fuentes del subtítulo"
 
 #: ../inc/customizer.php:159
 msgid "Single Post"
@@ -271,7 +275,7 @@ msgstr ""
 #: ../inc/customizer.php:196
 #, fuzzy
 msgid "Archive Pages"
-msgstr "Archives"
+msgstr "Archivo"
 
 #: ../inc/customizer.php:227
 msgid "Show Full Content"
@@ -279,16 +283,16 @@ msgstr ""
 
 #: ../page.php:13
 msgid "Continue reading <span class=\"meta-nav\">...</span>"
-msgstr "Lire la suite <span class=\"meta-nav\">...</span>"
+msgstr "Sigue leyendo <span class=\"meta-nav\">…</span>"
 
 #: ../search.php:4
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Résultats de Recherche pour : %s"
+msgstr "Resultados de búsqueda para: %s"
 
 #: ../searchform.php:2
 msgid "Search"
-msgstr "Rechercher"
+msgstr "Buscar"
 
 #: ../sidebar.php:12
 msgid "Meta"
