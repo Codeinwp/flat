@@ -71,14 +71,6 @@ function flat_entry_meta( $show_sep = true ) {
     echo '<span class="comments-link">'.comments_popup_link( __( '0 Comment', 'flat' ), __( '1 Comment', 'flat' ), __( '% Comments', 'flat' ) ) . '</span>';
 }
 
-// return whether we display post metadata on single post ($is_single = true) or archive pages ($is_single = false)
-function flat_show_metadata($is_single) {
-    if ($is_single) {
-        return flat_get_theme_option('single_metadata') == '1';
-    }
-    return flat_get_theme_option('archive_metadata') == '1';
-}
-
 function flat_paging_nav() {
 	global $wp_query, $paged;
 
