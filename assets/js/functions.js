@@ -19,7 +19,9 @@
       $('#site-navigation .menu-item-has-children, #site-navigation .page_item_has_children')
       .not('.current-menu-parent, .current_page_parent, .current_page_ancestor, .current-menu-ancestor')
       .hover(function() {
-        $(this).children('.fa').toggleClass('open').next('ul').stop(true, true).slideToggle(300);
+        $(this).children('.fa').toggleClass('open').next('ul').stop(true, true).delay(200).slideDown();
+      },function() {
+        $(this).children('.fa').toggleClass('open').next('ul').stop(true, true).delay(500).slideUp();
       });
     }
   });
