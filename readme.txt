@@ -21,8 +21,8 @@ Features list
  - Twitter Bootstrap 3.1.1
  - Font Awesome 4.0.3
  - Write on HTML5 / LESS
- - Compatible up to WordPress 3.8.1
- - Customize: Logo, Favicon, Sidebar Background Color
+ - Compatible up to WordPress 3.8.2
+ - Customize: Logo, Favicon, Sidebar Background Color, Archive Posts, Single Post
  - Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
  - Translation Ready (Language available: English, German, French, Russian, Spanish)
 
