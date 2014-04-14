@@ -160,7 +160,7 @@ function flat_customize_register( $wp_customize ) {
     'priority' => 110,
   ));
   $wp_customize->add_setting('flat_theme_options[single_featured_image]', array(
-    'default'        => '0',
+    'default'        => '1',
     'capability'     => 'edit_theme_options',
     'type'           => 'option',
   ));
@@ -171,7 +171,7 @@ function flat_customize_register( $wp_customize ) {
     'type'       => 'checkbox'
   ) );
   $wp_customize->add_setting('flat_theme_options[single_metadata]', array(
-    'default'        => '1',
+    'default'        => '0',
     'capability'     => 'edit_theme_options',
     'type'           => 'option',
   ));
@@ -182,7 +182,7 @@ function flat_customize_register( $wp_customize ) {
     'type'       => 'checkbox'
   ) );
   $wp_customize->add_setting('flat_theme_options[single_author_box]', array(
-    'default'        => '1',
+    'default'        => '0',
     'capability'     => 'edit_theme_options',
     'type'           => 'option',
   ));
@@ -197,7 +197,7 @@ function flat_customize_register( $wp_customize ) {
     'priority' => 100,
   ));
   $wp_customize->add_setting('flat_theme_options[archive_featured_image]', array(
-    'default'        => '1',
+    'default'        => '0',
     'capability'     => 'edit_theme_options',
     'type'           => 'option',
   ));
@@ -208,7 +208,7 @@ function flat_customize_register( $wp_customize ) {
     'type'       => 'checkbox'
   ) );
   $wp_customize->add_setting('flat_theme_options[archive_metadata]', array(
-    'default'        => '1',
+    'default'        => '0',
     'capability'     => 'edit_theme_options',
     'type'           => 'option',
   ));
@@ -219,7 +219,7 @@ function flat_customize_register( $wp_customize ) {
     'type'       => 'checkbox'
   ));
   $wp_customize->add_setting('flat_theme_options[archive_content]', array(
-    'default'        => '1',
+    'default'        => '0',
     'capability'     => 'edit_theme_options',
     'type'           => 'option',
   ));

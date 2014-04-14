@@ -29,10 +29,10 @@ add_action( 'after_setup_theme', 'flat_setup' );
 function flat_scripts_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
-	wp_enqueue_style( 'flat-template', get_template_directory_uri() . '/assets/css/template.css', array(), '1.3.1' );
-	wp_enqueue_style( 'flat-style', get_stylesheet_uri(), array(), '1.3.1' );
+	wp_enqueue_style( 'flat-template', get_template_directory_uri() . '/assets/css/template.css', array(), '1.3.4' );
+	wp_enqueue_style( 'flat-style', get_stylesheet_uri(), array(), '1.3.4' );
 	wp_enqueue_script( 'flat-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap-3.1.1.min.js', array( 'jquery' ), '3.1.1', true );
-    wp_enqueue_script( 'flat-functions', get_template_directory_uri() . '/assets/js/functions.js', array( 'jquery', 'flat-bootstrap' ), '1.3.1', true );
+    wp_enqueue_script( 'flat-functions', get_template_directory_uri() . '/assets/js/functions.js', array( 'jquery', 'flat-bootstrap' ), '1.3.4', true );
 }
 add_action( 'wp_enqueue_scripts', 'flat_scripts_styles' );
 

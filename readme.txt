@@ -60,6 +60,15 @@ Contributers
 
 Changelog
 ----
+1.3.4
+* Tweak: Change some default options
+
+1.3.3
+* Fix: Fatal error
+
+1.3.2
+* Fix: Syntax error on single post
+
 1.3.1
 * Tweak: Posts display options
 * Fix: Syntax error on single post
