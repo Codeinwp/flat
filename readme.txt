@@ -31,32 +31,32 @@ Resources
 Flat is built with the following resources:
 
 Code based on DW Minion
-	- http://www.designwall.com/wordpress/themes/dw-minion/
-	- Copyright: DesignWall, http://www.designwall.com/
-	- License under GPL v3.0: http://www.gnu.org/licenses/gpl-3.0.html
+ - http://www.designwall.com/wordpress/themes/dw-minion/
+ - Copyright: DesignWall, http://www.designwall.com/
+ - License under GPL v3.0: http://www.gnu.org/licenses/gpl-3.0.html
 
 Bootstrap 3.1.1
-	- http://getbootstrap.com/
-	- Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
+ - http://getbootstrap.com/
+ - Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
 
 Icon Fonts: Font Awesome
-	- http://fortawesome.github.io/Font-Awesome/
-	- Copyright: Dave Gandy, twitter.com/davegandy
-	- Font Awesome licensed under SIL OFL 1.1: http://scripts.sil.org/OFL
-	- Code licensed under MIT License: http://opensource.org/licenses/mit-license.html
+ - http://fortawesome.github.io/Font-Awesome/
+ - Copyright: Dave Gandy, twitter.com/davegandy
+ - Font Awesome licensed under SIL OFL 1.1: http://scripts.sil.org/OFL
+ - Code licensed under MIT License: http://opensource.org/licenses/mit-license.html
 
 5 Blurred Backgrounds Vol.1
-	- http://graphicburger.com/5-blurred-backgrounds-vol-1/
-	- License: http://graphicburger.com/license/
+ - http://graphicburger.com/5-blurred-backgrounds-vol-1/
+ - License: http://graphicburger.com/license/
 
 Contributers
 ----
-  - Richard Alexander von Moltke Necochea: http://twitter.com/ravmn
-	- Фарух Джапаркулов
-	- Didier: http://www.wptrads.com/theme/flat-2/
-	- abovethewater: https://github.com/abovethewater
-	- Kevin Papst: https://github.com/kevinpapst
-	- Ashfame: https://github.com/ashfame
+ - Richard Alexander von Moltke Necochea: http://twitter.com/ravmn
+ - Фарух Джапаркулов
+ - Didier: http://www.wptrads.com/theme/flat-2/
+ - abovethewater: https://github.com/abovethewater
+ - Kevin Papst: https://github.com/kevinpapst
+ - Ashfame: https://github.com/ashfame
 
 Changelog
 ----
