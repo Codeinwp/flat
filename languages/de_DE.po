@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
 "POT-Creation-Date: 2014-04-14 11:54+0700\n"
-"PO-Revision-Date: 2014-04-14 11:54+0700\n"
-"Last-Translator: Thanh Luu <hi@yoarts.com>\n"
+"PO-Revision-Date: 2014-04-14 16:40+0100\n"
+"Last-Translator: Kevin Papst <kpapst@gmx.net>\n"
 "Language-Team: YoArts <hi@yoarts.com>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -258,27 +258,27 @@ msgstr "Untertitel Schriftart"
 
 #: ../inc/customizer.php:159
 msgid "Single Post"
-msgstr ""
+msgstr "Beitragsseiten"
 
 #: ../inc/customizer.php:168 ../inc/customizer.php:205
 msgid "Hide Featured Image"
-msgstr ""
+msgstr "Verstecke Beitragsbild"
 
 #: ../inc/customizer.php:179 ../inc/customizer.php:216
 msgid "Hide Metadata"
-msgstr ""
+msgstr "Verstecke Metadaten"
 
 #: ../inc/customizer.php:190
 msgid "Hide Author Box"
-msgstr ""
+msgstr "Verstecke Autor Box"
 
 #: ../inc/customizer.php:196
 msgid "Archive Pages"
-msgstr "Archiv Seiten"
+msgstr "Archivseiten"
 
 #: ../inc/customizer.php:227
 msgid "Show Post Excerpt"
-msgstr ""
+msgstr "Zeige Artikelauszug"
 
 #: ../page.php:13
 msgid "Continue reading <span class=\"meta-nav\">...</span>"
