@@ -165,7 +165,7 @@ function flat_customize_register( $wp_customize ) {
     'type'           => 'option',
   ));
   $wp_customize->add_control('single_featured_image', array(
-    'label'      => __('Show Featured Image', 'flat'),
+    'label'      => __('Hide Featured Image', 'flat'),
     'section'    => 'layout_single',
     'settings'   => 'flat_theme_options[single_featured_image]',
     'type'       => 'checkbox'
@@ -176,7 +176,7 @@ function flat_customize_register( $wp_customize ) {
     'type'           => 'option',
   ));
   $wp_customize->add_control('single_metadata', array(
-    'label'      => __('Show Metadata', 'flat'),
+    'label'      => __('Hide Metadata', 'flat'),
     'section'    => 'layout_single',
     'settings'   => 'flat_theme_options[single_metadata]',
     'type'       => 'checkbox'
@@ -187,7 +187,7 @@ function flat_customize_register( $wp_customize ) {
     'type'           => 'option',
   ));
   $wp_customize->add_control('single_author_box', array(
-    'label'      => __('Show Author Box', 'flat'),
+    'label'      => __('Hide Author Box', 'flat'),
     'section'    => 'layout_single',
     'settings'   => 'flat_theme_options[single_author_box]',
     'type'       => 'checkbox'
@@ -202,7 +202,7 @@ function flat_customize_register( $wp_customize ) {
     'type'           => 'option',
   ));
   $wp_customize->add_control('archive_featured_image', array(
-    'label'      => __('Show Featured Image', 'flat'),
+    'label'      => __('Hide Featured Image', 'flat'),
     'section'    => 'layout_archive',
     'settings'   => 'flat_theme_options[archive_featured_image]',
     'type'       => 'checkbox'
@@ -213,7 +213,7 @@ function flat_customize_register( $wp_customize ) {
     'type'           => 'option',
   ));
   $wp_customize->add_control('archive_metadata', array(
-    'label'      => __('Show Metadata', 'flat'),
+    'label'      => __('Hide Metadata', 'flat'),
     'section'    => 'layout_archive',
     'settings'   => 'flat_theme_options[archive_metadata]',
     'type'       => 'checkbox'
@@ -224,7 +224,7 @@ function flat_customize_register( $wp_customize ) {
     'type'           => 'option',
   ));
   $wp_customize->add_control('archive_content', array(
-    'label'      => __('Show Full Content', 'flat'),
+    'label'      => __('Show Post Excerpt', 'flat'),
     'section'    => 'layout_archive',
     'settings'   => 'flat_theme_options[archive_content]',
     'type'       => 'checkbox'

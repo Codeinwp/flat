@@ -60,6 +60,10 @@ Contributers
 
 Changelog
 ----
+1.3.1
+* Tweak: Posts display options
+* Fix: Syntax error on single post
+
 1.3.0
 * Add: Posts display options (Contribute by @kevinpapst)
 * Add: Spanish translation (Contribute by Richard Alexander von Moltke Necochea)

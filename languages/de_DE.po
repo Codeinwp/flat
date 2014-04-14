@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-04-13 21:52+0700\n"
-"PO-Revision-Date: 2014-04-13 21:56+0700\n"
+"POT-Creation-Date: 2014-04-14 11:54+0700\n"
+"PO-Revision-Date: 2014-04-14 11:54+0700\n"
 "Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: YoArts <hi@yoarts.com>\n"
 "Language: de_DE\n"
@@ -261,15 +261,15 @@ msgid "Single Post"
 msgstr ""
 
 #: ../inc/customizer.php:168 ../inc/customizer.php:205
-msgid "Show Featured Image"
+msgid "Hide Featured Image"
 msgstr ""
 
 #: ../inc/customizer.php:179 ../inc/customizer.php:216
-msgid "Show Metadata"
+msgid "Hide Metadata"
 msgstr ""
 
 #: ../inc/customizer.php:190
-msgid "Show Author Box"
+msgid "Hide Author Box"
 msgstr ""
 
 #: ../inc/customizer.php:196
@@ -277,7 +277,7 @@ msgid "Archive Pages"
 msgstr "Archiv Seiten"
 
 #: ../inc/customizer.php:227
-msgid "Show Full Content"
+msgid "Show Post Excerpt"
 msgstr ""
 
 #: ../page.php:13
