@@ -12,12 +12,14 @@
     <div class="entry-thumbnail"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'flat' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a></div>
   <?php endif; ?>
   <?php $archive_content = flat_get_theme_option('archive_content'); ?>
-  <?php if ( is_search() || ( !empty( $archive_content ) ) ) : ?>
-  <div class="entry-summary"><?php the_excerpt(); ?></div>
+  <?php if( empty( $archive_content ) ) : ?>
+    <div class="entry-content">
+      <?php the_content( __( 'Continue reading', 'flat' ) ); ?>
+      <?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'flat' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+    </div>
   <?php else : ?>
-  <div class="entry-content">
-    <?php the_content( __( 'Continue reading', 'flat' ) ); ?>
-    <?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'flat' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-  </div>
+    <div class="entry-summary"><?php the_excerpt(); ?></div>
+  <?php else : ?>
+  
   <?php endif; ?>
 </article>

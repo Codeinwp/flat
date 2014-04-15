@@ -51,6 +51,7 @@ Icon Fonts: Font Awesome
 
 Contributers
 ----
+ - Teddy Rilliot: https://github.com/TeddyRilliot
  - Richard Alexander von Moltke Necochea: http://twitter.com/ravmn
  - Фарух Джапаркулов
  - Didier: http://www.wptrads.com/theme/flat-2/
@@ -60,6 +61,11 @@ Contributers
 
 Changelog
 ----
+1.3.5
+* Tweak: Update German translation (Contribute by @kevinpapst)
+* Tweak: Update French translation (Contribute by @TeddyRilliot)
+* Tweak: Content display on Archive Pages
+
 1.3.4
 * Tweak: Change some default options
 
