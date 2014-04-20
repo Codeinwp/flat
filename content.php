@@ -19,7 +19,5 @@
     </div>
   <?php else : ?>
     <div class="entry-summary"><?php the_excerpt(); ?></div>
-  <?php else : ?>
-  
   <?php endif; ?>
 </article>
