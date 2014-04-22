@@ -56,7 +56,7 @@ Contributers
  - Фарух Джапаркулов
  - Didier: http://www.wptrads.com/theme/flat-2/
  - abovethewater: https://github.com/abovethewater
- - Kevin Papst: https://github.com/kevinpapst
+ - Kevin Papst: http://www.kevinpapst.de/wordpress-flat-theme/
  - Ashfame: https://github.com/ashfame
 
 Changelog
