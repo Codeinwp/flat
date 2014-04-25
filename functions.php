@@ -29,10 +29,10 @@ add_action( 'after_setup_theme', 'flat_setup' );
 function flat_scripts_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
-	wp_enqueue_style( 'flat-template', get_template_directory_uri() . '/assets/css/template.css', array(), '1.3.4' );
-	wp_enqueue_style( 'flat-style', get_stylesheet_uri(), array(), '1.3.4' );
+	wp_enqueue_style( 'flat-template', get_template_directory_uri() . '/assets/css/template.css', array(), '1.3.7' );
+	wp_enqueue_style( 'flat-style', get_stylesheet_uri(), array(), '1.3.7' );
 	wp_enqueue_script( 'flat-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap-3.1.1.min.js', array( 'jquery' ), '3.1.1', true );
-    wp_enqueue_script( 'flat-functions', get_template_directory_uri() . '/assets/js/functions.js', array( 'jquery', 'flat-bootstrap' ), '1.3.4', true );
+    wp_enqueue_script( 'flat-functions', get_template_directory_uri() . '/assets/js/functions.js', array( 'jquery', 'flat-bootstrap' ), '1.3.7', true );
 }
 add_action( 'wp_enqueue_scripts', 'flat_scripts_styles' );
 
@@ -72,26 +72,48 @@ function flat_entry_meta( $show_sep = true ) {
 }
 
 function flat_paging_nav() {
-	global $wp_query, $paged;
+  // Don't print empty markup if there's only one page.
+  if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+    return;
+  }
 
-	if ( $wp_query->max_num_pages < 2 && ( is_home() || is_archive() || is_search() ) )
-		return; ?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<div class="nav-links">
+  $paged        = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+  $pagenum_link = html_entity_decode( get_pagenum_link() );
+  $query_args   = array();
+  $url_parts    = explode( '?', $pagenum_link );
 
-			<?php if ( get_next_posts_link() ) : ?>
-				<div class="nav-next"><?php next_posts_link( __( '<i class="fa fa-chevron-right"></i>', 'flat' ) ); ?></div>
-			<?php endif; ?>
+  if ( isset( $url_parts[1] ) ) {
+    wp_parse_str( $url_parts[1], $query_args );
+  }
 
-			<?php if ( get_previous_posts_link() ) : ?>
-				<div class="nav-previous"><?php previous_posts_link( __( '<i class="fa fa-chevron-left"></i>', 'flat' ) ); ?></div>
-			<?php endif; ?>
+  $pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+  $pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
 
-			<div class="nav-current-page"><?php echo sprintf( __( 'Page %1$s of %2$s', 'flat' ), $paged, $wp_query->max_num_pages ) ?></div>
-		
-		</div>
-	</nav>
-	<?php
+  $format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+  $format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+
+  // Set up paginated links.
+  $links = paginate_links( array(
+    'base'     => $pagenum_link,
+    'format'   => $format,
+    'total'    => $GLOBALS['wp_query']->max_num_pages,
+    'current'  => $paged,
+    'mid_size' => 4,
+    'add_args' => array_map( 'urlencode', $query_args ),
+    'prev_text' => __( '<i class="fa fa-chevron-left"></i>', 'flat' ),
+    'next_text' => __( '<i class="fa fa-chevron-right"></i>', 'flat' ),
+  ) );
+
+  if ( $links ) :
+
+  ?>
+  <nav class="navigation paging-navigation" role="navigation">
+    <div class="nav-links">
+      <?php echo $links; ?>
+    </div>
+  </nav>
+  <?php
+  endif;
 }
 
 if ( ! function_exists( 'flat_post_nav' ) ) :

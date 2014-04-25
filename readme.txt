@@ -45,10 +45,6 @@ Icon Fonts: Font Awesome
  - Font Awesome licensed under SIL OFL 1.1: http://scripts.sil.org/OFL
  - Code licensed under MIT License: http://opensource.org/licenses/mit-license.html
 
-5 Blurred Backgrounds Vol.1
- - http://graphicburger.com/5-blurred-backgrounds-vol-1/
- - License: http://graphicburger.com/license/
-
 Contributers
 ----
  - Teddy Rilliot: https://github.com/TeddyRilliot
@@ -61,6 +57,12 @@ Contributers
 
 Changelog
 ----
+1.3.7
+* Tweak: Using Pagging instead of Next/Previous Posts button
+
+1.3.6
+* Tweak: Changed default background
+
 1.3.5
 * Tweak: Update German translation (Contribute by @kevinpapst)
 * Tweak: Update French translation (Contribute by @TeddyRilliot)

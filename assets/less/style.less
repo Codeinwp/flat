@@ -709,6 +709,7 @@ input#submit {
 	padding: 30px 90px;
 	position: relative;
 	background: @gray-lighter;
+	text-align: center;
 	.clearfix();
 
 	@media (max-width: @screen-sm-max) {
@@ -719,40 +720,23 @@ input#submit {
 		padding: 30px;
 	}
 
-	.nav-current-page {
-		left: 0;
-		line-height: 40px;
-		position: absolute;
-		right: 0;
-		text-align: center;
+	.page-numbers {
+		.btn();
+		.btn-success();
 	}
 
-	a {
-		background: #232323;
-		line-height: 40px;
-		width: 40px;
-		height: 40px;
-		display: block;
-		text-align: center;
-		color: #fff;
-		border-radius: @border-radius-base;
-
-		&:hover, &:focus {
-			background: #2e2e2e;
-			color: @gray-light;
-		}
+	.current,
+	.dots {
+		.btn-default();
+		border-color: transparent !important;
 	}
 
-	.nav-previous {
+	.prev {
 		float: left;
-		position: relative;
-		z-index: 1;
 	}
 
-	.nav-next {
+	.next {
 		float: right;
-		position: relative;
-		z-index: 1;
 	}
 }
 
