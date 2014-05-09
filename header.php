@@ -19,8 +19,8 @@
 					<div class="hgroup">
 						<?php flat_logo(); ?>
 					</div>
-					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas"><?php _e('<i class="fa fa-gear"></i>', 'flat'); ?></button>
-					<button type="button" class="btn btn-link hidden-lg toggle-navigation"><?php _e('<i class="fa fa-bars"></i>', 'flat'); ?></button>
+					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas" aria-label="Sidebar"><?php _e('<i class="fa fa-gear"></i>', 'flat'); ?></button>
+					<button type="button" class="btn btn-link hidden-lg toggle-navigation" aria-label="Navigation Menu"><?php _e('<i class="fa fa-bars"></i>', 'flat'); ?></button>
 					<nav id="site-navigation" class="navigation main-navigation" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'container' => false ) ); ?>
 					</nav>
