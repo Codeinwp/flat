@@ -325,7 +325,7 @@ function flat_custom_font() {
     if( !empty($font_import) ) {
       $font_import = str_replace('Open Sans Condensed','Open Sans Condensed:300', $font_import);
       $font_import = str_replace(' ', '+', $font_import);
-      echo str_replace('family=|', 'family=', "<link href='http://fonts.googleapis.com/css?family=".$font_import."' rel='stylesheet' type='text/css'>");
+      echo str_replace('family=|', 'family=', "<link href='//fonts.googleapis.com/css?family=".$font_import."' rel='stylesheet' type='text/css'>");
       echo "<style type='text/css'>".$font_style."</style>";
     }
     
