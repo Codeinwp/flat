@@ -138,5 +138,17 @@ function flat_post_nav() {
 }
 endif;
 
+//Change de default title of the pages
+function wp_title_changer( $title ) {
+	global $page, $paged;
+	if(is_feed()){return $title;}
+	$description=get_bloginfo('description');
+	$new_title=$title.get_bloginfo('name');
+	$new_title.=(!empty( $description )&&(is_home()||is_front_page()))?' | '.$description:'';
+	$new_title.=(2<=$paged||2<=$page)?' | '.sprintf( __('Page %s'),max($paged,$page)):'';
+	return $new_title;
+}
+add_filter('wp_title','wp_title_changer');
+
 // Add Theme Customizer functionality.
 require get_template_directory() . '/inc/customizer.php';
