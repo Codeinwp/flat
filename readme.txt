@@ -19,12 +19,12 @@ Features list
  - Custom Sidebar Color
  - Editor Style
  - Twitter Bootstrap 3.1.1
- - Font Awesome 4.0.3
+ - Font Awesome 4.1.0
  - Write on HTML5 / LESS
- - Compatible up to WordPress 3.8.2
+ - Compatible up to WordPress 3.9.1
  - Customize: Logo, Favicon, Sidebar Background Color, Archive Posts, Single Post
  - Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
- - Translation Ready (Language available: English, German, French, Russian, Spanish)
+ - Translation Ready (Language available: English, German, French, Russian, Spanish, Brazil)
 
 Resources
 ----
@@ -39,14 +39,17 @@ Bootstrap 3.1.1
  - http://getbootstrap.com/
  - Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
 
-Icon Fonts: Font Awesome
- - http://fortawesome.github.io/Font-Awesome/
+Font Awesome 4.1.0
+ - http://fontawesome.io/
  - Copyright: Dave Gandy, twitter.com/davegandy
  - Font Awesome licensed under SIL OFL 1.1: http://scripts.sil.org/OFL
  - Code licensed under MIT License: http://opensource.org/licenses/mit-license.html
 
 Contributers
 ----
+ - Victor Perin: https://github.com/victorperin
+ - Victor Tsaran: https://github.com/vick08
+ - Darshan Sawardekar: https://github.com/dsawardekar
  - Teddy Rilliot: https://github.com/TeddyRilliot
  - Richard Alexander von Moltke Necochea: http://twitter.com/ravmn
  - Фарух Джапаркулов
@@ -57,6 +60,12 @@ Contributers
 
 Changelog
 ----
+1.3.8
+* Add: Brazil translation (Contribute by @victorperin)
+* Tweak: Accessibility: provide labels for menu buttons in the header (Contribute by @vick08)
+* Tweak: Improve page titles for better accessibility
+* Fix: SSL issue about Google Fonts load
+
 1.3.7
 * Tweak: Using Pagging instead of Next/Previous Posts button
 

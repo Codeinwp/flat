@@ -138,5 +138,29 @@ function flat_post_nav() {
 }
 endif;
 
+if ( ! function_exists( 'flat_wp_title' ) ) :
+function flat_wp_title( $title, $sep ) {
+  global $paged, $page;
+
+  if ( is_feed() ) {
+    return $title;
+  }
+
+  $title .= get_bloginfo( 'name' );
+  $site_description = get_bloginfo( 'description', 'display' );
+
+  if ( $site_description && ( is_home() || is_front_page() ) ) {
+    $title = "$title $sep $site_description";
+  }
+
+  if ( $paged >= 2 || $page >= 2 ) {
+    $title = sprintf( __( 'Page %s', 'flat' ), max( $paged, $page ) ) . " $sep $title";
+  }
+
+  return $title;
+}
+endif;
+add_filter( 'wp_title', 'flat_wp_title', 10, 2 );
+
 // Add Theme Customizer functionality.
 require get_template_directory() . '/inc/customizer.php';

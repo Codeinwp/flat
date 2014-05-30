@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-04-14 11:55+0700\n"
-"PO-Revision-Date: 2014-04-14 23:29+0200\n"
-"Last-Translator: Teddy Rilliot <rilliot.teddy@gmail.com>\n"
+"POT-Creation-Date: 2014-05-30 22:17+0700\n"
+"PO-Revision-Date: 2014-05-30 22:17+0700\n"
+"Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: Wolforg <contact@wolforg.eu>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -142,7 +142,7 @@ msgstr "Pages :"
 msgid " "
 msgstr " "
 
-#: ../content.php:4 ../content.php:11
+#: ../content.php:4 ../content.php:12
 #, php-format
 msgid "Permalink to %s"
 msgstr "Lien permanent pour %s"
@@ -181,9 +181,9 @@ msgid ""
 "\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
 "rel=\"author\">%5$s</a></span></span>"
 msgstr ""
-"<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class"
-"=\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> par <span class=\""
-"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
+"<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class="
+"\"entry-date\" datetime=\"%2$s\">%3$s</time></a></span> par <span class="
+"\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
 "rel=\"author\">%5$s</a></span></span>"
 
 #: ../functions.php:71
@@ -198,22 +198,22 @@ msgstr "1 Commentaire"
 msgid "% Comments"
 msgstr "% Commentaires"
 
-#: ../functions.php:83
-msgid "<i class=\"fa fa-chevron-right\"></i>"
-msgstr "<i class=\"fa fa-chevron-right\"></i>"
-
-#: ../functions.php:87
+#: ../functions.php:103
 msgid "<i class=\"fa fa-chevron-left\"></i>"
 msgstr "<i class=\"fa fa-chevron-left\"></i>"
 
-#: ../functions.php:90
-#, php-format
-msgid "Page %1$s of %2$s"
-msgstr "Page %1$s sur %2$s"
+#: ../functions.php:104
+msgid "<i class=\"fa fa-chevron-right\"></i>"
+msgstr "<i class=\"fa fa-chevron-right\"></i>"
 
-#: ../functions.php:107
+#: ../functions.php:129
 msgid "Post navigation"
 msgstr "Navigation Article"
+
+#: ../functions.php:157
+#, fuzzy, php-format
+msgid "Page %s"
+msgstr "Pages :"
 
 #: ../header.php:22
 msgid "<i class=\"fa fa-gear\"></i>"
@@ -296,3 +296,6 @@ msgstr "Rechercher"
 #: ../sidebar.php:12
 msgid "Meta"
 msgstr "Meta"
+
+#~ msgid "Page %1$s of %2$s"
+#~ msgstr "Page %1$s sur %2$s"

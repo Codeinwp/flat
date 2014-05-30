@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-04-14 11:54+0700\n"
-"PO-Revision-Date: 2014-04-14 16:40+0100\n"
-"Last-Translator: Kevin Papst <kpapst@gmx.net>\n"
+"POT-Creation-Date: 2014-05-30 22:17+0700\n"
+"PO-Revision-Date: 2014-05-30 22:17+0700\n"
+"Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: YoArts <hi@yoarts.com>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -143,7 +143,7 @@ msgstr "Seiten:"
 msgid " "
 msgstr " "
 
-#: ../content.php:4 ../content.php:11
+#: ../content.php:4 ../content.php:12
 #, php-format
 msgid "Permalink to %s"
 msgstr "Permalink zu %s"
@@ -199,22 +199,22 @@ msgstr "1 Kommentar"
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#: ../functions.php:83
-msgid "<i class=\"fa fa-chevron-right\"></i>"
-msgstr "<i class=\"fa fa-chevron-right\"></i>"
-
-#: ../functions.php:87
+#: ../functions.php:103
 msgid "<i class=\"fa fa-chevron-left\"></i>"
 msgstr "<i class=\"fa fa-chevron-left\"></i>"
 
-#: ../functions.php:90
-#, php-format
-msgid "Page %1$s of %2$s"
-msgstr "Seite %1$s von %2$s"
+#: ../functions.php:104
+msgid "<i class=\"fa fa-chevron-right\"></i>"
+msgstr "<i class=\"fa fa-chevron-right\"></i>"
 
-#: ../functions.php:107
+#: ../functions.php:129
 msgid "Post navigation"
 msgstr "Beitrags-Navigation"
+
+#: ../functions.php:157
+#, php-format
+msgid "Page %s"
+msgstr "Seite %s"
 
 #: ../header.php:22
 msgid "<i class=\"fa fa-gear\"></i>"
@@ -297,8 +297,8 @@ msgstr "Suche"
 msgid "Meta"
 msgstr "Meta"
 
+#~ msgid "Page %1$s of %2$s"
+#~ msgstr "Seite %1$s von %2$s"
+
 #~ msgid "Semantic Personal Publishing Platform"
 #~ msgstr "Semantic Personal Publishing Platform"
-
-#~ msgid "Page %s"
-#~ msgstr "Seite %s"

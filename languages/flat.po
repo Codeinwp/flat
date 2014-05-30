@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-04-14 11:54+0700\n"
-"PO-Revision-Date: 2014-04-14 11:54+0700\n"
+"POT-Creation-Date: 2014-05-30 22:17+0700\n"
+"PO-Revision-Date: 2014-05-30 22:17+0700\n"
 "Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: YoArts <hi@yoarts.com>\n"
 "Language: en_US\n"
@@ -13,14 +13,6 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
-
-#: ../header.php:22
-msgid "SIdebar"
-msgstr ""
-
-#: ../header.php:23
-msgid "Navigation Menu"
-msgstr ""
 
 #: ../404.php:3
 msgid "Not Found"
@@ -144,7 +136,7 @@ msgstr ""
 msgid " "
 msgstr ""
 
-#: ../content.php:4 ../content.php:11
+#: ../content.php:4 ../content.php:12
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
@@ -196,21 +188,21 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: ../functions.php:83
-msgid "<i class=\"fa fa-chevron-right\"></i>"
-msgstr ""
-
-#: ../functions.php:87
+#: ../functions.php:103
 msgid "<i class=\"fa fa-chevron-left\"></i>"
 msgstr ""
 
-#: ../functions.php:90
-#, php-format
-msgid "Page %1$s of %2$s"
+#: ../functions.php:104
+msgid "<i class=\"fa fa-chevron-right\"></i>"
 msgstr ""
 
-#: ../functions.php:107
+#: ../functions.php:129
 msgid "Post navigation"
+msgstr ""
+
+#: ../functions.php:157
+#, php-format
+msgid "Page %s"
 msgstr ""
 
 #: ../header.php:22
