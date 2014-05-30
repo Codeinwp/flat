@@ -14,6 +14,14 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
+#: ../header.php:22
+msgid "SIdebar"
+msgstr ""
+
+#: ../header.php:23
+msgid "Navigation Menu"
+msgstr ""
+
 #: ../404.php:3
 msgid "Not Found"
 msgstr ""
