@@ -61,7 +61,7 @@ Contributers
 Changelog
 ----
 1.3.8
-* Add: Brazil translation (Contribute by @victorperin)
+* Add: Brazil translation (Contribute by @victor_perin)
 * Tweak: Accessibility: provide labels for menu buttons in the header (Contribute by @vick08)
 * Tweak: Improve page titles for better accessibility
 * Fix: SSL issue about Google Fonts load
