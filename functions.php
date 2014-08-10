@@ -164,3 +164,10 @@ add_filter( 'wp_title', 'flat_wp_title', 10, 2 );
 
 // Add Theme Customizer functionality.
 require get_template_directory() . '/inc/customizer.php';
+
+
+//Modifying the "Read more" button.
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
+function modify_read_more_link() {
+	return '<a class="btn btn-default btn-sm" href="' . get_permalink() . '">'.__( 'Continue reading', 'flat' ) .' &#62;&#62;</a>';
+}
