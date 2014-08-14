@@ -74,6 +74,26 @@ function flat_customize_register( $wp_customize ) {
     'section' => 'colors',
     'settings' => 'flat_theme_options[sidebar_background_color]',
   )));
+  $wp_customize->add_setting('flat_theme_options[link_text_color]', array(
+    'capability' => 'edit_theme_options',
+    'type' => 'option',
+    'default' => '#1abc9c',
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'link_text_color', array(
+    'label' => __('Link Text Color', 'flat'),
+    'section' => 'colors',
+    'settings' => 'flat_theme_options[link_text_color]',
+  )));
+  $wp_customize->add_setting('flat_theme_options[link_hover_color]', array(
+    'capability' => 'edit_theme_options',
+    'type' => 'option',
+    'default' => '#117964',
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'link_hover_color', array(
+    'label' => __('Link Hover Color', 'flat'),
+    'section' => 'colors',
+    'settings' => 'flat_theme_options[link_hover_color]',
+  )));
   $wp_customize->add_setting('flat_theme_options[background_size]', array(
     'default'        => 'cover',
     'capability'     => 'edit_theme_options',
@@ -276,6 +296,14 @@ add_action( 'wp_head', 'flat_favicon' );
  */
 function flat_custom_css() {
   $custom_style = '<style type="text/css">';
+  $link_text_color = flat_get_theme_option('link_text_color');
+  if( !empty($link_text_color) ) {
+    $custom_style.= 'a { color: '.$link_text_color.'; }';
+  }
+  $link_hover_color = flat_get_theme_option('link_hover_color');
+  if( !empty($link_hover_color) ) {
+    $custom_style.= 'a:hover, a:focus { color: '.$link_hover_color.'; }';
+  }
   $sidebar_background_color = flat_get_theme_option('sidebar_background_color');
   if( !empty($sidebar_background_color) ) {
     $custom_style.= '#page:before, .sidebar-offcanvas, #secondary { background-color: '.$sidebar_background_color.'; }';
