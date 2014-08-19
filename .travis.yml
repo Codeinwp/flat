@@ -17,6 +17,7 @@ language: php
 # e.g. copy database configurations, environment variables, etc.
 # Failures in this section will result in build status 'errored'.
 before_script:
+    - cd
     # Install CodeSniffer for WordPress Coding Standards checks.
     - git clone https://github.com/squizlabs/PHP_CodeSniffer.git php-codesniffer
     # Install WordPress Coding Standards.
@@ -42,4 +43,4 @@ script:
     # -n flag: Do not print warnings (shortcut for --warning-severity=0)
     # --standard: Use WordPress as the standard.
     # --extensions: Only sniff PHP files.
-    - php-codesniffer/scripts/phpcs -p -s -v -n . --standard=WordPress --extensions=php
+    - php-codesniffer/scripts/phpcs -p -s -v -n yoarts/flat --standard=WordPress --extensions=php

@@ -1,5 +1,6 @@
 # Flat
 
+![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)
 * Author: YoArts
 * Author URL: http://www.yoarts.com
 * Contributer: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
@@ -7,7 +8,6 @@
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Description
-![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)
 
 Flat is a WordPress Blog Theme designed by YoArts. We would like to say that Flat is both beautiful and charming at the same time.
 
