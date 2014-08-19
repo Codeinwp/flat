@@ -1,9 +1,9 @@
 (function($){
+	'use strict';
   $(document).ready(function() {
     $('.toggle-sidebar').click(function() {
       $('.row-offcanvas').toggleClass('active');
     });
-
     $('.toggle-navigation').click(function() {
       $(this).toggleClass('open').next('#site-navigation').slideToggle(300);
     });
