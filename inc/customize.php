@@ -302,10 +302,10 @@ function flat_custom_font() {
 	$sub_heading_font_family = flat_get_theme_option( 'sub_heading_font_family', 'Roboto+Condensed' );
 
 	echo '<style type="text/css">';
-		echo '#masthead .site-title {font-family:' . esc_attr( str_replace( $site_title_font_family, '+|:400,700', '' ) ) . '}';
-		echo 'body {font-family:' . esc_attr( str_replace( $global_font_family, '+|:400,700', '' ) ) . '}';
-		echo 'h1,h2,h3,h4,h5,h6 {font-family:' . esc_attr( str_replace( $heading_font_family, '+|:400,700', '' ) ) . '}';
-		echo '#masthead .site-description, .hentry .entry-meta {font-family:' . esc_attr( str_replace( $sub_heading_font_family, '+|:400,700', '' ) ) . '}';
+		echo '#masthead .site-title {font-family:' . esc_attr( str_replace( array( '+',':400,700'), array( ' ' ,'' ), $site_title_font_family ) ) . '}';
+		echo 'body {font-family:' . esc_attr( str_replace( array( '+',':400,700'), array( ' ' ,' ' ), $global_font_family ) ) . '}';
+		echo 'h1,h2,h3,h4,h5,h6 {font-family:' . esc_attr( str_replace( array( '+',':400,700'), array( ' ' ,' ' ), $heading_font_family ) ) . '}';
+		echo '#masthead .site-description, .hentry .entry-meta {font-family:' . esc_attr( str_replace( array( '+',':400,700'), array( ' ' ,' ' ), $sub_heading_font_family ) ) . '}';
 	echo '</style>';
 	echo '<link href="//fonts.googleapis.com/css?family=' . esc_attr( $site_title_font_family . '|' . $global_font_family . '|' . $heading_font_family . '|' . $sub_heading_font_family ) . '" rel="stylesheet" type="text/css">';
 
