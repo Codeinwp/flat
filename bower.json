@@ -1,0 +1,19 @@
+{
+  "name": "flat",
+  "version": "1.4.0",
+  "homepage": "http://www.yoarts.com",
+  "authors": [
+    "Thanh Luu <hi@yoarts.com>"
+  ],
+  "license": "GPL-3.0+",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor"
+  ],
+  "dependencies": {
+    "fontawesome": "4.1.0",
+    "bootstrap": "3.2.0"
+  }
+}
