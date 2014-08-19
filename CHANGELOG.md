@@ -1,3 +1,9 @@
+1.4.1
+=====
+
+* Tweak: Better font import & render
+* Fix: Print Style to header
+
 1.4.0
 =====
 

@@ -1,6 +1,6 @@
 <?php
 function flat_scripts_styles() {
-	$version = '1.4.0';
+	$version = '1.4.1';
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
