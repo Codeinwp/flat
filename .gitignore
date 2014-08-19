@@ -2,6 +2,9 @@
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 node_modules
 assets/vendor/*
+!assets/vendor/fontawesome/
+assets/vendor/fontawesome/*
+!assets/vendor/fontawesome/fonts/
 assets/css/main.css.map
 assets/css/main.css
 assets/js/scripts.js

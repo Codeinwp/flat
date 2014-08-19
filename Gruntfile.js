@@ -22,6 +22,29 @@ module.exports = function(grunt) {
   ];
 
   grunt.initConfig({
+    zip: {
+      flat: {
+        src: [
+          '*.php',
+          '*.css',
+          'readme.txt',
+          'changelog.txt',
+          'screenshot.png',
+          'assets/*.*',
+          'assets/css/editor-style.css',
+          'assets/css/main.min.css',
+          'assets/img/**',
+          'assets/js/html5shiv.min.js',
+          'assets/js/respond.min.js',
+          'assets/js/scripts.min.js',
+          'assets/vendor/fontawesome/fonts/**',
+          'inc/**',
+          'languages/**',
+        ],
+        dest: '../flat.zip'
+      }
+    },
+
     jshint: {
       options: {
         jshintrc: '.jshintrc'

@@ -32,7 +32,7 @@ function flat_scripts_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 
-  if (WP_ENV === 'development') {
+  if ( defined( 'WP_ENV' ) && WP_ENV === 'development') {
     $assets = array(
       'css' => '/assets/css/main.css',
       'js'  => '/assets/js/scripts.js',
