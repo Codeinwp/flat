@@ -7,6 +7,7 @@
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Description
+![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)
 
 Flat is a WordPress Blog Theme designed by YoArts. We would like to say that Flat is both beautiful and charming at the same time.
 
@@ -100,3 +101,4 @@ When completed, you'll be able to run the various Grunt commands provided from t
 * `grunt dev` — Compile LESS to CSS, concatenate and validate JS
 * `grunt watch` — Compile assets when file changes are made
 * `grunt build` — Create minified assets that are used on non-development environments
+* `grunt zip` — Export theme package for WordPress.org
