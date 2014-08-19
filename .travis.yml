@@ -43,4 +43,4 @@ script:
     # -n flag: Do not print warnings (shortcut for --warning-severity=0)
     # --standard: Use WordPress as the standard.
     # --extensions: Only sniff PHP files.
-    - `pwd`/php-codesniffer/scripts/phpcs -p -s -v -n yoarts/flat --standard=WordPress --extensions=php
+    - $(pwd)/php-codesniffer/scripts/phpcs -p -s -v -n yoarts/flat --standard=WordPress --extensions=php
