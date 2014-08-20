@@ -302,49 +302,12 @@ function flat_custom_font() {
 	$sub_heading_font_family = flat_get_theme_option( 'sub_heading_font_family', 'Roboto+Condensed' );
 
 	echo '<style type="text/css">';
-		echo '#masthead .site-title {font-family:' . esc_attr( str_replace( array( '+',':400,700'), array( ' ' ,'' ), $site_title_font_family ) ) . '}';
-		echo 'body {font-family:' . esc_attr( str_replace( array( '+',':400,700'), array( ' ' ,' ' ), $global_font_family ) ) . '}';
-		echo 'h1,h2,h3,h4,h5,h6 {font-family:' . esc_attr( str_replace( array( '+',':400,700'), array( ' ' ,' ' ), $heading_font_family ) ) . '}';
-		echo '#masthead .site-description, .hentry .entry-meta {font-family:' . esc_attr( str_replace( array( '+',':400,700'), array( ' ' ,' ' ), $sub_heading_font_family ) ) . '}';
+		echo '#masthead .site-title {font-family:' . esc_attr( str_replace( array( '+', ':400,700'), array( ' ', '' ), $site_title_font_family ) ) . '}';
+		echo 'body {font-family:' . esc_attr( str_replace( array( '+', ':400,700'), array( ' ', ' ' ), $global_font_family ) ) . '}';
+		echo 'h1,h2,h3,h4,h5,h6 {font-family:' . esc_attr( str_replace( array( '+', ':400,700'), array( ' ', ' ' ), $heading_font_family ) ) . '}';
+		echo '#masthead .site-description, .hentry .entry-meta {font-family:' . esc_attr( str_replace( array( '+', ':400,700'), array( ' ', ' ' ), $sub_heading_font_family ) ) . '}';
 	echo '</style>';
 	echo '<link href="//fonts.googleapis.com/css?family=' . esc_attr( $site_title_font_family . '|' . $global_font_family . '|' . $heading_font_family . '|' . $sub_heading_font_family ) . '" rel="stylesheet" type="text/css">';
-
-
-	/*if ( ! empty($site_title_font_family) && $site_title_font_family != 'Amatic SC' ) {
-		$font_import .= '|'.$site_title_font_family;
-		$font_style .= '#masthead .site-title {font-family:' . $site_title_font_family . '}';
-	}
-
-	if ( ! empty( $site_title_font_family ) || ! empty( $global_font_family ) || ! empty( $heading_font_family ) || ! empty( $sub_heading_font_family ) ) {
-		$font_import = '';
-		$font_style = '';
-		if ( ! empty($site_title_font_family) && $site_title_font_family != 'Amatic SC' ) {
-			$font_import .= '|'.$site_title_font_family;
-			$font_style .= '#masthead .site-title {font-family:' . $site_title_font_family . '}';
-		}
-
-		if ( ! empty( $global_font_family ) && $global_font_family != 'Roboto' ) {
-			$font_import .= '|' . $global_font_family;
-			$font_style .= 'body {font-family:'.$global_font_family.'}';
-		}
-
-		if ( ! empty( $heading_font_family ) && $heading_font_family != 'Roboto Slab' ) {
-			$font_import .= '|' . $heading_font_family;
-			$font_style .= 'h1,h2,h3,h4,h5,h6 {font-family:' . $heading_font_family . '}';
-		}
-
-		if ( ! empty( $sub_heading_font_family ) && $sub_heading_font_family != 'Roboto Condensed' ) {
-			$font_import .= '|' . $sub_heading_font_family;
-			$font_style .= '#masthead .site-description, .hentry .entry-meta {font-family:' . $sub_heading_font_family . '}';
-		}
-
-		if ( ! empty( $font_import) ) {
-			$font_import = str_replace( 'Open Sans Condensed', 'Open Sans Condensed:300', $font_import );
-			$font_import = str_replace( ' ', '+', $font_import );
-			echo str_replace( 'family=|', 'family=', "<link href='//fonts.googleapis.com/css?family=" . esc_attr( $font_import ) . "' rel='stylesheet' type='text/css'>" );
-			echo '<style type="text/css">'. $font_style .'</style>';
-		}
-	}*/
 }
 add_action( 'wp_head', 'flat_custom_font' );
 
