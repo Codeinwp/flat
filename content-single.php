@@ -15,12 +15,7 @@
 		<?php the_content( __( 'Continue reading', 'flat' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'flat' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 	</div>
-
-	<?php $tag_list = get_the_tag_list( '', __( ' ', 'flat' ) ); ?>
-
-	<?php if ( $tag_list && is_single() ) : ?>
-		<div class="tags-links"><?php echo esc_attr( $tag_list ); ?></div>
-	<?php endif; ?>
+	<?php the_tags( '<div class="tags-links">', __( ' ', 'flat' ), '</div>' ); ?>
 </article>
 	<?php $single_author_box = flat_get_theme_option( 'single_author_box' ); ?>
 	<?php if ( get_the_author_meta( 'description' ) && empty( $single_author_box ) ) : ?>

@@ -36,20 +36,33 @@ function flat_paging_nav() {
 
 	// Set up paginated links.
 	$links = paginate_links( array(
-		'base'     => $pagenum_link,
-		'format'   => $format,
-		'total'    => $GLOBALS['wp_query']->max_num_pages,
-		'current'  => $paged,
-		'mid_size' => 4,
-		'add_args' => array_map( 'urlencode', $query_args ),
-		'prev_text' => __( '<i class="fa fa-chevron-left"></i>', 'flat' ),
-		'next_text' => __( '<i class="fa fa-chevron-right"></i>', 'flat' ),
+		'base'			=> $pagenum_link,
+		'format'		=> $format,
+		'total'			=> $GLOBALS['wp_query']->max_num_pages,
+		'current'		=> $paged,
+		'mid_size'	=> 4,
+		'add_args'	=> array_map( 'urlencode', $query_args ),
+		'prev_text'	=> __( '<i class="fa fa-chevron-left"></i>', 'flat' ),
+		'next_text'	=> __( '<i class="fa fa-chevron-right"></i>', 'flat' ),
 	) );
+
+	$allowed_html = array(
+    'a' => array(
+      'href' => array(),
+      'class' => array()
+    ),
+    'span' => array(
+      'class' => array()
+    ),
+    'i' => array(
+      'class' => array()
+    ),
+	);
 
 	if ( $links ) : ?>
 		<nav class="navigation paging-navigation" role="navigation">
 			<div class="nav-links">
-				<?php echo esc_attr( $links ); ?>
+				<?php echo wp_kses( $links, $allowed_html ); ?>
 			</div>
 		</nav>
 	<?php
