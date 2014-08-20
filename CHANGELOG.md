@@ -1,3 +1,8 @@
+1.4.2
+=====
+
+* Fix: Display Tags, Pagination Links & Custom Fonts
+
 1.4.1
 =====
 
