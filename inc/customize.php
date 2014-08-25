@@ -50,9 +50,9 @@ function flat_customize_register( $wp_customize ) {
 		'section' => 'title_tagline',
 		'type'    => 'select',
 		'choices'    => array(
-			'site_title' => 'Site Title',
-			'site_logo' => 'Site Logo',
-			'both_title_logo' => 'Both Title & Logo',
+			'site_title' => __('Site Title', 'flat'),
+			'site_logo' => __('Site Logo', 'flat'),
+			'both_title_logo' => __('Both Title & Logo', 'flat'),
 		),
 	));
 	$wp_customize->add_setting('flat_theme_options[favicon]', array(
@@ -86,9 +86,9 @@ function flat_customize_register( $wp_customize ) {
 		'section' => 'background_image',
 		'type'    => 'radio',
 		'choices'    => array(
-			'cover' => 'Cover',
-			'contain' => 'Contain',
-			'initial' => 'Initial',
+			'cover' => __('Cover', 'flat'),
+			'contain' => __('Contain', 'flat'),
+			'initial' => __('Initial', 'flat'),
 		),
 	));
 	$wp_customize->add_section('typography', array(
