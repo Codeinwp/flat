@@ -1,3 +1,9 @@
+1.4.3
+=====
+
+* Fix: A minor bug, in which the span tags would not wrap around the link
+* Fix: Video embed issue
+
 1.4.2
 =====
 

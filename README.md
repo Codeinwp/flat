@@ -1,6 +1,6 @@
 # Flat
 
-![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)(https://travis-ci.org/yoarts/flat)
+[![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)](https://travis-ci.org/yoarts/flat)
 * Author: YoArts
 * Author URL: http://www.yoarts.com
 * Contributer: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
@@ -23,7 +23,7 @@ Flat is a WordPress Blog Theme designed by YoArts. We would like to say that Fla
 * Write on HTML5 / LESS
 * [Bootstrap](http://getbootstrap.com/) 3.2.0
 * [Font Awesome](http://fontawesome.io/) 4.1.0
-* Compatible up to WordPress 3.9.4
+* Compatible up to WordPress 3.9.2
 * Customize: Logo, Favicon, Sidebar Background Color, Archive Posts, Single Post
 * Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
 * Translation Ready (Language available: English, German, French, Russian, Spanish, Brazil, Nederlands)
@@ -62,6 +62,7 @@ Flat is built with the following resources:
 
 ## Contributers
 
+ - TobsCore: https://github.com/TobsCore
  - Marcus Michaels: https://github.com/marcusmichaels
  - Creative-mind: https://github.com/creative-mind
  - Mrinal Kanti Roy: https://github.com/mkrdip
