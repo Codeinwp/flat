@@ -9,8 +9,11 @@ function flat_entry_meta( $show_sep = true ) {
 		get_the_author()
 	);
 
-		if ( $show_sep == true ) echo '<span class="sep">&middot;</span>';
-		echo '<span class="comments-link">'.comments_popup_link( __( '0 Comment', 'flat' ), __( '1 Comment', 'flat' ), __( '% Comments', 'flat' ) ) . '</span>';
+		if ( $show_sep == true ) 
+			echo '<span class="sep">&middot;</span>';
+		echo '<span class="comments-link">';
+		comments_popup_link( __( '0 Comment', 'flat' ), __( '1 Comment', 'flat' ), __( '% Comments', 'flat' ) );
+		echo '</span>';
 }
 
 function flat_paging_nav() {
