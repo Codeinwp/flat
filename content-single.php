@@ -3,7 +3,7 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php $single_metadata = flat_get_theme_option( 'single_metadata' ); ?>
 		<?php if ( empty( $single_metadata ) ) : ?>
-			<div class="entry-meta"><?php flat_entry_meta(); ?></div>
+			<div class="entry-meta"><?php flat_entry_meta(); ?><?php edit_post_link( ' · Edit Post' );?></div>
 		<?php endif; ?>
 	</header>
 	<?php $single_featured_image = flat_get_theme_option( 'single_featured_image' ); ?>

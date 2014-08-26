@@ -5,7 +5,7 @@
 		</h2>
 		<?php $archive_metadata = flat_get_theme_option( 'archive_metadata' ); ?>
 		<?php if ( empty ( $archive_metadata ) ) : ?>
-			<div class="entry-meta"><?php flat_entry_meta(); ?></div>
+			<div class="entry-meta"><?php flat_entry_meta(); ?><?php edit_post_link( ' · Edit Post' );?></div>
 		<?php endif; ?>
 	</header>
 	<?php $archive_featured_image = flat_get_theme_option( 'archive_featured_image' ) ?>
