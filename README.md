@@ -1,6 +1,6 @@
 # Flat
 
-![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)
+![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)(https://travis-ci.org/yoarts/flat)
 * Author: YoArts
 * Author URL: http://www.yoarts.com
 * Contributer: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
