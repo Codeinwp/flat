@@ -1,4 +1,4 @@
-<?php if ( post_password_required() || !comments_open() ) return; ?>
+<?php if ( post_password_required() || ! comments_open() ) return; ?>
 
 <div id="comments" class="comments-area">
 
@@ -18,16 +18,13 @@
 			?>
 		</ol>
 
-		<?php
-			// Are there comments to navigate through?
-			if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
-		?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 		<nav class="navigation comment-navigation" role="navigation">
 			<h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'flat' ); ?></h1>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'flat' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'flat' ) ); ?></div>
-		</nav><!-- .comment-navigation -->
-		<?php endif; // Check for comment navigation ?>
+		</nav>
+		<?php endif; ?>
 
 		<?php if ( ! comments_open() && get_comments_number() ) : ?>
 		<p class="no-comments"><?php _e( 'Comments are closed.' , 'flat' ); ?></p>
