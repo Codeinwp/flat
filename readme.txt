@@ -20,8 +20,8 @@ Flat is a WordPress Blog Theme designed by YoArts. We would like to say that Fla
 * Custom Sidebar Color
 * Editor Style
 * Write on HTML5 / LESS
-* [Bootstrap](http://getbootstrap.com/) 3.2.0
-* [Font Awesome](http://fontawesome.io/) 4.1.0
+* [Bootstrap](http://getbootstrap.com/) 3.3.1
+* [Font Awesome](http://fontawesome.io/) 4.2.0
 * Compatible up to WordPress 3.9.2
 * Customize: Logo, Favicon, Sidebar Background Color, Archive Posts, Single Post
 * Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
@@ -37,12 +37,12 @@ Flat is built with the following resources:
  - Copyright: DesignWall, http://www.designwall.com/
  - License under GPL v3.0: http://www.gnu.org/licenses/gpl-3.0.html
 
-**Bootstrap 3.2.0**
+**Bootstrap 3.3.1**
 
  - http://getbootstrap.com/
  - Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
 
-**Font Awesome 4.1.0**
+**Font Awesome 4.2.0**
 
  - http://fontawesome.io/
  - Copyright: Dave Gandy, twitter.com/davegandy
