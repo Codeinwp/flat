@@ -254,8 +254,8 @@ function flat_sanitize_background_size( $background_size ) {
  */
 function flat_get_theme_option( $option_name, $default = '' ) {
 	$options = get_option( 'flat_theme_options' );
-	if ( isset( $options[$option_name] ) ) {
-		return $options[$option_name];
+	if ( isset( $options[ $option_name ] ) ) {
+		return $options[ $option_name ];
 	}
 	return $default;
 }
@@ -317,9 +317,9 @@ add_action( 'wp_head', 'flat_custom_font' );
 function flat_logo() {
 	$header_display = flat_get_theme_option( 'header_display', 'site_title' );
 
-	if ( $header_display === 'both_title_logo' ) {
+	if ( 'both_title_logo' === $header_display ) {
 		$header_class = 'display-title-logo';
-	} else if ( $header_display === 'site_logo' ) {
+	} else if ( 'site_logo' === $header_display ) {
 		$header_class = 'display-logo';
 	} else {
 		$header_class = 'display-title';
@@ -329,14 +329,15 @@ function flat_logo() {
 	$tagline = get_bloginfo( 'description' );
 
 	echo '<h1 class="site-title ' . esc_attr( $header_class ) . '"><a href="' . esc_url( home_url( '/' ) ) . '" title="'. esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">';
-	if ( $header_class != 'display-title' ) {
+	if ( 'display-title' !== $header_class ) {
 		echo '<img alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" src="' . esc_attr( $logo ) . '" />';
 	}
-	if ( $header_class != 'display-logo' ) {
+	if ( 'display-logo' !=== $header_class ) {
 		echo esc_attr( get_bloginfo( 'name' ) );
 	}
 	echo '</a></h1>';
 
-	if ( $tagline )
+	if ( $tagline ) {
 		echo '<h2 class="site-description">' . esc_attr( $tagline ) . '</h2>';
+	}
 }

@@ -1,4 +1,4 @@
-<?php if ( post_password_required() || ! comments_open() ) return; ?>
+<?php if ( post_password_required() || ! comments_open() ) { return; } ?>
 
 <div id="comments" class="comments-area">
 

@@ -9,8 +9,9 @@ function flat_entry_meta( $show_sep = true ) {
 		get_the_author()
 	);
 
-		if ( $show_sep == true ) 
-			echo '<span class="sep">&middot;</span>';
+	if ( $show_sep === true ) {
+		echo '<span class="sep">&middot;</span>';
+	}
 		echo '<span class="comments-link">';
 		comments_popup_link( __( '0 Comment', 'flat' ), __( '1 Comment', 'flat' ), __( '% Comments', 'flat' ) );
 		echo '</span>';
@@ -50,16 +51,16 @@ function flat_paging_nav() {
 	) );
 
 	$allowed_html = array(
-    'a' => array(
-      'href' => array(),
-      'class' => array()
-    ),
-    'span' => array(
-      'class' => array()
-    ),
-    'i' => array(
-      'class' => array()
-    ),
+		'a' => array(
+			'href' => array(),
+			'class' => array()
+		),
+		'span' => array(
+			'class' => array()
+		),
+		'i' => array(
+			'class' => array()
+		),
 	);
 
 	if ( $links ) : ?>
@@ -78,8 +79,9 @@ if ( ! function_exists( 'flat_post_nav' ) ) :
 			$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
 			$next     = get_adjacent_post( false, '', false );
 
-			if ( ! $next && ! $previous )
-					return;
+			if ( ! $next && ! $previous ) {
+				return;
+			}
 			?>
 			<nav class="navigation post-navigation" role="navigation">
 					<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'flat' ); ?></h1>

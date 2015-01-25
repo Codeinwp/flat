@@ -1,11 +1,12 @@
 <?php
 function flat_scripts_styles() {
-	$version = '1.4.2';
+	$version = wp_get_theme()->get( 'Version' );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
 
-	if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
+	if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
 		$assets = array(
 			'css' => '/assets/css/flat.css',
 			'js'  => '/assets/js/flat.js',
