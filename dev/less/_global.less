@@ -56,12 +56,12 @@ input[type="color"] {
 	.form-control();
 	box-shadow: none !important;
 	border-color: @gray-lighter;
-	border-width: 2px;
 	min-height: 40px;
+	font-size: 14px;
 	-webkit-appearance: none;
 
 	&:focus {
-		border-color: @brand-primary !important;
+		border-color: @gray-dark !important;
 	}
 
 	#secondary & {
@@ -91,7 +91,6 @@ img {
 
 .btn {
 	outline: none !important;
-	border-width: 0 0 2px;
 }
 
 .button-variant(@color; @background; @border) {
@@ -458,6 +457,7 @@ input#submit {
 		font-size: @font-size-base;
 		font-family: @font-family-condensed;
 		color: @gray-light;
+		background: @gray-lighter;
 
 		@media (max-width: @screen-md-max) {
 			padding: 20px 125px;
@@ -643,10 +643,10 @@ input#submit {
 	}
 
 	.entry-title a {
-		color: @gray-dark;
+		color: @brand-darken;
 
 		&:hover, &:focus {
-			color: @gray;
+			color: @gray-dark;
 		}
 	}
 
@@ -708,7 +708,6 @@ input#submit {
 .paging-navigation {
 	padding: 30px 90px;
 	position: relative;
-	background: @gray-lighter;
 	text-align: center;
 	.clearfix();
 
@@ -722,13 +721,13 @@ input#submit {
 
 	.page-numbers {
 		.btn();
-		.btn-success();
+		.btn-default();
 	}
 
 	.current,
 	.dots {
 		.btn-default();
-		border-color: transparent !important;
+		.opacity(.5);
 	}
 
 	.prev {
@@ -984,6 +983,11 @@ input#submit {
 	text-align: center;
 	padding: 30px;
 	font-size: @font-size-small;
+	background: @gray-lighter;
+
+	a {
+		color: @gray-dark;
+	}
 }
 
 #disqus_thread {
@@ -1013,7 +1017,7 @@ input#submit {
 
 	&.author .author-info {
 		padding: 30px 0;
-		margin: 0 60px;
+		margin: 0 90px;
 		position: relative;
 		border-bottom: 1px solid @gray-lighter;
 

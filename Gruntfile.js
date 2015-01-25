@@ -141,6 +141,7 @@ module.exports = function(grunt) {
 		'jshint',
 		'less:build',
 		'autoprefixer:build',
-		'uglify'
+		'uglify',
+		'compress'
 	]);
 };
