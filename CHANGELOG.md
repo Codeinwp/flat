@@ -1,6 +1,8 @@
 1.5
 =====
 
+* New: Add theme support title-tag
+* Tweak: Add sanitize callback to all customize fields
 * Tweak: Compatible with WordPress 4.1
 * Tweak: Buttons, Form Elements Style
 

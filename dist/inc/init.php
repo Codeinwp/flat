@@ -11,6 +11,8 @@ function flat_setup() {
 
 	add_editor_style( array( 'assets/css/editor-style.css' ) );
 
+	add_theme_support( 'title-tag' );
+
 	$custom_background_support = array(
 		'default-color'          => '',
 		'default-image'          => get_template_directory_uri() . '/assets/img/default-background.jpg',
