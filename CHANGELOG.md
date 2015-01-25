@@ -1,3 +1,9 @@
+1.5
+=====
+
+* Tweak: Compatible with WordPress 4.1
+* Tweak: Buttons, Form Elements Style
+
 1.4.3
 =====
 

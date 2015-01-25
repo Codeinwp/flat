@@ -7,17 +7,17 @@ function flat_scripts_styles() {
 
 	if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
 		$assets = array(
-			'css' => '/assets/css/main.css',
-			'js'  => '/assets/js/scripts.js',
+			'css' => '/assets/css/flat.css',
+			'js'  => '/assets/js/flat.js',
 		);
 	} else {
 		$assets = array(
-			'css' => '/assets/css/main.min.css',
-			'js'  => '/assets/js/scripts.min.js',
+			'css' => '/assets/css/flat.min.css',
+			'js'  => '/assets/js/flat.min.js',
 		);
 	}
 
-	wp_enqueue_style( 'flat-main', get_template_directory_uri() . $assets['css'], array(), $version );
+	wp_enqueue_style( 'flat-theme', get_template_directory_uri() . $assets['css'], array(), $version );
 	wp_enqueue_style( 'flat-style', get_stylesheet_uri(), array(), $version );
 	wp_enqueue_script( 'flat-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, true );
 }

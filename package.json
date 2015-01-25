@@ -1,6 +1,6 @@
 {
   "name": "flat",
-  "version": "1.4.3",
+  "version": "1.5",
   "author": "Thanh Luu <hi@yoarts.com>",
   "homepage": "http://www.yoarts.com",
   "repository": {
@@ -31,10 +31,10 @@
     "grunt-contrib-less": "~0.11.3",
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-compress": "~0.12.0",
     "grunt-modernizr": "~0.5.2",
     "grunt-wp-assets": "~0.2.6",
     "load-grunt-tasks": "~0.6.0",
-    "time-grunt": "~0.3.2",
-    "grunt-zip": "0.15.0"
+    "time-grunt": "~0.3.2"
   }
 }

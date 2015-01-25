@@ -101,5 +101,4 @@ When completed, you'll be able to run the various Grunt commands provided from t
 
 * `grunt dev` — Compile LESS to CSS, concatenate and validate JS
 * `grunt watch` — Compile assets when file changes are made
-* `grunt build` — Create minified assets that are used on non-development environments
-* `grunt zip` — Export theme package for WordPress.org
+* `grunt build` — Create minified assets, then export theme package for WordPress.org
