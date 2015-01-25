@@ -23,11 +23,3 @@ function flat_scripts_styles() {
 	wp_enqueue_script( 'flat-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, true );
 }
 add_action( 'wp_enqueue_scripts', 'flat_scripts_styles' );
-
-function flat_ie_support_header() {
-		echo '<!--[if lt IE 9]>'. "\n";
-		echo '<script src="' . esc_url( get_template_directory_uri() . '/assets/js/html5shiv.min.js' ) . '"></script>'. "\n";
-		echo '<script src="' . esc_url( get_template_directory_uri() . '/assets/js/respond.min.js' ) . '"></script>'. "\n";
-		echo '<![endif]-->'. "\n";
-}
-add_action( 'wp_head', 'flat_ie_support_header' );

@@ -12,7 +12,7 @@ function flat_customize_register( $wp_customize ) {
 	$wp_customize->add_setting('flat_theme_options[logo]', array(
 		'capability' => 'edit_theme_options',
 		'type' => 'option',
-		'sanitize_callback' => 'esc_url_raw'
+		'sanitize_callback' => 'esc_url_raw',
 	));
 	$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'logo', array(
 		'label' => __( 'Site Logo', 'flat' ),
@@ -25,7 +25,7 @@ function flat_customize_register( $wp_customize ) {
 		'default'        => 'yesteryear',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
-		'sanitize_callback' => 'flat_sanitize_site_title_font_family'
+		'sanitize_callback' => 'flat_sanitize_site_title_font_family',
 	));
 	$wp_customize->add_control( 'site_title_font_family', array(
 		'settings' => 'flat_theme_options[site_title_font_family]',
@@ -67,12 +67,12 @@ function flat_customize_register( $wp_customize ) {
 	$wp_customize->add_setting('flat_theme_options[favicon]', array(
 		'capability' => 'edit_theme_options',
 		'type' => 'option',
-		'sanitize_callback' => 'esc_url_raw'
+		'sanitize_callback' => 'esc_url_raw',
 	));
 	$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'favicon', array(
 		'label' => __( 'Site Favicon', 'flat' ),
 		'section' => 'title_tagline',
-		'settings' => 'flat_theme_options[favicon]'
+		'settings' => 'flat_theme_options[favicon]',
 	)));
 
 	// Color
@@ -80,7 +80,7 @@ function flat_customize_register( $wp_customize ) {
 		'capability' => 'edit_theme_options',
 		'type' => 'option',
 		'default' => '#333',
-		'sanitize_callback' => 'sanitize_hex_color'
+		'sanitize_callback' => 'sanitize_hex_color',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'sidebar_background_color', array(
 		'label' => __( 'Sidebar Background Color', 'flat' ),
@@ -118,7 +118,7 @@ function flat_customize_register( $wp_customize ) {
 		'default'        => 'Roboto',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
-		'sanitize_callback' => 'flat_sanitize_global_font_family'
+		'sanitize_callback' => 'flat_sanitize_global_font_family',
 	));
 	$wp_customize->add_control( 'global_font_family', array(
 		'settings' => 'flat_theme_options[global_font_family]',
@@ -140,7 +140,7 @@ function flat_customize_register( $wp_customize ) {
 		'default'        => 'Roboto Slab',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
-		'sanitize_callback' => 'flat_sanitize_heading_font_family'
+		'sanitize_callback' => 'flat_sanitize_heading_font_family',
 	));
 	$wp_customize->add_control( 'heading_font_family', array(
 		'settings' => 'flat_theme_options[heading_font_family]',
@@ -164,7 +164,7 @@ function flat_customize_register( $wp_customize ) {
 		'default'        => 'Roboto Condensed',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
-		'sanitize_callback' => 'flat_sanitize_subheading_font_family'
+		'sanitize_callback' => 'flat_sanitize_subheading_font_family',
 	));
 	$wp_customize->add_control( 'sub_heading_font_family', array(
 		'settings' => 'flat_theme_options[sub_heading_font_family]',
@@ -192,7 +192,7 @@ function flat_customize_register( $wp_customize ) {
 		'default'        => '1',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
-		'sanitize_callback' => 'flat_sanitize_checkbox'
+		'sanitize_callback' => 'flat_sanitize_checkbox',
 	));
 	$wp_customize->add_control('single_featured_image', array(
 		'label'      => __( 'Hide Featured Image', 'flat' ),
@@ -206,7 +206,7 @@ function flat_customize_register( $wp_customize ) {
 		'default'        => '0',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
-		'sanitize_callback' => 'flat_sanitize_checkbox'
+		'sanitize_callback' => 'flat_sanitize_checkbox',
 	));
 	$wp_customize->add_control('single_metadata', array(
 		'label'      => __( 'Hide Metadata', 'flat' ),
@@ -220,7 +220,7 @@ function flat_customize_register( $wp_customize ) {
 		'default'        => '0',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
-		'sanitize_callback' => 'flat_sanitize_checkbox'
+		'sanitize_callback' => 'flat_sanitize_checkbox',
 	));
 	$wp_customize->add_control('single_author_box', array(
 		'label'      => __( 'Hide Author Box', 'flat' ),
@@ -240,7 +240,7 @@ function flat_customize_register( $wp_customize ) {
 		'default'        => '0',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
-		'sanitize_callback' => 'flat_sanitize_checkbox'
+		'sanitize_callback' => 'flat_sanitize_checkbox',
 	));
 	$wp_customize->add_control('archive_featured_image', array(
 		'label'      => __( 'Hide Featured Image', 'flat' ),
@@ -254,7 +254,7 @@ function flat_customize_register( $wp_customize ) {
 		'default'        => '0',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
-		'sanitize_callback' => 'flat_sanitize_checkbox'
+		'sanitize_callback' => 'flat_sanitize_checkbox',
 	));
 	$wp_customize->add_control('archive_metadata', array(
 		'label'      => __( 'Hide Metadata', 'flat' ),
@@ -268,7 +268,7 @@ function flat_customize_register( $wp_customize ) {
 		'default'        => '0',
 		'capability'     => 'edit_theme_options',
 		'type'           => 'option',
-		'sanitize_callback' => 'flat_sanitize_checkbox'
+		'sanitize_callback' => 'flat_sanitize_checkbox',
 	));
 	$wp_customize->add_control('archive_content', array(
 		'label'      => __( 'Show Post Excerpt', 'flat' ),

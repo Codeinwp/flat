@@ -1,3 +1,8 @@
+<?php
+/**
+ * The template for displaying the footer
+ */
+?>
 				<?php if ( apply_filters( 'show_flat_credits', true ) ) : ?>
 					<div class="site-info">
 						<?php do_action( 'flat_credits' ); ?>

@@ -9,7 +9,7 @@ function flat_entry_meta( $show_sep = true ) {
 		get_the_author()
 	);
 
-	if ( $show_sep === true ) {
+	if ( true === $show_sep ) {
 		echo '<span class="sep">&middot;</span>';
 	}
 		echo '<span class="comments-link">';
@@ -75,24 +75,22 @@ function flat_paging_nav() {
 
 if ( ! function_exists( 'flat_post_nav' ) ) :
 	function flat_post_nav() {
-			global $post;
-			$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
-			$next     = get_adjacent_post( false, '', false );
+		global $post;
+		$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
+		$next     = get_adjacent_post( false, '', false );
 
-			if ( ! $next && ! $previous ) {
-				return;
-			}
-			?>
-			<nav class="navigation post-navigation" role="navigation">
-					<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'flat' ); ?></h1>
-					<div class="nav-links">
-
-							<?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'flat' ) ); ?>
-							<?php next_post_link( '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'flat' ) ); ?>
-
-					</div>
-			</nav>
-			<?php
+		if ( ! $next && ! $previous ) {
+			return;
+		}
+		?>
+		<nav class="navigation post-navigation" role="navigation">
+			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'flat' ); ?></h1>
+			<div class="nav-links">
+				<?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'flat' ) ); ?>
+				<?php next_post_link( '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'flat' ) ); ?>
+			</div>
+		</nav>
+		<?php
 	}
 endif;
 
