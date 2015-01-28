@@ -1,3 +1,8 @@
+1.5.1
+=====
+
+* New: Add non minification of html5shiv.min.js and respond.min.js
+
 1.5
 =====
 
