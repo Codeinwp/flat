@@ -1,3 +1,10 @@
+1.5.2
+=====
+
+* Tweak: Using Flexbox to fixed footer on the bottom
+* Tweak: Using the_archive_title() and the_archive_description() to display Title & Desc in Archive Pages
+
+
 1.5.1
 =====
 

@@ -7202,6 +7202,7 @@ body {
           background-size: cover;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 a {
   text-decoration: none !important;
@@ -7520,7 +7521,7 @@ input[type="color"]:focus {
 #secondary input[type="search"],
 #secondary input[type="tel"],
 #secondary input[type="color"] {
-  border: none;
+  border-color: #fff;
 }
 textarea {
   min-height: 120px;
@@ -7795,6 +7796,13 @@ input#submit.active {
     background: #333;
   }
 }
+@media (min-width: 1200px) {
+  #page > .container > .row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 #masthead .hgroup {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -7873,6 +7881,9 @@ input#submit.active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 14px;
 }
+#secondary .widget:last-child {
+  border-bottom: none;
+}
 #secondary .widget-title {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.3);
@@ -7924,6 +7935,21 @@ input#submit.active {
 #primary {
   background: #fff;
   padding: 0;
+}
+@media (min-width: 1200px) {
+  #primary {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #primary #content {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 #primary .page-title {
   padding: 20px 90px;
