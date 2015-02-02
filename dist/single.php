@@ -1,17 +1,20 @@
 <?php get_header(); ?>
-
 			<div id="content" class="site-content" role="main">
+			<?php
+			while ( have_posts() ) : the_post();
+				get_template_part( 'content', 'single' );
 
-			<?php while ( have_posts() ) : the_post(); ?>
+				the_post_navigation( array(
+					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'flat' ) . '</span> ' .
+						'<span class="screen-reader-text">' . __( 'Next post:', 'flat' ) . '</span> ' .
+						'<span class="post-title">%title</span>',
+					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'flat' ) . '</span> ' .
+						'<span class="screen-reader-text">' . __( 'Previous post:', 'flat' ) . '</span> ' .
+						'<span class="post-title">%title</span>',
+				) );
 
-				<?php get_template_part( 'content', 'single' ); ?>
-
-				<?php flat_post_nav(); ?>
-
-				<?php comments_template(); ?>
-				
-			<?php endwhile; ?>
-
+				comments_template();
+			endwhile;
+			?>
 			</div>
-
 <?php get_footer(); ?>

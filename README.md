@@ -21,8 +21,8 @@ Flat is a WordPress Blog Theme designed by YoArts. We would like to say that Fla
 * Custom Sidebar Color
 * Editor Style
 * Write on HTML5 / LESS
-* [Bootstrap](http://getbootstrap.com/) 3.2.0
-* [Font Awesome](http://fontawesome.io/) 4.1.0
+* [Bootstrap](http://getbootstrap.com/) 3.3.2
+* [Font Awesome](http://fontawesome.io/) 4.3.0
 * Compatible up to WordPress 4.1
 * Customize: Logo, Favicon, Sidebar Background Color, Archive Posts, Single Post
 * Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading

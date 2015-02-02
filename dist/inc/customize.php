@@ -311,7 +311,7 @@ function flat_sanitize_subheading_font_family( $subheading_font_family ) {
 }
 
 function flat_sanitize_checkbox( $input ) {
-	if ( $input == 1 ) {
+	if ( 1 == $input ) {
 		return 1;
 	} else {
 		return '';
