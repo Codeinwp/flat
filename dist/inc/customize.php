@@ -379,7 +379,6 @@ add_action( 'wp_head', 'flat_custom_css' );
  */
 function flat_custom_font() {
 	$site_title_font_family = flat_get_theme_option( 'site_title_font_family', 'Amatic+SC' );
-	$site_title_font_family_name = str_replace( $site_title_font_family, '+|:400,700', '' );
 	$global_font_family = flat_get_theme_option( 'global_font_family', 'Roboto:400,700' );
 	$heading_font_family = flat_get_theme_option( 'heading_font_family', 'Roboto+Slab' );
 	$sub_heading_font_family = flat_get_theme_option( 'sub_heading_font_family', 'Roboto+Condensed' );
@@ -390,9 +389,26 @@ function flat_custom_font() {
 		echo 'h1,h2,h3,h4,h5,h6 {font-family:' . esc_attr( str_replace( array( '+', ':400,700'), array( ' ', ' ' ), $heading_font_family ) ) . '}';
 		echo '#masthead .site-description, .hentry .entry-meta {font-family:' . esc_attr( str_replace( array( '+', ':400,700'), array( ' ', ' ' ), $sub_heading_font_family ) ) . '}';
 	echo '</style>';
-	echo '<link href="//fonts.googleapis.com/css?family=' . esc_attr( $site_title_font_family . '|' . $global_font_family . '|' . $heading_font_family . '|' . $sub_heading_font_family ) . '" rel="stylesheet" type="text/css">';
 }
 add_action( 'wp_head', 'flat_custom_font' );
+
+/**
+ * Get Custom Fonts URL
+ */
+function flat_fonts_url() {
+	$fonts_url = '';
+	$fonts     = array();
+	$fonts[] = flat_get_theme_option( 'site_title_font_family', 'Amatic+SC' );
+	$fonts[] = flat_get_theme_option( 'global_font_family', 'Roboto:400,700' );
+	$fonts[] = flat_get_theme_option( 'heading_font_family', 'Roboto+Slab' );
+	$fonts[] = flat_get_theme_option( 'sub_heading_font_family', 'Roboto+Condensed' );
+	if ( $fonts ) {
+		$fonts_url = add_query_arg( array(
+			'family' => esc_attr( implode( '%7C', $fonts ) )
+		), '//fonts.googleapis.com/css' );
+	}
+	return $fonts_url;
+}
 
 /**
  * Display Logo

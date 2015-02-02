@@ -1,6 +1,7 @@
 <?php
+if ( ! function_exists( 'twentyfifteen_fonts_url' ) ) :
 function flat_setup() {
-		load_theme_textdomain( 'flat', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'flat', get_template_directory() . '/languages' );
 
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );
@@ -22,6 +23,7 @@ function flat_setup() {
 	);
 	add_theme_support( 'custom-background', $custom_background_support );
 }
+endif;
 add_action( 'after_setup_theme', 'flat_setup' );
 
 function flat_widgets_init() {
