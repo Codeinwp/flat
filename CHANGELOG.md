@@ -1,5 +1,12 @@
+1.5.4
+=====
+
+* Tweak: Footer Credit Link
+* Tweak: Code Spacing
+
 1.5.3
 =====
+
 * Tweak: Using the_posts_pagination() and the_post_navination() to display Pagging & Navigation
 * Tweak: Google Fonts URL
 * Tweak: Correct file inclusion in functions.php
