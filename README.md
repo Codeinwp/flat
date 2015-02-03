@@ -1,6 +1,6 @@
 # Flat
 
-[![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)](https://travis-ci.org/yoarts/flat)
+[![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)](https://travis-ci.org/yoarts/flat) [![devDependency Status](https://david-dm.org/yoarts/flat/dev-status.svg)](https://david-dm.org/yoarts/flat#info=devDependencies)
 * Author: YoArts
 * Author URL: http://www.yoarts.com
 * Contributer: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater

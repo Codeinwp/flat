@@ -67,7 +67,7 @@ if ( ! function_exists( 'flat_scripts_styles' ) ) :
 			wp_enqueue_script( 'comment-reply' );
 		}
 
-		if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
+		if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
 			$assets = array(
 				'css' => '/assets/css/flat.css',
 				'js'  => '/assets/js/flat.js',
