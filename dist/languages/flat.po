@@ -177,7 +177,7 @@ msgid ""
 msgstr ""
 
 #: ../functions.php:71
-msgid "0 Comment"
+msgid "0 Comments"
 msgstr ""
 
 #: ../functions.php:71
