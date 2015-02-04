@@ -1,4 +1,6 @@
+<?php tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php tha_entry_top(); ?>
 	<header class="entry-header">
 		<h2 class="entry-title">
 			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'flat' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
@@ -21,4 +23,6 @@
 	<?php else : ?>
 		<div class="entry-summary"><?php the_excerpt(); ?></div>
 	<?php endif; ?>
+	<?php tha_entry_bottom(); ?>
 </article>
+<?php tha_entry_after(); ?>
