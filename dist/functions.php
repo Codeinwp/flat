@@ -1,5 +1,6 @@
 <?php
 require get_template_directory() . '/inc/customize.php';
+require get_template_directory() . '/inc/tha-theme-hooks.php';
 
 /**
  * Set the content width
