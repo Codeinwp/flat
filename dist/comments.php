@@ -1,5 +1,5 @@
 <?php if ( post_password_required() || ! comments_open() ) { return; } ?>
-<?php tha_comments_before(); ?>
+<?php do_action( 'tha_comments_before' ); ?>
 <div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
@@ -35,4 +35,4 @@
 	<?php comment_form( array( 'format' => 'html5' ) ); ?>
 
 </div>
-<?php tha_comments_after(); ?>
+<?php do_action( 'tha_comments_after' ); ?>

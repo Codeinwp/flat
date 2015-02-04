@@ -1,6 +1,6 @@
-<?php tha_sidebars_before(); ?>
+<?php do_action( 'tha_sidebars_before' ); ?>
 <div id="main-sidebar" class="widget-area" role="complementary">
-	<?php tha_sidebar_top(); ?>
+	<?php do_action( 'tha_sidebar_top' ); ?>
 	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 		<aside id="archives" class="widget">
@@ -20,6 +20,6 @@
 		</aside>
 
 	<?php endif; ?>
-	<?php tha_sidebar_bottom(); ?>
+	<?php do_action( 'tha_sidebar_bottom' ); ?>
 </div>
-<?php tha_sidebars_after(); ?>
+<?php do_action( 'tha_sidebars_after' ); ?>
