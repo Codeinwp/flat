@@ -27,6 +27,7 @@ Flat is a WordPress Blog Theme designed by YoArts. We would like to say that Fla
 * Customize: Logo, Favicon, Sidebar Background Color, Archive Posts, Single Post
 * Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
 * Translation Ready (Language available: English, German, French, Russian, Spanish, Brazil, Nederlands)
+* [Theme Hook Alliance](https://github.com/zamoose/themehookalliance/) hooks for extensible customization
 
 ## Resources
 

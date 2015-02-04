@@ -1,5 +1,7 @@
 <?php get_header(); ?>
+			<?php do_action( 'tha_entry_before' ); ?>
 			<div id="content" class="site-content" role="main">
+				<?php do_action( 'tha_entry_top' ); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
@@ -12,5 +14,7 @@
 				</article>
 				<?php comments_template(); ?>
 			<?php endwhile; ?>
+				<?php do_action( 'tha_entry_bottom' ); ?>
 			</div>
+			<?php do_action( 'tha_entry_after' ); ?>
 <?php get_footer(); ?>

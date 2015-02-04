@@ -1,5 +1,6 @@
 <?php
 require get_template_directory() . '/inc/customize.php';
+require get_template_directory() . '/inc/tha-theme-hooks.php';
 
 /**
  * Set the content width
@@ -34,6 +35,9 @@ if ( ! function_exists( 'flat_setup' ) ) :
 			'admin-preview-callback' => '',
 		);
 		add_theme_support( 'custom-background', $custom_background_support );
+
+		# Theme Hook Alliance hooks
+		add_theme_support( 'tha_hooks', array( 'all' ) );
 	}
 endif;
 add_action( 'after_setup_theme', 'flat_setup' );
@@ -111,3 +115,29 @@ if ( ! function_exists( 'flat_entry_meta' ) ) :
 		echo '</span>';
 	}
 endif;
+
+if ( ! function_exists( 'flat_current_theme_supports' ) ) :
+	/**
+	 * Allows plugin/customization authors to check whether Flat supports
+	 * Theme Hook Alliance hooks
+	 * 
+	 * Plugin developers should always check for the support of a <strong>specific</strong>
+	 * hook type before hooking a callback function to a hook of this type.
+	 * 
+	 * Example:
+	 * <code>
+	 * 		if ( current_theme_supports( 'tha_hooks', 'header' ) )
+	 * 	  		add_action( 'tha_head_top', 'prefix_header_top' );	
+	 * </code>
+	 * 
+	 * @param bool $bool true
+	 * @param array $args The hook type being checked
+	 * @param array $registered All registered hook types
+	 * 
+	 * @return bool
+	 */
+	function flat_current_theme_supports( $bool, $args, $registered ) {
+		return in_array( $args[0], $registered[0] ) || in_array( 'all', $registered[0] );
+	}
+endif;
+add_filter( 'current_theme_supports-tha_hooks', 'flat_current_theme_supports', 10, 3 );
