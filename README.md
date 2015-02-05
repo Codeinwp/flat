@@ -3,7 +3,7 @@
 [![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)](https://travis-ci.org/yoarts/flat) [![devDependency Status](https://david-dm.org/yoarts/flat/dev-status.svg)](https://david-dm.org/yoarts/flat#info=devDependencies) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yoarts/flat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 * Author: YoArts
 * Author URL: http://www.yoarts.com
-* Contributer: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater, @brazenlygeek
+* Contributer: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
 * License: GNU General Public License v3.0
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -51,35 +51,31 @@ Flat is built with the following resources:
   * Licensed under [GPL v3.0](http://www.gnu.org/licenses/gpl-3.0.html)
 * **[Bootstrap 3.3.2](http://getbootstrap.com/)**
   * Copyright: [@mdo](http://twitter.com/mdo) and [@fat](http://twitter.com/fat)
-
-**Font Awesome 4.1.0**
-
- - http://fontawesome.io/
- - Copyright: Dave Gandy, twitter.com/davegandy
- - Font Awesome licensed under SIL OFL 1.1: http://scripts.sil.org/OFL
- - Code licensed under MIT License: http://opensource.org/licenses/mit-license.html
-
-**HTML5 Shiv 3.7.2**
-
- - @afarkas @jdalton @jon_neal @rem
- - MIT/GPL2 Licensed
+* **[Font Awesome 4.3.0](http://fontawesome.io/)**
+  * Copyright: [Dave Gandy](http://twitter.com/davegandy)
+  * Font Awesome licensed under [SIL OFL 1.1](http://scripts.sil.org/OFL)
+  * Code licensed under [MIT License](http://opensource.org/licenses/mit-license.html)
+* **[HTML5 Shiv 3.7.2](https://github.com/aFarkas/html5shiv)**
+  * @afarkas @jdalton @jon_neal @rem
+  * Licensed under [MIT/GPL2](https://github.com/aFarkas/html5shiv/blob/master/MIT%20and%20GPL2%20licenses.md)
 
 ## Contributers
 
- - TobsCore: https://github.com/TobsCore
- - Marcus Michaels: https://github.com/marcusmichaels
- - Creative-mind: https://github.com/creative-mind
- - Mrinal Kanti Roy: https://github.com/mkrdip
- - Victor Perin: https://github.com/victorperin
- - Victor Tsaran: https://github.com/vick08
- - Darshan Sawardekar: https://github.com/dsawardekar
- - Teddy Rilliot: https://github.com/TeddyRilliot
- - Richard Alexander von Moltke Necochea: http://twitter.com/ravmn
- - Фарух Джапаркулов
- - Didier: http://www.wptrads.com/theme/flat-2/
- - abovethewater: https://github.com/abovethewater
- - Kevin Papst: http://www.kevinpapst.de/wordpress-flat-theme/
- - Ashfame: https://github.com/ashfame
+* [TobsCore](https://github.com/TobsCore)
+* [Marcus Michaels](https://github.com/marcusmichaels)
+* [Creative-mind](https://github.com/creative-mind)
+* [Mrinal Kanti Roy](https://github.com/mkrdip)
+* [Victor Perin](https://github.com/victorperin)
+* [Victor Tsaran](https://github.com/vick08)
+* [Darshan Sawardekar](https://github.com/dsawardekar)
+* [Teddy Rilliot](https://github.com/TeddyRilliot)
+* [Richard Alexander von Moltke Necochea](http://twitter.com/ravmn)
+* Фарух Джапаркулов
+* [Didier](http://www.wptrads.com/theme/flat-2/)
+* [abovethewater](https://github.com/abovethewater)
+* [Kevin Papst](http://www.kevinpapst.de/wordpress-flat-theme/)
+* [Ashfame](https://github.com/ashfame)
+* [Rick Beckman](http://www.rickbeckman.com/)
 
 ## Theme development
 
@@ -90,6 +86,7 @@ Add the following to your `wp-config.php` on your development installation:
 ```php
 define('WP_ENV', 'development');
 ```
+
 ### Install Grunt
 
 **Unfamiliar with npm? Don't have node installed?** [Download and install node.js](http://nodejs.org/download/) before proceeding.
