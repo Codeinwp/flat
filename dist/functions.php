@@ -61,6 +61,8 @@ if ( ! function_exists( 'flat_scripts_styles' ) ) :
 	 * Sets up necessary scripts and styles
 	 */
 	function flat_scripts_styles() {
+		global $wp_version;
+
 		$version = wp_get_theme()->get( 'Version' );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -82,10 +84,45 @@ if ( ! function_exists( 'flat_scripts_styles' ) ) :
 		wp_enqueue_style( 'flat-fonts', flat_fonts_url(), array(), null );
 		wp_enqueue_style( 'flat-theme', get_template_directory_uri() . $assets['css'], array(), $version );
 		wp_enqueue_style( 'flat-style', get_stylesheet_uri(), array(), $version );
-		wp_enqueue_script( 'flat-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, true );
+		wp_enqueue_script( 'flat-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, false );
+
+		# If the `script_loader_tag` filter is unavailable, this script will be added via the `wp_head` hook
+		if ( version_compare( '4.1', $wp_version, '<=' ) ) {
+			wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.2', false );
+		}
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'flat_scripts_styles' );
+
+# The following function uses a filter introduced in WP 4.1
+if ( version_compare( '4.1', $wp_version, '<=' ) ) :
+	if ( ! function_exists( 'flat_filter_scripts' ) ) :
+		/**
+		 * Filters enqueued script output to better suit Flat's needs
+		 */
+		function flat_filter_scripts( $tag, $handle, $src ) {
+			# Remove `type` attribute (unneeded in HTML5)
+			$tag = str_replace( ' type=\'text/javascript\'', '', $tag );
+	
+			# Apply conditionals to html5shiv for legacy IE
+			if ( 'html5shiv' === $handle ) {
+				$tag = "<!--[if lt IE 9]>\n$tag<![endif]-->\n";
+			}
+	
+			return $tag;
+		}
+	endif;
+	add_filter( 'script_loader_tag', 'flat_filter_scripts', 10, 3 );
+# If the `script_loader_tag` filter is unavailable...
+else :
+	/**
+	 * Adds html5shiv the "old" way (WP < 4.1)
+	 */
+	function flat_add_html5shiv() {
+		echo "<!--[if lt IE 9]>\n<script src='" . esc_url( get_template_directory_uri() ) . "/assets/js/html5shiv.min.js'></script>\n<![endif]-->";
+	}
+	add_action( 'wp_head', 'flat_add_html5shiv' );
+endif;
 
 if ( ! function_exists( 'flat_entry_meta' ) ) :
 	/**
