@@ -3,45 +3,54 @@
 [![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)](https://travis-ci.org/yoarts/flat) [![devDependency Status](https://david-dm.org/yoarts/flat/dev-status.svg)](https://david-dm.org/yoarts/flat#info=devDependencies) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yoarts/flat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 * Author: YoArts
 * Author URL: http://www.yoarts.com
-* Contributer: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
+* Contributer: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater, @brazenlygeek
 * License: GNU General Public License v3.0
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Description
 
-Flat is a WordPress Blog Theme designed by YoArts. We would like to say that Flat is both beautiful and charming at the same time.
+Flat is a responsive WordPress theme designed by YoArts. We would like to say that Flat is both beautiful and charming at the same time.
 
-## Features list
+## Features
 
+* Responsive layout
+* Off-canvas sidebar on handheld devices and small screens
+* WordPress customizer options:
+  * Add site logo
+  * Add favicon
+  * Select fonts (via Google Fonts)
+  * Choose colors
+  * And more!
+* Editor style for a more WYSIWYG post-editing experience
+* Fully HTML5 compatible
+* [Bootstrap](http://getbootstrap.com/) 3.3.2
+  * Fully responsive framework
+  * Wide variety of CSS effects available
+* [Font Awesome](http://fontawesome.io/) 4.3.0
+  * Over 500 icons scalable to any size
+  * Several icon effects
+  * Screen reader friendly
+* Compatible up to WordPress 4.1
+* Translation ready, with the following languages included:
+  * Brazilian Portugese
+  * Dutch
+  * English
+  * French
+  * German
+  * Russian
+  * Spanish
 * [Grunt](http://gruntjs.com/) for compiling LESS to CSS, checking for JS errors, live reloading, concatenating and minifying files
 * [Bower](http://bower.io/) for front-end package management
-* Responsive Layout
-* Off-Canvas Sidebar on Handheld Devices
-* Custom Background
-* Custom Sidebar Color
-* Editor Style
-* Write on HTML5 / LESS
-* [Bootstrap](http://getbootstrap.com/) 3.3.2
-* [Font Awesome](http://fontawesome.io/) 4.3.0
-* Compatible up to WordPress 4.1
-* Customize: Logo, Favicon, Sidebar Background Color, Archive Posts, Single Post
-* Google Fonts select for Customize: Body, Site Title, Heading, Sub-Heading
-* Translation Ready (Language available: English, German, French, Russian, Spanish, Brazil, Nederlands)
 
 ## Resources
 
 Flat is built with the following resources:
 
-**Code based on DW Minion**
-
- - http://www.designwall.com/wordpress/themes/dw-minion/
- - Copyright: DesignWall, http://www.designwall.com/
- - License under GPL v3.0: http://www.gnu.org/licenses/gpl-3.0.html
-
-**Bootstrap 3.2.0**
-
- - http://getbootstrap.com/
- - Copyright: @mdo: twitter.com/mdo and @fat: twitter.com/fat
+* **Code based on [DW Minion](http://www.designwall.com/wordpress/themes/dw-minion/)** 
+  * Copyright: [DesignWall](http://www.designwall.com/)
+  * Licensed under [GPL v3.0](http://www.gnu.org/licenses/gpl-3.0.html)
+* **[Bootstrap 3.3.2](http://getbootstrap.com/)**
+  * Copyright: [@mdo](http://twitter.com/mdo) and [@fat](http://twitter.com/fat)
 
 **Font Awesome 4.1.0**
 
