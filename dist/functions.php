@@ -103,23 +103,22 @@ if ( version_compare( '4.1', $wp_version, '<=' ) ) :
 		function flat_filter_scripts( $tag, $handle, $src ) {
 			# Remove `type` attribute (unneeded in HTML5)
 			$tag = str_replace( ' type=\'text/javascript\'', '', $tag );
-	
+
 			# Apply conditionals to html5shiv for legacy IE
 			if ( 'html5shiv' === $handle ) {
 				$tag = "<!--[if lt IE 9]>\n$tag<![endif]-->\n";
 			}
-	
+
 			return $tag;
 		}
 	endif;
 	add_filter( 'script_loader_tag', 'flat_filter_scripts', 10, 3 );
-# If the `script_loader_tag` filter is unavailable...
-else :
+else : # If the `script_loader_tag` filter is unavailable...
 	/**
 	 * Adds html5shiv the "old" way (WP < 4.1)
 	 */
 	function flat_add_html5shiv() {
-		echo "<!--[if lt IE 9]>\n<script src='" . esc_url( get_template_directory_uri() ) . "/assets/js/html5shiv.min.js'></script>\n<![endif]-->";
+		echo "<!--[if lt IE 9]>\n<scr" . 'ipt src="' . esc_url( get_template_directory_uri() ) . '/assets/js/html5shiv.min.js"></scr' . "ipt>\n<![endif]-->";
 	}
 	add_action( 'wp_head', 'flat_add_html5shiv' );
 endif;
