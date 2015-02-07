@@ -4,7 +4,18 @@ module.exports = function(grunt) {
 	require('time-grunt')(grunt);
 
 	var jsFileList = [
-		'dev/vendor/bootstrap/js/*.js',
+		'dev/vendor/bootstrap/js/transition.js',
+    'dev/vendor/bootstrap/js/alert.js',
+    'dev/vendor/bootstrap/js/button.js',
+    'dev/vendor/bootstrap/js/carousel.js',
+    'dev/vendor/bootstrap/js/collapse.js',
+    'dev/vendor/bootstrap/js/dropdown.js',
+    'dev/vendor/bootstrap/js/modal.js',
+    'dev/vendor/bootstrap/js/tooltip.js',
+    'dev/vendor/bootstrap/js/popover.js',
+    'dev/vendor/bootstrap/js/scrollspy.js',
+    'dev/vendor/bootstrap/js/tab.js',
+    'dev/vendor/bootstrap/js/affix.js',
 		'dev/js/*.js'
 	];
 
@@ -128,9 +139,10 @@ module.exports = function(grunt) {
 	]);
 	grunt.registerTask('build', [
 		'jshint',
-		'less:build',
-		'autoprefixer:build',
+		'less',
+		'autoprefixer',
 		'uglify',
+		'concat',
 		'compress'
 	]);
 };
