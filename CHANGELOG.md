@@ -1,3 +1,10 @@
+1.5.5
+=====
+
+* Fix: Navigation Toggle on Mobile
+* New: Backward Compatible for the_posts_pagination(), the_post_navination(), the_archive_title() and the_archive_description()
+* Tweak: Enqueue html5shiv.js to functions.php
+
 1.5.4
 =====
 
