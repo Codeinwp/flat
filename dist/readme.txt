@@ -30,6 +30,7 @@ Flat is a responsive WordPress theme designed by YoArts. We would like to say th
   * Several icon effects
   * Screen reader friendly
 * Compatible up to WordPress 4.1
+* Customization read via child themes and/or hooks (see below for available hooks)
 * Translation ready, with the following languages included:
   * Brazilian Portugese
   * Dutch
@@ -75,3 +76,62 @@ Flat is built with the following resources:
 * [Kevin Papst](http://www.kevinpapst.de/wordpress-flat-theme/)
 * [Ashfame](https://github.com/ashfame)
 * [Rick Beckman](http://www.rickbeckman.com/)
+
+## Customization
+
+Flat is able to be customized extensively by the [WordPress hooks & filters API](http://codex.wordpress.org/Plugin_API), which is a fancy way of saying that without creating a child theme, you have the freedom to add, remove, and change a lot of what makes Flat _Flat_. In addition to the default hooks & filters that just about any WordPress theme has available, Flat is equipped with the following:
+
+### Available hooks
+
+* `flat_html_before`
+* `flat_head_top`
+* `flat_head_bottom`
+* `flat_body_top`
+* `flat_body_bottom`
+* `flat_header_before`
+* `flat_header_after`
+* `flat_header_top`
+* `flat_header_bottom`
+* `flat_content_before`
+* `flat_content_after`
+* `flat_content_top`
+* `flat_content_bottom`
+* `flat_entry_before`
+* `flat_entry_after`
+* `flat_entry_top`
+* `flat_entry_bottom`
+* `flat_page_before`
+* `flat_page_after`
+* `flat_page_top`
+* `flat_page_bottom`
+* `flat_index_before`
+* `flat_index_after`
+* `flat_index_top`
+* `flat_index_bottom`
+* `flat_archive_before`
+* `flat_archive_after`
+* `flat_archive_top`
+* `flat_archive_bottom`
+* `flat_search_before`
+* `flat_search_after`
+* `flat_search_top`
+* `flat_search_bottom`
+* `flat_comments_before`
+* `flat_comments_after`
+* `flat_comments_top`
+* `flat_comments_bottom`
+* `flat_sidebar_before`
+* `flat_sidebar_after`
+* `flat_sidebar_top`
+* `flat_sidebar_bottom`
+* `flat_404_content`
+* `flat_footer_before`
+* `flat_footer_after`
+* `flat_footer_top`
+* `flat_footer_bottom`
+* BONUS! All Theme Hook Alliance hooks are included!
+
+### Available filters
+
+* `flat_404_title` — (string) The title of the 404 Error page.
+* `show_flat_credits` — (boolean) Whether to show the default `footer` credits block

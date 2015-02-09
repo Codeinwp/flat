@@ -11,10 +11,15 @@
 		<div class="entry-thumbnail"><?php the_post_thumbnail(); ?></div>
 	<?php endif; ?>
 
+	<?php flat_hook_entry_before(); ?>
+
 	<div class="entry-content">
+		<?php flat_hook_entry_top(); ?>
 		<?php the_content( __( 'Continue reading', 'flat' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'flat' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+		<?php flat_hook_entry_bottom(); ?>
 	</div>
+	<?php flat_hook_entry_after(); ?>
 	<?php the_tags( '<div class="tags-links">', __( ' ', 'flat' ), '</div>' ); ?>
 </article>
 	<?php $single_author_box = flat_get_theme_option( 'single_author_box' ); ?>

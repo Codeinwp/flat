@@ -1,4 +1,6 @@
+<?php flat_hook_sidebar_before(); ?>
 <div id="main-sidebar" class="widget-area" role="complementary">
+	<?php flat_hook_sidebar_top(); ?>
 	<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 		<aside id="archives" class="widget">
@@ -18,4 +20,6 @@
 		</aside>
 
 	<?php endif; ?>
+	<?php flat_hook_sidebar_bottom(); ?>
 </div>
+<?php flat_hook_sidebar_after(); ?>
