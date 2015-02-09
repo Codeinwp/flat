@@ -1,6 +1,10 @@
 <?php if ( post_password_required() || ! comments_open() ) { return; } ?>
 
+<?php flat_hook_comments_before(); ?>
+
 <div id="comments" class="comments-area">
+
+	<?php flat_hook_comments_top(); ?>
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
@@ -34,4 +38,8 @@
 
 	<?php comment_form( array( 'format' => 'html5' ) ); ?>
 
+	<?php flat_hook_comments_bottom(); ?>
+
 </div>
+
+<?php flat_hook_comments_after(); ?>
