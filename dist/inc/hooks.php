@@ -34,6 +34,50 @@ function flat_hook_head_bottom() {
 }
 
 /**
+ * Before page header
+ *
+ * HTML context: within `div#content`, just before `header.site-header`
+ * THA hook: tha_header_before
+ */
+function flat_hook_header_before() {
+	do_action( 'flat_header_before' );
+	do_action( 'tha_header_before' );
+}
+
+/**
+ * Top of header
+ *
+ * HTML context: top of `header`
+ * THA hook: tha_header_top
+ */
+function flat_hook_header_top() {
+	do_action( 'flat_header_top' );
+	do_action( 'tha_header_top' );
+}
+
+/**
+ * Bottom of header
+ *
+ * HTML context: bottom of `header`
+ * THA hook: tha_header_bottom
+ */
+function flat_hook_header_bottom() {
+	do_action( 'flat_header_bottom' );
+	do_action( 'tha_header_bottom' );
+}
+
+/**
+ * After page header
+ *
+ * HTML context: within `div#content`, just after `header.site-header`
+ * THA hook: tha_header_after
+ */
+function flat_hook_header_after() {
+	do_action( 'flat_header_after' );
+	do_action( 'tha_header_after' );
+}
+
+/**
  * Top of body
  *
  * HTML context: within `body` just before `div#page`

@@ -238,7 +238,7 @@ if ( ! function_exists( 'flat_output_404_content' ) ) :
 	 * The default content of a 404 page
 	 */
 	function flat_output_404_content() {
-		echo '<p>' . __( 'It looks like nothing was found at this location. Maybe try a search?', 'flat' ) . "</p>\n"
+		echo '<p>' . __( 'It looks like nothing was found at this location. Maybe try a search?', 'flat' ) . "</p>\n";
 
 		get_search_form();
 	}

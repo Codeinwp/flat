@@ -1,14 +1,14 @@
 <?php flat_hook_html_before(); ?>
 <html <?php language_attributes(); ?>>
 <head>
-	<?php flat_head_top(); ?>
+	<?php flat_hook_head_top(); ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<?php wp_head(); ?>
-	<?php flat_head_bottom(); ?>
+	<?php flat_hook_head_bottom(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -17,7 +17,7 @@
 	<div class="container">
 		<div class="row row-offcanvas row-offcanvas-left">
 			<div id="secondary" class="col-lg-3">
-				<?php flat_hook_heade_before(); ?>
+				<?php flat_hook_header_before(); ?>
 				<header id="masthead" class="site-header" role="banner">
 					<?php flat_hook_header_top(); ?>
 					<div class="hgroup">
