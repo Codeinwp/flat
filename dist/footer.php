@@ -18,7 +18,7 @@
 		</div>
 	</div>
 </div>
-<?php flat_body_bottom(); ?>
+<?php flat_hook_body_bottom(); ?>
 <?php wp_footer(); ?>
 </body>
 </html>
