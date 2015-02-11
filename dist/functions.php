@@ -60,11 +60,16 @@ if ( ! function_exists( 'flat_setup' ) ) :
 		register_nav_menu( 'primary', __( 'Navigation Menu', 'flat' ) );
 
 		# Add filters
+		add_filter( 'current_theme_supports-tha_hooks', '__return_true' ); # Enables checking for THA hooks
+		add_filter( 'style_loader_tag', 'flat_filter_styles', 10, 2 ); # Filters style tags as needed 
+		add_filter( 'the_content_more_link', 'modify_read_more_link' ); # Enhances appearance of "Read more..." link
 		add_filter( 'use_default_gallery_style', '__return_false' ); # Disable default WordPress gallery styling
 
 		# Add actions
 		add_action( 'flat_html_before', 'flat_doctype' ); # Outputs HTML doctype
 		add_action( 'flat_404_content', 'flat_output_404_content' ); # Outputs a helpful message on 404 pages
+		add_action( 'widgets_init', 'flat_widgets_init' ); # Registers Flat's sidebar
+		add_action( 'wp_enqueue_scripts', 'flat_scripts_styles' ); # Enqueue's Flat's scripts & styles
 	}
 endif;
 add_action( 'after_setup_theme', 'flat_setup' );
@@ -85,7 +90,6 @@ if ( ! function_exists( 'flat_widgets_init' ) ) :
 		) );
 	}
 endif;
-add_action( 'widgets_init', 'flat_widgets_init' );
 
 if ( ! function_exists( 'flat_scripts_styles' ) ) :
 	/**
@@ -94,12 +98,15 @@ if ( ! function_exists( 'flat_scripts_styles' ) ) :
 	function flat_scripts_styles() {
 		global $wp_version;
 
-		$version = wp_get_theme()->get( 'Version' );
+		# Get the current version of Flat, even if a child theme is being used
+		$version = wp_get_theme( wp_get_theme()->template )->get( 'Version' );
 
+		# When needed, enqueue comment-reply script
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
+		# Minified versions of CSS & JS are used, unless a development constant is set
 		if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
 			$assets = array(
 				'css' => '/assets/css/flat.css',
@@ -112,10 +119,9 @@ if ( ! function_exists( 'flat_scripts_styles' ) ) :
 			);
 		}
 
-		wp_enqueue_style( 'flat-fonts', flat_fonts_url(), array(), null );
-		wp_enqueue_style( 'flat-theme', get_template_directory_uri() . $assets['css'], array(), $version );
-		wp_enqueue_style( 'flat-style', get_stylesheet_uri(), array(), $version );
-		wp_enqueue_script( 'flat-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, false );
+		wp_enqueue_style( 'flat-fonts', flat_fonts_url(), array(), null ); # Web fonts
+		wp_enqueue_style( 'flat-theme', get_template_directory_uri() . $assets['css'], array(), $version ); # Flat's styling
+		wp_enqueue_script( 'flat-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, false ); # Flat's scripting
 
 		# If the `script_loader_tag` filter is unavailable, this script will be added via the `wp_head` hook
 		if ( version_compare( '4.1', $wp_version, '<=' ) ) {
@@ -123,7 +129,6 @@ if ( ! function_exists( 'flat_scripts_styles' ) ) :
 		}
 	}
 endif;
-add_action( 'wp_enqueue_scripts', 'flat_scripts_styles' );
 
 # The following function uses a filter introduced in WP 4.1
 if ( version_compare( '4.1', $wp_version, '<=' ) ) :
@@ -149,23 +154,29 @@ else : # If the `script_loader_tag` filter is unavailable...
 	 * Adds html5shiv the "old" way (WP < 4.1)
 	 */
 	function flat_add_html5shiv() {
-		echo "<!--[if lt IE 9]>\n<scr" . 'ipt src="' . esc_url( get_template_directory_uri() ) . '/assets/js/html5shiv.min.js"></scr' . "ipt>\n<![endif]-->";
+		echo "<!--[if lt IE 9]>\n<scr" . 'ipt src="' . esc_url( get_template_directory_uri() ) . '/assets/js/html5shiv.min.js"></scr' . "ipt>\n<![endif]-->"; # This is a hack to disguise adding the script without using WordPress' enqueue function
 	}
 	add_action( 'wp_head', 'flat_add_html5shiv' );
 endif;
 
-if ( ! function_exists( 'flat_tha_support' ) ) :
+if ( ! function_exists( 'flat_filter_styles' ) ) :
 	/**
-	 * Allows support for Theme Hook Alliance hooks to be checked by plugins/customizers
+	 * Filter enqueued style output to better suit HTML5
 	 */
-	function flat_tha_support() {
-		return true;
+	function flat_filter_styles( $tag, $handle ) {
+		# Get rid of unnecessary `type` attribute
+		$tag = str_replace( ' type=\'text/css\'', '', $tag );
+
+		# Get rid of double-spaces
+		$tag = str_replace( '  ', ' ', $tag );
+
+		return $tag;	
 	}
 endif;
-add_filter( 'current_theme_supports-tha_hooks', 'flat_tha_support' );
 
-
-add_filter( 'the_content_more_link', 'modify_read_more_link' );
+/**
+ * Enhances "Read more..." links with Bootstrap button styling
+ */
 function modify_read_more_link() {
-	return '<a class="btn btn-default btn-sm" href="' . get_permalink() . '">'.__( 'Continue reading', 'flat' ).' &#62;&#62;</a>';
+	return '<a class="btn btn-default btn-sm" href="' . esc_url( get_permalink() ) . '">' . sprintf( __( 'Continue reading %s', 'flat' ), '<i class="fa fa-angle-double-right"></i></a>' );
 }
