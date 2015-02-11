@@ -1,3 +1,7 @@
+1.5.6
+
+* Fix: Search Results Pagination
+
 1.5.5
 =====
 
