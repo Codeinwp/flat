@@ -78,10 +78,10 @@ if ( ! function_exists( 'flat_widgets_init' ) ) :
 			'name'          => __( 'Main Widget Area', 'flat' ),
 			'id'            => 'sidebar-1',
 			'description'   => __( 'Appears in the sidebar section of the site', 'flat' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
+			'before_widget' => "\t\t\t\t\t" . '<aside id="%1$s" class="widget %2$s">' . "\n",
+			'after_widget'  => "\t\t\t\t\t</aside>\n",
+			'before_title'  => "\t\t\t\t\t\t<h3 class='widget-title'>",
+			'after_title'   => "</h3>\n",
 		) );
 	}
 endif;
