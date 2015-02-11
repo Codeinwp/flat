@@ -13,12 +13,17 @@ if ( 1 == count( get_included_files() ) ) {
 	die( 'Direct access of this file is prohibited. Thank you.' );
 }
 
-require get_template_directory() . '/inc/customize.php';
-require get_template_directory() . '/inc/hooks.php';
-require get_template_directory() . '/inc/template-tags.php';
+/**
+ * File inclusions
+ */
+require get_template_directory() . '/inc/customize.php'; # Enables user customization via admin panel
+require get_template_directory() . '/inc/hooks.php'; # Enables user customization via WordPress plugin API
+require get_template_directory() . '/inc/template-tags.php'; # Contains functions that output HTML
 
 /**
- * Set the content width
+ * Set the max width for embedded content
+ *
+ * @link http://codex.wordpress.org/Content_Width
  */
 if ( ! isset( $content_width ) ) {
 	$content_width = 720;
@@ -29,20 +34,11 @@ if ( ! function_exists( 'flat_setup' ) ) :
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 */
 	function flat_setup() {
+		# Localization
 		load_theme_textdomain( 'flat', get_template_directory() . '/languages' );
 
-		add_theme_support( 'automatic-feed-links' );
-		add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );
-		add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status' ) );
-		register_nav_menu( 'primary', __( 'Navigation Menu', 'flat' ) );
-		add_theme_support( 'post-thumbnails' );
-		add_filter( 'use_default_gallery_style', '__return_false' );
-
-		add_editor_style( array( 'assets/css/editor-style.css' ) );
-
-		add_theme_support( 'title-tag' );
-		add_theme_support( 'tha-hooks', array( 'all' ) );
-
+		# Enable WordPress theme features
+		add_theme_support( 'automatic-feed-links' ); # @link http://codex.wordpress.org/Automatic_Feed_Links
 		$custom_background_support = array(
 			'default-color'          => '',
 			'default-image'          => get_template_directory_uri() . '/assets/img/default-background.jpg',
@@ -50,11 +46,25 @@ if ( ! function_exists( 'flat_setup' ) ) :
 			'admin-head-callback'    => '',
 			'admin-preview-callback' => '',
 		);
-		add_theme_support( 'custom-background', $custom_background_support );
+		add_theme_support( 'custom-background', $custom_background_support ); # @link http://codex.wordpress.org/Custom_Backgrounds
+		add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status' ) ); # @link http://codex.wordpress.org/Post%20Formats
+		add_theme_support( 'post-thumbnails' ); # @link http://codex.wordpress.org/Post%20Thumbnails
+		add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );
+		add_theme_support( 'title-tag' ); # @link http://codex.wordpress.org/Title_Tag
+		add_theme_support( 'tha-hooks', array( 'all' ) ); # @link https://github.com/zamoose/themehookalliance
 
-		# Add default theme blocks
-		add_action( 'flat_html_before', 'flat_doctype' );
-		add_action( 'flat_404_content', 'flat_output_404_content' );
+		# Add style to the post editor for a more WYSIWYG experience
+		add_editor_style( array( 'assets/css/editor-style.css' ) );
+
+		# Flat has one navigation menu; register it with WordPress
+		register_nav_menu( 'primary', __( 'Navigation Menu', 'flat' ) );
+
+		# Add filters
+		add_filter( 'use_default_gallery_style', '__return_false' ); # Disable default WordPress gallery styling
+
+		# Add actions
+		add_action( 'flat_html_before', 'flat_doctype' ); # Outputs HTML doctype
+		add_action( 'flat_404_content', 'flat_output_404_content' ); # Outputs a helpful message on 404 pages
 	}
 endif;
 add_action( 'after_setup_theme', 'flat_setup' );
