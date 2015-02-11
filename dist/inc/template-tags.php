@@ -94,7 +94,7 @@ if ( ! function_exists( 'the_archive_title' ) ) :
 		 */
 		$title = apply_filters( 'get_the_archive_title', $title );
 		if ( ! empty( $title ) ) {
-			echo $before . $title . $after;
+			echo wp_kses_post( $before . $title . $after );
 		}
 	}
 endif;
@@ -120,7 +120,7 @@ if ( ! function_exists( 'the_archive_description' ) ) :
 			 *
 			 * @param string $description Archive description to be displayed.
 			 */
-			echo $before . $description . $after;
+			echo wp_kses_post( $before . $description . $after );
 		}
 	}
 endif;
@@ -170,7 +170,7 @@ if ( ! function_exists( 'the_post_navigation' ) ) :
 	 *                    arguments. Default empty array.
 	 */
 	function the_post_navigation( $args = array() ) {
-		echo get_the_post_navigation( $args );
+		echo balanceTags( get_the_post_navigation( $args ) );
 	}
 endif;
 
@@ -229,7 +229,7 @@ if ( ! function_exists( 'the_posts_pagination' ) ) :
 	 *                    Default empty array.
 	 */
 	function the_posts_pagination( $args = array() ) {
-		echo get_the_posts_pagination( $args );
+		echo balanceTags( get_the_posts_pagination( $args ) );
 	}
 endif;
 
@@ -238,7 +238,7 @@ if ( ! function_exists( 'flat_output_404_content' ) ) :
 	 * The default content of a 404 page
 	 */
 	function flat_output_404_content() {
-		echo '<p>' . __( 'It looks like nothing was found at this location. Maybe try a search?', 'flat' ) . "</p>\n";
+		echo balanceTags( '<p>' . __( 'It looks like nothing was found at this location. Maybe try a search?', 'flat' ) . "</p>\n" );
 
 		get_search_form();
 	}
