@@ -1,4 +1,18 @@
 <?php
+/**
+ * Flat initiation
+ *
+ * Initializes Flat's features and includes all necessary files.
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	die( 'Direct access of this file is prohibited. Thank you.' );
+}
+
 require get_template_directory() . '/inc/customize.php';
 require get_template_directory() . '/inc/hooks.php';
 require get_template_directory() . '/inc/template-tags.php';
