@@ -143,5 +143,5 @@ add_filter( 'current_theme_supports-tha_hooks', 'flat_tha_support' );
 
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 function modify_read_more_link() {
-return '<a class="btn btn-default btn-sm" href="' . get_permalink() . '">'.__( 'Continue reading', 'flat' ).' &#62;&#62;</a>';
+	return '<a class="btn btn-default btn-sm" href="' . get_permalink() . '">'.__( 'Continue reading', 'flat' ).' &#62;&#62;</a>';
 }
