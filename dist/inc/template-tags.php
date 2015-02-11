@@ -94,7 +94,7 @@ if ( ! function_exists( 'the_archive_title' ) ) :
 		 */
 		$title = apply_filters( 'get_the_archive_title', $title );
 		if ( ! empty( $title ) ) {
-			echo esc_attr( $before . $title . $after );
+			echo wp_kses_post( $before . $title . $after );
 		}
 	}
 endif;
@@ -120,7 +120,7 @@ if ( ! function_exists( 'the_archive_description' ) ) :
 			 *
 			 * @param string $description Archive description to be displayed.
 			 */
-			echo esc_attr( $before . $description . $after );
+			echo wp_kses_post( $before . $description . $after );
 		}
 	}
 endif;
