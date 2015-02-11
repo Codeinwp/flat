@@ -61,7 +61,7 @@ if ( ! function_exists( 'flat_setup' ) ) :
 
 		# Add filters
 		add_filter( 'current_theme_supports-tha_hooks', '__return_true' ); # Enables checking for THA hooks
-		add_filter( 'style_loader_tag', 'flat_filter_styles', 10, 2 ); # Filters style tags as needed 
+		add_filter( 'style_loader_tag', 'flat_filter_styles', 10, 2 ); # Filters style tags as needed
 		add_filter( 'the_content_more_link', 'modify_read_more_link' ); # Enhances appearance of "Read more..." link
 		add_filter( 'use_default_gallery_style', '__return_false' ); # Disable default WordPress gallery styling
 
@@ -170,7 +170,7 @@ if ( ! function_exists( 'flat_filter_styles' ) ) :
 		# Get rid of double-spaces
 		$tag = str_replace( '  ', ' ', $tag );
 
-		return $tag;	
+		return $tag;
 	}
 endif;
 
