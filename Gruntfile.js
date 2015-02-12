@@ -116,7 +116,7 @@ module.exports = function(grunt) {
 			},
 			livereload: {
 				options: {
-					livereload: false
+					livereload: true
 				},
 				files: [
 					'dev/**',
@@ -133,9 +133,9 @@ module.exports = function(grunt) {
 	]);
 	grunt.registerTask('dev', [
 		'jshint',
-		'less:dev',
-		'autoprefixer:dev',
-		'concat'
+		'less:build',
+		'autoprefixer:build',
+		'uglify'
 	]);
 	grunt.registerTask('build', [
 		'jshint',
