@@ -1,6 +1,7 @@
 1.5.6
 
 * Fix: Search Results Pagination
+* Add: Hook Positions
 
 1.5.5
 =====

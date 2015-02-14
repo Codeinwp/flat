@@ -33,7 +33,7 @@
 				<?php flat_hook_header_after(); ?>
 
 				<div class="sidebar-offcanvas">
-					<?php get_sidebar(); ?>
+<?php get_sidebar(); ?>
 				</div>
 			</div>
 

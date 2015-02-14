@@ -1,108 +1,56 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-05-30 22:17+0700\n"
-"PO-Revision-Date: 2014-05-30 22:17+0700\n"
+"POT-Creation-Date: 2015-02-12 21:48+0700\n"
+"PO-Revision-Date: 2015-02-12 21:48+0700\n"
 "Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: YoArts <hi@yoarts.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../404.php:3
+#: ../404.php:4
 msgid "Not Found"
 msgstr "Ничего не найдено"
 
-#: ../404.php:5
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
-"Похоже, ничего не было найдено по этому адресу. Может быть, попробовать "
-"поиск?"
-
-#: ../archive.php:5
-#, php-format
-msgid "Category: %s"
-msgstr "Категория: %s"
-
-#: ../archive.php:8
-#, php-format
-msgid "Tag: %s"
-msgstr "Тег: %s"
-
-#: ../archive.php:13
-#, php-format
-msgid "Author: %s"
-msgstr "Автор: %s"
-
-#: ../archive.php:18
-#, php-format
-msgid "Day: %s"
-msgstr "День: %s"
-
-#: ../archive.php:21
-#, php-format
-msgid "Month: %s"
-msgstr "Месяц: %s"
-
-#: ../archive.php:24
-#, php-format
-msgid "Year: %s"
-msgstr "Год: %s"
-
-#: ../archive.php:27
-msgid "Asides"
-msgstr "Резервы"
-
-#: ../archive.php:30
-msgid "Images"
-msgstr "Изображение"
-
-#: ../archive.php:33
-msgid "Videos"
-msgstr "Видео"
-
-#: ../archive.php:36
-msgid "Quotes"
-msgstr "Кавычки"
-
-#: ../archive.php:39
-msgid "Links"
-msgstr "Ссылки"
-
-#: ../archive.php:42 ../sidebar.php:5
-msgid "Archives"
-msgstr "Архивы"
-
-#: ../archive.php:60 ../author-bio.php:6
+#: ../archive.php:10 ../author-bio.php:6
 #, php-format
 msgid "About %s"
 msgstr "Об %s"
 
-#: ../author-bio.php:10
+#: ../archive.php:24 ../index.php:10 ../search.php:12
+msgid "<i class=\"fa fa-chevron-left\"></i>"
+msgstr "<i class=\"fa fa-chevron-left\"></i>"
+
+#: ../archive.php:24 ../index.php:10 ../search.php:12
+msgid "<i class=\"fa fa-chevron-right\"></i>"
+msgstr "<i class=\"fa fa-chevron-right\"></i>"
+
+#: ../author-bio.php:11
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Просмотр всех публикаций %s <span class=\"meta-nav\">&rarr;</span>"
 
-#: ../comments.php:26
+#: ../comments.php:27
 msgid "Comment navigation"
 msgstr "Навигация по комментариям"
 
-#: ../comments.php:27
+#: ../comments.php:28
 msgid "&larr; Older Comments"
 msgstr "&larr; Старые комментарии"
 
-#: ../comments.php:28
+#: ../comments.php:29
 msgid "Newer Comments &rarr;"
 msgstr "Новые комментарии &rarr;"
 
-#: ../comments.php:33
+#: ../comments.php:34
 msgid "Comments are closed."
 msgstr "Комментарии закрыты."
 
@@ -132,50 +80,144 @@ msgid ""
 msgstr ""
 "Кажется, мы не можем найти то, что вы ищете. Возможно, поиск может помочь."
 
-#: ../content-single.php:14 ../content.php:17
+#: ../content-single.php:18 ../content.php:20
 msgid "Continue reading"
 msgstr "Продолжить чтение"
 
-#: ../content-single.php:15 ../content.php:18 ../page.php:15
+#: ../content-single.php:19 ../content.php:21 ../page.php:15
 msgid "Pages:"
 msgstr "Страницы:"
 
-#: ../content-single.php:19
+#: ../content-single.php:23
 msgid " "
 msgstr ""
 
-#: ../content.php:4 ../content.php:12
+#: ../content.php:4 ../content.php:13
 #, php-format
 msgid "Permalink to %s"
 msgstr "Постоянная ссылка на %s"
 
-#: ../footer.php:4
+#: ../footer.php:10
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: ../footer.php:4
+#: ../footer.php:10
 #, php-format
 msgid "Proudly powered by %s"
 msgstr "Сайт работает на %s"
 
-#: ../footer.php:5
+#: ../footer.php:11
 #, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "Тема: %1$s Автор: %2$s."
+msgid "Theme: %1$s %2$s by %3$s."
+msgstr ""
 
-#: ../functions.php:11
+#: ../functions.php:60
 msgid "Navigation Menu"
 msgstr "Основное меню"
 
-#: ../functions.php:49
+#: ../functions.php:83
 msgid "Main Widget Area"
 msgstr "Основная область для виджетов"
 
-#: ../functions.php:51
+#: ../functions.php:85
 msgid "Appears in the sidebar section of the site"
 msgstr "Появится в разделе боковой панели сайта"
 
-#: ../functions.php:62
+#: ../functions.php:181
+#, php-format
+msgid "Continue reading %s"
+msgstr ""
+
+#: ../header.php:26
+msgid "<i class=\"fa fa-gear\"></i>"
+msgstr ""
+
+#: ../header.php:27
+msgid "<i class=\"fa fa-bars\"></i>"
+msgstr ""
+
+#: ../inc/customize.php:20 ../inc/customize.php:63
+msgid "Site Logo"
+msgstr "Логотип сайта"
+
+#: ../inc/customize.php:34
+msgid "Site Title Font Family"
+msgstr "Шрифт заголовка сайта"
+
+#: ../inc/customize.php:62
+msgid "Site Title"
+msgstr ""
+
+#: ../inc/customize.php:64
+msgid "Both Title &amp; Logo"
+msgstr ""
+
+#: ../inc/customize.php:75
+msgid "Site Favicon"
+msgstr "Иконка сайта"
+
+#: ../inc/customize.php:88
+msgid "Sidebar Background Color"
+msgstr "Цвет фона боковой панели"
+
+#: ../inc/customize.php:102
+msgid "Background size"
+msgstr ""
+
+#: ../inc/customize.php:106
+msgid "Cover"
+msgstr ""
+
+#: ../inc/customize.php:107
+msgid "Contain"
+msgstr ""
+
+#: ../inc/customize.php:108
+msgid "Initial"
+msgstr ""
+
+#: ../inc/customize.php:114
+msgid "Typography"
+msgstr "Типографика"
+
+#: ../inc/customize.php:127
+msgid "Global Font Family"
+msgstr "Основной шрифт"
+
+#: ../inc/customize.php:149
+msgid "Heading Font Family"
+msgstr "Шрифт заголовков"
+
+#: ../inc/customize.php:173
+msgid "Sub-Heading Font Family"
+msgstr "Шрифт подзаголовков"
+
+#: ../inc/customize.php:188
+msgid "Single Post"
+msgstr ""
+
+#: ../inc/customize.php:200 ../inc/customize.php:248
+msgid "Hide Featured Image"
+msgstr ""
+
+#: ../inc/customize.php:214 ../inc/customize.php:262
+msgid "Hide Metadata"
+msgstr ""
+
+#: ../inc/customize.php:228
+msgid "Hide Author Box"
+msgstr ""
+
+#: ../inc/customize.php:236
+#, fuzzy
+msgid "Archive Pages"
+msgstr "Архивы"
+
+#: ../inc/customize.php:276
+msgid "Show Post Excerpt"
+msgstr ""
+
+#: ../inc/template-tags.php:19
 #, php-format
 msgid ""
 "<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class="
@@ -188,105 +230,89 @@ msgstr ""
 "\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
 "rel=\"author\">%5$s</a></span></span>"
 
-#: ../functions.php:71
-msgid "0 Comment"
-msgstr "0 Комментарий"
+#: ../inc/template-tags.php:32
+msgid "0 Comments"
+msgstr ""
 
-#: ../functions.php:71
+#: ../inc/template-tags.php:32
 msgid "1 Comment"
 msgstr "1 Комментарий"
 
-#: ../functions.php:71
+#: ../inc/template-tags.php:32
 msgid "% Comments"
 msgstr "% Комментарий"
 
-#: ../functions.php:103
-msgid "<i class=\"fa fa-chevron-left\"></i>"
-msgstr "<i class=\"fa fa-chevron-left\"></i>"
+#: ../inc/template-tags.php:50
+#, php-format
+msgid "Category: %s"
+msgstr "Категория: %s"
 
-#: ../functions.php:104
-msgid "<i class=\"fa fa-chevron-right\"></i>"
-msgstr "<i class=\"fa fa-chevron-right\"></i>"
+#: ../inc/template-tags.php:52
+#, php-format
+msgid "Tag: %s"
+msgstr "Тег: %s"
 
-#: ../functions.php:129
+#: ../inc/template-tags.php:54
+#, php-format
+msgid "Author: %s"
+msgstr "Автор: %s"
+
+#: ../inc/template-tags.php:56
+#, php-format
+msgid "Year: %s"
+msgstr "Год: %s"
+
+#: ../inc/template-tags.php:58
+#, php-format
+msgid "Month: %s"
+msgstr "Месяц: %s"
+
+#: ../inc/template-tags.php:60
+#, php-format
+msgid "Day: %s"
+msgstr "День: %s"
+
+#: ../inc/template-tags.php:82
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:86
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: ../inc/template-tags.php:88 ../sidebar.php:7
+msgid "Archives"
+msgstr "Архивы"
+
+#: ../inc/template-tags.php:147
 msgid "Post navigation"
 msgstr "Пост навигаций"
 
-#: ../functions.php:157
-#, fuzzy, php-format
-msgid "Page %s"
-msgstr "Страницы:"
-
-#: ../header.php:22
-msgid "<i class=\"fa fa-gear\"></i>"
+#: ../inc/template-tags.php:199
+msgid "Previous"
 msgstr ""
 
-#: ../header.php:23
-msgid "<i class=\"fa fa-bars\"></i>"
+#: ../inc/template-tags.php:200
+msgid "Next"
 msgstr ""
 
-#: ../inc/customizer.php:22
-msgid "Site Title Font Family"
-msgstr "Шрифт заголовка сайта"
-
-#: ../inc/customizer.php:37
-msgid "Site Logo"
-msgstr "Логотип сайта"
-
-#: ../inc/customizer.php:63
-msgid "Site Favicon"
-msgstr "Иконка сайта"
-
-#: ../inc/customizer.php:73
-msgid "Sidebar Background Color"
-msgstr "Цвет фона боковой панели"
-
-#: ../inc/customizer.php:95
-msgid "Typography"
-msgstr "Типографика"
-
-#: ../inc/customizer.php:105
-msgid "Global Font Family"
-msgstr "Основной шрифт"
-
-#: ../inc/customizer.php:125
-msgid "Heading Font Family"
-msgstr "Шрифт заголовков"
-
-#: ../inc/customizer.php:146
-msgid "Sub-Heading Font Family"
-msgstr "Шрифт подзаголовков"
-
-#: ../inc/customizer.php:159
-msgid "Single Post"
+#: ../inc/template-tags.php:201
+msgid "Posts navigation"
 msgstr ""
 
-#: ../inc/customizer.php:168 ../inc/customizer.php:205
-msgid "Hide Featured Image"
+#: ../inc/template-tags.php:241
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
+"Похоже, ничего не было найдено по этому адресу. Может быть, попробовать "
+"поиск?"
 
-#: ../inc/customizer.php:179 ../inc/customizer.php:216
-msgid "Hide Metadata"
-msgstr ""
-
-#: ../inc/customizer.php:190
-msgid "Hide Author Box"
-msgstr ""
-
-#: ../inc/customizer.php:196
-#, fuzzy
-msgid "Archive Pages"
-msgstr "Архивы"
-
-#: ../inc/customizer.php:227
-msgid "Show Post Excerpt"
-msgstr ""
-
-#: ../page.php:13
+#: ../page.php:14
 msgid "Continue reading <span class=\"meta-nav\">...</span>"
 msgstr "Продолжить чтение <span class=\"meta-nav\">...</span>"
 
-#: ../search.php:4
+#: ../search.php:3
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Результаты поиска для: %s"
@@ -295,9 +321,34 @@ msgstr "Результаты поиска для: %s"
 msgid "Search"
 msgstr "Поиск"
 
-#: ../sidebar.php:12
+#: ../sidebar.php:14
 msgid "Meta"
 msgstr "Мета"
+
+#~ msgid "Asides"
+#~ msgstr "Резервы"
+
+#~ msgid "Images"
+#~ msgstr "Изображение"
+
+#~ msgid "Videos"
+#~ msgstr "Видео"
+
+#~ msgid "Quotes"
+#~ msgstr "Кавычки"
+
+#~ msgid "Links"
+#~ msgstr "Ссылки"
+
+#~ msgid "Theme: %1$s by %2$s."
+#~ msgstr "Тема: %1$s Автор: %2$s."
+
+#~ msgid "0 Comment"
+#~ msgstr "0 Комментарий"
+
+#, fuzzy
+#~ msgid "Page %s"
+#~ msgstr "Страницы:"
 
 #~ msgid "Page %1$s of %2$s"
 #~ msgstr "Страница %1$s of %2$s"

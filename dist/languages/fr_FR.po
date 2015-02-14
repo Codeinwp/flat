@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
-"POT-Creation-Date: 2014-05-30 22:17+0700\n"
-"PO-Revision-Date: 2014-05-30 22:17+0700\n"
+"POT-Creation-Date: 2015-02-12 21:37+0700\n"
+"PO-Revision-Date: 2015-02-12 21:45+0700\n"
 "Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: Wolforg <contact@wolforg.eu>\n"
 "Language: fr\n"
@@ -11,97 +11,47 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../404.php:3
+#: ../404.php:4
 msgid "Not Found"
 msgstr "Non Trouvé"
 
-#: ../404.php:5
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr "Il semble que rien ne se trouve à cet endroit. Essayer une recherche ?"
-
-#: ../archive.php:5
-#, php-format
-msgid "Category: %s"
-msgstr "Catégorie : %s"
-
-#: ../archive.php:8
-#, php-format
-msgid "Tag: %s"
-msgstr "Mot-clé : %s"
-
-#: ../archive.php:13
-#, php-format
-msgid "Author: %s"
-msgstr "Auteur : %s"
-
-#: ../archive.php:18
-#, php-format
-msgid "Day: %s"
-msgstr "Jour : %s"
-
-#: ../archive.php:21
-#, php-format
-msgid "Month: %s"
-msgstr "Mois : %s"
-
-#: ../archive.php:24
-#, php-format
-msgid "Year: %s"
-msgstr "Année : %s"
-
-#: ../archive.php:27
-msgid "Asides"
-msgstr "Annonces"
-
-#: ../archive.php:30
-msgid "Images"
-msgstr "Images"
-
-#: ../archive.php:33
-msgid "Videos"
-msgstr "Vidéos"
-
-#: ../archive.php:36
-msgid "Quotes"
-msgstr "Citations"
-
-#: ../archive.php:39
-msgid "Links"
-msgstr "Liens"
-
-#: ../archive.php:42 ../sidebar.php:5
-msgid "Archives"
-msgstr "Archives"
-
-#: ../archive.php:60 ../author-bio.php:6
+#: ../archive.php:10 ../author-bio.php:6
 #, php-format
 msgid "About %s"
 msgstr "A propos de %s"
 
-#: ../author-bio.php:10
+#: ../archive.php:24 ../index.php:10 ../search.php:12
+msgid "<i class=\"fa fa-chevron-left\"></i>"
+msgstr "<i class=\"fa fa-chevron-left\"></i>"
+
+#: ../archive.php:24 ../index.php:10 ../search.php:12
+msgid "<i class=\"fa fa-chevron-right\"></i>"
+msgstr "<i class=\"fa fa-chevron-right\"></i>"
+
+#: ../author-bio.php:11
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Voir tous les articles par %s <span class=\"meta-nav\">&rarr;</span>"
 
-#: ../comments.php:26
+#: ../comments.php:27
 msgid "Comment navigation"
 msgstr "Navigation Commentaires"
 
-#: ../comments.php:27
+#: ../comments.php:28
 msgid "&larr; Older Comments"
 msgstr "&laquo; Commentaires plus Anciens"
 
-#: ../comments.php:28
+#: ../comments.php:29
 msgid "Newer Comments &rarr;"
 msgstr "Commentaires plus Récents &raquo;"
 
-#: ../comments.php:33
+#: ../comments.php:34
 msgid "Comments are closed."
 msgstr "Commentaires clos."
 
@@ -130,50 +80,143 @@ msgstr ""
 "Nous ne trouvons pas ce que vous recherchez. Essayez d'effectuer une "
 "recherche."
 
-#: ../content-single.php:14 ../content.php:17
+#: ../content-single.php:18 ../content.php:20
 msgid "Continue reading"
 msgstr "Lire la suite &raquo;"
 
-#: ../content-single.php:15 ../content.php:18 ../page.php:15
+#: ../content-single.php:19 ../content.php:21 ../page.php:15
 msgid "Pages:"
 msgstr "Pages :"
 
-#: ../content-single.php:19
+#: ../content-single.php:23
 msgid " "
 msgstr " "
 
-#: ../content.php:4 ../content.php:12
+#: ../content.php:4 ../content.php:13
 #, php-format
 msgid "Permalink to %s"
 msgstr "Lien permanent pour %s"
 
-#: ../footer.php:4
+#: ../footer.php:10
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: ../footer.php:4
+#: ../footer.php:10
 #, php-format
 msgid "Proudly powered by %s"
 msgstr "Fièrement propulsé par %s"
 
-#: ../footer.php:5
+#: ../footer.php:11
 #, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "Thème: %1s par %2$s."
+msgid "Theme: %1$s %2$s by %3$s."
+msgstr "Theme: %1$s %2$s by %3$s."
 
-#: ../functions.php:11
+#: ../functions.php:60
 msgid "Navigation Menu"
 msgstr "Menu de navigation"
 
-#: ../functions.php:49
+#: ../functions.php:83
 msgid "Main Widget Area"
 msgstr "Zone Widget Principale"
 
-#: ../functions.php:51
+#: ../functions.php:85
 msgid "Appears in the sidebar section of the site"
 msgstr "Affiché dans la barre du site"
 
-#: ../functions.php:62
+#: ../functions.php:181
+#, php-format
+msgid "Continue reading %s"
+msgstr ""
+
+#: ../header.php:26
+msgid "<i class=\"fa fa-gear\"></i>"
+msgstr "<i class=\"fa fa-gear\"></i>"
+
+#: ../header.php:27
+msgid "<i class=\"fa fa-bars\"></i>"
+msgstr "<i class=\"fa fa-bars\"></i>"
+
+#: ../inc/customize.php:20 ../inc/customize.php:63
+msgid "Site Logo"
+msgstr "Logo du site"
+
+#: ../inc/customize.php:34
+msgid "Site Title Font Family"
+msgstr "Police du titre"
+
+#: ../inc/customize.php:62
+msgid "Site Title"
+msgstr ""
+
+#: ../inc/customize.php:64
+msgid "Both Title &amp; Logo"
+msgstr ""
+
+#: ../inc/customize.php:75
+msgid "Site Favicon"
+msgstr "Favicon du site"
+
+#: ../inc/customize.php:88
+msgid "Sidebar Background Color"
+msgstr "Arrière-plan de la colonne latérale"
+
+#: ../inc/customize.php:102
+msgid "Background size"
+msgstr ""
+
+#: ../inc/customize.php:106
+msgid "Cover"
+msgstr ""
+
+#: ../inc/customize.php:107
+msgid "Contain"
+msgstr ""
+
+#: ../inc/customize.php:108
+msgid "Initial"
+msgstr ""
+
+#: ../inc/customize.php:114
+msgid "Typography"
+msgstr "Typographie"
+
+#: ../inc/customize.php:127
+msgid "Global Font Family"
+msgstr "Police globale"
+
+#: ../inc/customize.php:149
+msgid "Heading Font Family"
+msgstr "Police des en-têtes"
+
+#: ../inc/customize.php:173
+msgid "Sub-Heading Font Family"
+msgstr "Police des sous-titres"
+
+#: ../inc/customize.php:188
+msgid "Single Post"
+msgstr "Article"
+
+#: ../inc/customize.php:200 ../inc/customize.php:248
+msgid "Hide Featured Image"
+msgstr "Masquer l'image à la une"
+
+#: ../inc/customize.php:214 ../inc/customize.php:262
+msgid "Hide Metadata"
+msgstr "Masquer les métadonnées"
+
+#: ../inc/customize.php:228
+msgid "Hide Author Box"
+msgstr "Masquer la fiche de l'auteur"
+
+#: ../inc/customize.php:236
+msgid "Archive Pages"
+msgstr "Archives"
+
+#: ../inc/customize.php:276
+msgid "Show Post Excerpt"
+msgstr "Afficher un extrait de l'article"
+
+#: ../inc/template-tags.php:19
 #, php-format
 msgid ""
 "<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\"><time class="
@@ -186,105 +229,87 @@ msgstr ""
 "\"byline\"><span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
 "rel=\"author\">%5$s</a></span></span>"
 
-#: ../functions.php:71
-msgid "0 Comment"
-msgstr "Pas de commentaire"
+#: ../inc/template-tags.php:32
+msgid "0 Comments"
+msgstr ""
 
-#: ../functions.php:71
+#: ../inc/template-tags.php:32
 msgid "1 Comment"
 msgstr "1 Commentaire"
 
-#: ../functions.php:71
+#: ../inc/template-tags.php:32
 msgid "% Comments"
 msgstr "% Commentaires"
 
-#: ../functions.php:103
-msgid "<i class=\"fa fa-chevron-left\"></i>"
-msgstr "<i class=\"fa fa-chevron-left\"></i>"
+#: ../inc/template-tags.php:50
+#, php-format
+msgid "Category: %s"
+msgstr "Catégorie : %s"
 
-#: ../functions.php:104
-msgid "<i class=\"fa fa-chevron-right\"></i>"
-msgstr "<i class=\"fa fa-chevron-right\"></i>"
+#: ../inc/template-tags.php:52
+#, php-format
+msgid "Tag: %s"
+msgstr "Mot-clé : %s"
 
-#: ../functions.php:129
+#: ../inc/template-tags.php:54
+#, php-format
+msgid "Author: %s"
+msgstr "Auteur : %s"
+
+#: ../inc/template-tags.php:56
+#, php-format
+msgid "Year: %s"
+msgstr "Année : %s"
+
+#: ../inc/template-tags.php:58
+#, php-format
+msgid "Month: %s"
+msgstr "Mois : %s"
+
+#: ../inc/template-tags.php:60
+#, php-format
+msgid "Day: %s"
+msgstr "Jour : %s"
+
+#: ../inc/template-tags.php:82
+#, php-format
+msgid "Archives: %s"
+msgstr "Archives: %s"
+
+#: ../inc/template-tags.php:86
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: ../inc/template-tags.php:88 ../sidebar.php:7
+msgid "Archives"
+msgstr "Archives"
+
+#: ../inc/template-tags.php:147
 msgid "Post navigation"
 msgstr "Navigation Article"
 
-#: ../functions.php:157
-#, fuzzy, php-format
-msgid "Page %s"
-msgstr "Pages :"
-
-#: ../header.php:22
-msgid "<i class=\"fa fa-gear\"></i>"
+#: ../inc/template-tags.php:199
+msgid "Previous"
 msgstr ""
 
-#: ../header.php:23
-msgid "<i class=\"fa fa-bars\"></i>"
+#: ../inc/template-tags.php:200
+msgid "Next"
 msgstr ""
 
-#: ../inc/customizer.php:22
-msgid "Site Title Font Family"
-msgstr "Police du titre"
+#: ../inc/template-tags.php:201
+msgid "Posts navigation"
+msgstr ""
 
-#: ../inc/customizer.php:37
-msgid "Site Logo"
-msgstr "Logo du site"
+#: ../inc/template-tags.php:241
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Il semble que rien ne se trouve à cet endroit. Essayer une recherche ?"
 
-#: ../inc/customizer.php:63
-msgid "Site Favicon"
-msgstr "Favicon du site"
-
-#: ../inc/customizer.php:73
-msgid "Sidebar Background Color"
-msgstr "Arrière-plan de la colonne latérale"
-
-#: ../inc/customizer.php:95
-msgid "Typography"
-msgstr "Typographie"
-
-#: ../inc/customizer.php:105
-msgid "Global Font Family"
-msgstr "Police globale"
-
-#: ../inc/customizer.php:125
-msgid "Heading Font Family"
-msgstr "Police des en-têtes"
-
-#: ../inc/customizer.php:146
-msgid "Sub-Heading Font Family"
-msgstr "Police des sous-titres"
-
-#: ../inc/customizer.php:159
-msgid "Single Post"
-msgstr "Article"
-
-#: ../inc/customizer.php:168 ../inc/customizer.php:205
-msgid "Hide Featured Image"
-msgstr "Masquer l'image à la une"
-
-#: ../inc/customizer.php:179 ../inc/customizer.php:216
-msgid "Hide Metadata"
-msgstr "Masquer les métadonnées"
-
-#: ../inc/customizer.php:190
-msgid "Hide Author Box"
-msgstr "Masquer la fiche de l'auteur"
-
-#: ../inc/customizer.php:196
-#, fuzzy
-msgid "Archive Pages"
-msgstr "Archives"
-
-#: ../inc/customizer.php:227
-msgid "Show Post Excerpt"
-msgstr "Afficher un extrait de l'article"
-
-#: ../page.php:13
+#: ../page.php:14
 msgid "Continue reading <span class=\"meta-nav\">...</span>"
 msgstr "Lire la suite <span class=\"meta-nav\">...</span>"
 
-#: ../search.php:4
+#: ../search.php:3
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de Recherche pour : %s"
@@ -293,9 +318,34 @@ msgstr "Résultats de Recherche pour : %s"
 msgid "Search"
 msgstr "Rechercher"
 
-#: ../sidebar.php:12
+#: ../sidebar.php:14
 msgid "Meta"
 msgstr "Meta"
+
+#~ msgid "Asides"
+#~ msgstr "Annonces"
+
+#~ msgid "Images"
+#~ msgstr "Images"
+
+#~ msgid "Videos"
+#~ msgstr "Vidéos"
+
+#~ msgid "Quotes"
+#~ msgstr "Citations"
+
+#~ msgid "Links"
+#~ msgstr "Liens"
+
+#~ msgid "Theme: %1$s by %2$s."
+#~ msgstr "Thème: %1s par %2$s."
+
+#~ msgid "0 Comment"
+#~ msgstr "Pas de commentaire"
+
+#, fuzzy
+#~ msgid "Page %s"
+#~ msgstr "Pages :"
 
 #~ msgid "Page %1$s of %2$s"
 #~ msgstr "Page %1$s sur %2$s"

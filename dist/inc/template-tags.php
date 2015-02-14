@@ -144,7 +144,7 @@ if ( ! function_exists( 'get_the_post_navigation' ) ) :
 		$args = wp_parse_args( $args, array(
 			'prev_text'          => '%title',
 			'next_text'          => '%title',
-			'screen_reader_text' => __( 'Post navigation' ),
+			'screen_reader_text' => __( 'Post navigation', 'flat' ),
 		) );
 
 		$navigation = '';
@@ -196,9 +196,9 @@ if ( ! function_exists( 'get_the_posts_pagination' ) ) :
 		if ( $GLOBALS['wp_query']->max_num_pages > 1 ) {
 			$args = wp_parse_args( $args, array(
 				'mid_size'           => 1,
-				'prev_text'          => __( 'Previous' ),
-				'next_text'          => __( 'Next' ),
-				'screen_reader_text' => __( 'Posts navigation' ),
+				'prev_text'          => __( 'Previous', 'flat' ),
+				'next_text'          => __( 'Next', 'flat' ),
+				'screen_reader_text' => __( 'Posts navigation', 'flat' ),
 			) );
 
 			// Make sure we get a string back. Plain is the next best thing.
