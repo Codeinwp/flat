@@ -419,10 +419,10 @@ function flat_logo() {
 
 	echo '<h1 class="site-title "><a href="' . esc_url( home_url( '/' ) ) . '" title="'. esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">';
 
-	if ( !empty( esc_attr( $logo ) ) ) {
+	if ( ! empty( esc_attr( $logo ) ) ) {
 		echo '<img alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" src="' . esc_attr( $logo ) . '" />';
 	}
-	if ( !empty( esc_attr( get_bloginfo( 'name' ) ) ) ) {
+	if ( ! empty( esc_attr( get_bloginfo( 'name' ) ) ) ) {
 		echo esc_attr( get_bloginfo( 'name' ) );
 	}
 
