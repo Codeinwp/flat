@@ -53,17 +53,6 @@ function flat_customize_register( $wp_customize ) {
 		'type' => 'option',
 		'sanitize_callback' => 'flat_sanitize_header_display',
 	) );
-	$wp_customize->add_control( 'header_display', array(
-		'settings' => 'flat_theme_options[header_display]',
-		'label' => 'Display as',
-		'section' => 'title_tagline',
-		'type' => 'select',
-		'choices' => array(
-			'site_title' => __( 'Site Title', 'flat' ),
-			'site_logo' => __( 'Site Logo', 'flat' ),
-			'both_title_logo' => __( 'Both Title &amp; Logo', 'flat' ),
-		),
-	) );
 
 	// Favicon
 	$wp_customize->add_setting( 'flat_theme_options[favicon]', array(
@@ -324,13 +313,6 @@ function flat_sanitize_checkbox( $input ) {
 	}
 }
 
-function flat_sanitize_header_display( $header_display ) {
-	if ( ! in_array( $header_display, array( 'site_title', 'site_logo', 'both_title_logo' ) ) ) {
-		$header_display = 'site_title';
-	}
-
-	return $header_display;
-}
 
 function flat_sanitize_background_size( $background_size ) {
 	if ( ! in_array( $background_size, array( 'cover', 'contain', 'initial' ) ) ) {
@@ -431,25 +413,16 @@ function flat_fonts_url() {
  * Display Logo
  */
 function flat_logo() {
-	$header_display = flat_get_theme_option( 'header_display', 'site_title' );
-
-	if ( 'both_title_logo' === $header_display ) {
-		$header_class = 'display-title-logo';
-	} else if ( 'site_logo' === $header_display ) {
-		$header_class = 'display-logo';
-	} else {
-		$header_class = 'display-title';
-	}
 
 	$logo = esc_url( flat_get_theme_option( 'logo' ) );
 	$tagline = get_bloginfo( 'description' );
 
-	echo '<h1 class="site-title ' . esc_attr( $header_class ) . '"><a href="' . esc_url( home_url( '/' ) ) . '" title="'. esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">';
+	echo '<h1 class="site-title "><a href="' . esc_url( home_url( '/' ) ) . '" title="'. esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">';
 
-	if ( 'display-title' !== $header_class ) {
+	if ( !empty( esc_attr( $logo ) ) ) {
 		echo '<img alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" src="' . esc_attr( $logo ) . '" />';
 	}
-	if ( 'display-logo' !== $header_class ) {
+	if ( !empty( esc_attr( get_bloginfo( 'name' ) ) ) ) {
 		echo esc_attr( get_bloginfo( 'name' ) );
 	}
 
