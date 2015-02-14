@@ -16,7 +16,7 @@ if ( ! function_exists( 'flat_entry_meta' ) ) :
 	 * @param bool $show_sep Whether to show a separator between meta items
 	 */
 	function flat_entry_meta( $show_sep = true ) {
-		printf( __( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> by <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>', 'flat' ),
+		printf( __( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date published" datetime="%2$s" itemprop="datepublished">%3$s</time></a></span> by <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>', 'flat' ),
 			esc_url( get_permalink() ),
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),

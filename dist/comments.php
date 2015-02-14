@@ -8,7 +8,7 @@
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
-			<?php comments_number( '0 comment', '1 comment', '% comments' ); ?>
+			<?php comments_number( __( '<span itemprop="interactionCount">0</span> comment', 'flat' ), __( '<span itemprop="interactionCount">1</span> comment', 'flat' ), __( '<span itemprop="interactionCount">%</span> comments', 'flat' ) ); ?>
 		</h2>
 
 		<ol class="comment-list">
