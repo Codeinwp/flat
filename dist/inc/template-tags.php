@@ -14,15 +14,28 @@ if ( ! function_exists( 'flat_entry_meta' ) ) :
 	 * Template tag to output entry metadata
 	 *
 	 * @param bool $show_sep Whether to show a separator between meta items
+	 * @param bool $author_postbox Whether an author box will be used on posts
 	 */
-	function flat_entry_meta( $show_sep = true ) {
-		printf( __( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date published" datetime="%2$s" itemprop="datepublished">%3$s</time></a></span> by <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>', 'flat' ),
-			esc_url( get_permalink() ),
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			get_the_author()
-		);
+	function flat_entry_meta( $show_sep = true, $author_postbox = false ) {
+		if ( true === $author_postbox ) {
+			/* translators: 1: Permalink, 2: Computer-friendly published date, 3: User-friendly published date, 4: Author archive link, 5: Author name */
+			printf( __( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date published" datetime="%2$s" itemprop="datepublished">%3$s</time></a></span> by <span class="author vcard"><a class="url fn n" href="%4$s" rel="author" itemprop="url">%5$s</a></span>', 'flat' ),
+				esc_url( get_permalink() ),
+				esc_attr( get_the_date( 'c' ) ),
+				esc_html( get_the_date() ),
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+				get_the_author()
+			);
+		} else {
+			/* translators: 1: Permalink, 2: Computer-friendly published date, 3: User-friendly published date, 4: Author archive link, 5: Author name */
+			printf( __( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date published" datetime="%2$s" itemprop="datepublished">%3$s</time></a></span> by <span class="author vcard" itemscope itemprop="author" itemtype="http://schema.org/Person"><a class="url fn n" href="%4$s" rel="author" itemprop="url"><span itemprop="name">%5$s</span></a></span>', 'flat' ),
+				esc_url( get_permalink() ),
+				esc_attr( get_the_date( 'c' ) ),
+				esc_html( get_the_date() ),
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+				get_the_author()
+			);
+		}
 
 		if ( true === $show_sep ) {
 			echo '<span class="sep">&middot;</span>';
