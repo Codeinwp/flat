@@ -11,7 +11,7 @@
 	<?php flat_hook_head_bottom(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 <?php flat_hook_body_top(); ?>
 <div id="page">
 	<div class="container">
@@ -38,5 +38,5 @@
 			</div>
 
 			<?php flat_hook_content_before(); ?>
-			<div id="primary" class="content-area col-lg-9">
+			<div id="primary" class="content-area col-lg-9" itemprop="mainContentOfPage">
 				<?php flat_hook_content_top(); ?>

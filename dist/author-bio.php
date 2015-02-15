@@ -1,6 +1,6 @@
 <div class="author-info" itemprop="author" itemscope itemtype="http://schema.org/Person">
 	<div class="author-avatar" itemprop="image">
-		<?php echo str_replace( '/>', 'itemprop=\'image\' />', get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'flat_author_bio_avatar_size', 80 ) ) ); ?>
+		<?php echo wp_kses( str_replace( '/>', 'itemprop=\'image\' />', get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'flat_author_bio_avatar_size', 80 ) ) ), array( 'img' => array( 'src' => array(), 'itemprop' => array(), 'alt' => array(), 'class' => array(), 'height' => array(), 'width' => array() ) ) ); ?>
 	</div>
 	<div class="author-description">
 		<h4><?php printf( __( 'About <span itemprop="name">%s</span>', 'flat' ), get_the_author() ); ?></h4>
