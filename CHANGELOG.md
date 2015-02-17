@@ -2,6 +2,7 @@
 
 * Fix: Missing Hook on Pages
 * Add: Load main stylesheet for childtheme supports
+* Add: Microdata & Microformats - Enhancements for Richer Posts
 
 1.5.6
 
