@@ -188,6 +188,42 @@ function flat_hook_entry_bottom() {
 }
 
 /**
+ * Before page lists
+ *
+ * HTML context: within `div#primary`, just before `div#content`
+ */
+function flat_hook_page_before() {
+	do_action( 'flat_page_before' );
+}
+
+/**
+ * After page lists
+ *
+ * HTML context: within `div#primary`, just after `div#content`
+ */
+function flat_hook_page_after() {
+	do_action( 'flat_page_after' );
+}
+
+/**
+ * Top of page lists
+ *
+ * HTMl context: top of `div#content`
+ */
+function flat_hook_page_top() {
+	do_action( 'flat_page_top' );
+}
+
+/**
+ * Bottom of page lists
+ *
+ * HTML context: bottom of `div#content`
+ */
+function flat_hook_page_bottom() {
+	do_action( 'flat_page_bottom' );
+}
+
+/**
  * Before index list
  *
  * HTML context: within `div#primary`, just before `div#content`

@@ -1,3 +1,8 @@
+1.5.7
+
+* Fix: Missing Hook on Pages
+* Add: Load main stylesheet for childtheme supports
+
 1.5.6
 
 * Fix: Search Results Pagination

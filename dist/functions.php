@@ -122,6 +122,8 @@ if ( ! function_exists( 'flat_scripts_styles' ) ) :
 		wp_enqueue_style( 'flat-fonts', flat_fonts_url(), array(), null ); # Web fonts
 		wp_enqueue_style( 'flat-theme', get_template_directory_uri() . $assets['css'], array(), $version ); # Flat's styling
 		wp_enqueue_script( 'flat-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, false ); # Flat's scripting
+		wp_enqueue_style( 'flat-style', get_stylesheet_uri() ); # Load main stylesheet, for child theme supports
+
 
 		# If the `script_loader_tag` filter is unavailable, this script will be added via the `wp_head` hook
 		if ( version_compare( '4.1', $wp_version, '<=' ) ) {
