@@ -1,9 +1,9 @@
-# Teddy Rilliot <rilliot.teddy@gmail.com>, 2014.
+# Teddy Rilliot <rilliot.teddy@gmail.com>, Gaëtan Petit <https://github.com/gaetan-petit>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: Flat\n"
 "POT-Creation-Date: 2015-02-12 21:37+0700\n"
-"PO-Revision-Date: 2015-02-12 21:45+0700\n"
+"PO-Revision-Date: 2015-02-17 11:52+0100\n"
 "Last-Translator: Thanh Luu <hi@yoarts.com>\n"
 "Language-Team: Wolforg <contact@wolforg.eu>\n"
 "Language: fr\n"
@@ -126,7 +126,7 @@ msgstr "Affiché dans la barre du site"
 #: ../functions.php:181
 #, php-format
 msgid "Continue reading %s"
-msgstr ""
+msgstr "Lire la suite %s"
 
 #: ../header.php:26
 msgid "<i class=\"fa fa-gear\"></i>"
@@ -146,11 +146,11 @@ msgstr "Police du titre"
 
 #: ../inc/customize.php:62
 msgid "Site Title"
-msgstr ""
+msgstr "Titre du site"
 
 #: ../inc/customize.php:64
 msgid "Both Title &amp; Logo"
-msgstr ""
+msgstr "Titre et logo du site"
 
 #: ../inc/customize.php:75
 msgid "Site Favicon"
@@ -162,7 +162,7 @@ msgstr "Arrière-plan de la colonne latérale"
 
 #: ../inc/customize.php:102
 msgid "Background size"
-msgstr ""
+msgstr "Format de l'image d'arrière-plan"
 
 #: ../inc/customize.php:106
 msgid "Cover"
@@ -231,7 +231,7 @@ msgstr ""
 
 #: ../inc/template-tags.php:32
 msgid "0 Comments"
-msgstr ""
+msgstr "0 Commentaire"
 
 #: ../inc/template-tags.php:32
 msgid "1 Comment"
@@ -291,11 +291,11 @@ msgstr "Navigation Article"
 
 #: ../inc/template-tags.php:199
 msgid "Previous"
-msgstr ""
+msgstr "Précédent"
 
 #: ../inc/template-tags.php:200
 msgid "Next"
-msgstr ""
+msgstr "Suivant"
 
 #: ../inc/template-tags.php:201
 msgid "Posts navigation"
