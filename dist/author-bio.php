@@ -8,7 +8,10 @@
 			<?php $author_description = wptexturize( get_the_author_meta( 'description' ) ); ?>
 			<span itemprop="description"><?php echo wp_kses( $author_description, wp_kses_allowed_html( 'pre_user_description' ) ); ?></span>
 			<a itemprop="url" class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-				<?php printf( esc_html__( 'View all posts by %1$s %2$s', 'flat' ), get_the_author(), '<i class="fa fa-angle-double-right meta-nav"></i>' ); # translators: 1: Author name, 2: Arrow icon ?>
+				<?php
+					# translators: 1: Author name, 2: Arrow icon
+					printf( esc_html__( 'View all posts by %1$s %2$s', 'flat' ), get_the_author(), '<i class="fa fa-angle-double-right meta-nav"></i>' );
+				?>
 			</a>
 		</p>
 	</div>
