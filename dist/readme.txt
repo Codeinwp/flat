@@ -31,6 +31,7 @@ Flat is a responsive WordPress theme designed by YoArts. We would like to say th
   * Screen reader friendly
 * Compatible up to WordPress 4.1
 * Customization read via child themes and/or hooks (see below for available hooks)
+* Microdata & Microformats - Enhancements for Richer Posts
 * Translation ready, with the following languages included:
   * Brazilian Portugese
   * Dutch
@@ -46,7 +47,7 @@ Flat is a responsive WordPress theme designed by YoArts. We would like to say th
 
 Flat is built with the following resources:
 
-* **Code based on [DW Minion](http://www.designwall.com/wordpress/themes/dw-minion/)** 
+* **Code based on [DW Minion](http://www.designwall.com/wordpress/themes/dw-minion/)**
   * Copyright: [DesignWall](http://www.designwall.com/)
   * Licensed under [GPL v3.0](http://www.gnu.org/licenses/gpl-3.0.html)
 * **[Bootstrap 3.3.2](http://getbootstrap.com/)**

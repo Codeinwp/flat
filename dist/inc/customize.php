@@ -447,15 +447,15 @@ function flat_logo() {
 	echo '<h1 class="site-title ' . esc_attr( $header_class ) . '"><a href="' . esc_url( home_url( '/' ) ) . '" title="'. esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">';
 
 	if ( 'display-title' !== $header_class ) {
-		echo '<img alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" src="' . esc_attr( $logo ) . '" />';
+		echo '<img itemprop="primaryImageofPage" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" src="' . esc_attr( $logo ) . '" />';
 	}
 	if ( 'display-logo' !== $header_class ) {
-		echo esc_attr( get_bloginfo( 'name' ) );
+		echo '<span itemprop="name">' . esc_attr( get_bloginfo( 'name' ) ) . '</span>';
 	}
 
 	echo '</a></h1>';
 
 	if ( $tagline ) {
-		echo '<h2 class="site-description">' . esc_attr( $tagline ) . '</h2>';
+		echo '<h2 itemprop="description" class="site-description">' . esc_attr( $tagline ) . '</h2>';
 	}
 }
