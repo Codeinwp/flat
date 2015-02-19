@@ -3,7 +3,7 @@
 <div class="page-content">
 	<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-	<p><?php printf( esc_html__( 'Ready to publish your first post? %s', 'flat' ), printf( '<a href="%s">' . esc_html__( 'Get started here', 'flat' ) . '</a>', admin_url( 'post-new.php' ) ) ); ?></p>
+	<p><?php printf( esc_html__( 'Ready to publish your first post? %s', 'flat' ), printf( '<a href="%s">' . esc_html__( 'Get started here', 'flat' ) . '</a>', esc_url( admin_url( 'post-new.php' ) ) ) ); ?></p>
 
 	<?php elseif ( is_search() ) : ?>
 
