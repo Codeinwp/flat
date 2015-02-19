@@ -1,4 +1,5 @@
-<h2 class="page-title"><?php
+<h2 class="page-title">
+<?php
 	if ( is_home() && current_user_can( 'publish_posts' ) ) :
 		esc_html_e( 'Welcome to Your WordPress Site', 'flat' );
 	else :
