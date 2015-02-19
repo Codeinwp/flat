@@ -1,10 +1,10 @@
 <h2 class="page-title">
 <?php
-	if ( is_home() && current_user_can( 'publish_posts' ) ) :
-		esc_html_e( 'Welcome to Your WordPress Site', 'flat' );
-	else :
-		echo esc_html( apply_filters( 'flat_404_title', __( 'Not Found', 'flat' ) ) );
-	endif;
+if ( is_home() && current_user_can( 'publish_posts' ) ) :
+	esc_html_e( 'Welcome to Your WordPress Site', 'flat' );
+else :
+	echo esc_html( apply_filters( 'flat_404_title', __( 'Not Found', 'flat' ) ) );
+endif;
 ?></h2>
 
 <div class="page-content">
