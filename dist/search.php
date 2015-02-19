@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 	<?php flat_hook_search_before(); ?>
-	<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'flat' ), get_search_query() ); ?></h1>
+	<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'flat' ), get_search_query() ); ?></h1>
 	<div id="content" class="site-content" role="main">
 		<?php flat_hook_search_top(); ?>
 
