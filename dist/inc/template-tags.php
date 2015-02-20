@@ -18,22 +18,16 @@ if ( ! function_exists( 'flat_entry_meta' ) ) :
 	 */
 	function flat_entry_meta( $show_sep = true, $author_postbox = false ) {
 		if ( true === $author_postbox ) {
-			/* translators: 1: Permalink, 2: Computer-friendly published date, 3: User-friendly published date, 4: Author archive link, 5: Author name */
-			printf( __( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date published" datetime="%2$s" itemprop="datepublished">%3$s</time></a></span> by <span class="author vcard"><a class="url fn n" href="%4$s" rel="author" itemprop="url">%5$s</a></span>', 'flat' ),
-				esc_url( get_permalink() ),
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() ),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				get_the_author()
+			# translators: 1: Date linked to permalink, 2: Author linked to author archive
+			printf( esc_html__( '%1$s by %2$s', 'flat' ),
+				'<span class="entry-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><time class="entry-date published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '" itemprop="datepublished">' . esc_html( get_the_date() ) . '</time></a></span>',
+				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author" itemprop="url">' . esc_html( get_the_author() ) . '</a></span>'
 			);
 		} else {
-			/* translators: 1: Permalink, 2: Computer-friendly published date, 3: User-friendly published date, 4: Author archive link, 5: Author name */
-			printf( __( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date published" datetime="%2$s" itemprop="datepublished">%3$s</time></a></span> by <span class="author vcard" itemscope itemprop="author" itemtype="http://schema.org/Person"><a class="url fn n" href="%4$s" rel="author" itemprop="url"><span itemprop="name">%5$s</span></a></span>', 'flat' ),
-				esc_url( get_permalink() ),
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() ),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				get_the_author()
+			# translators: 1: Date linked to permalink, 2: Author linked to author archive
+			printf( esc_html__( '%1$s by %2$s', 'flat' ),
+				'<span class="entry-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><time class="entry-date published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '" itemprop="datepublished">' . esc_html( get_the_date() ) . '</time></a></span>',
+				'<span class="author vcard" itemscope itemprop="author" itemtype="http://schema.org/Person"><a class="url fn n" itemprop="url" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author" itemprop="url"><span itemprop="name">' . esc_html( get_the_author() ) . '</span></a></span>'
 			);
 		}
 
@@ -42,7 +36,7 @@ if ( ! function_exists( 'flat_entry_meta' ) ) :
 		}
 
 		echo '<span class="comments-link">';
-		comments_popup_link( __( '0 Comments', 'flat' ), __( '1 Comment', 'flat' ), __( '% Comments', 'flat' ) );
+		comments_popup_link( esc_html__( '0 Comments', 'flat' ), esc_html__( '1 Comment', 'flat' ), esc_html__( '% Comments', 'flat' ) );
 		echo '</span>';
 	}
 endif;
