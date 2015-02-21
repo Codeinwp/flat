@@ -1,4 +1,20 @@
-<?php flat_hook_html_before(); ?>
+<?php
+/**
+ * Page headers
+ *
+ * Kicks off template display with the HTML `head` and default page boilerplate.
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	die();
+}
+
+flat_hook_html_before();
+?>
 <html <?php language_attributes(); ?>>
 <head>
 	<?php flat_hook_head_top(); ?>

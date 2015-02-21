@@ -1,4 +1,19 @@
 <?php
+/**
+ * Single post display
+ *
+ * Used to output single post entries, unless a more specific template
+ * is found, such as `content-link.php`, in a child theme.
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	die();
+}
+
 # Whether to show an author postbox or not
 $author_postbox = false;
 $single_author_box = flat_get_theme_option( 'single_author_box' );

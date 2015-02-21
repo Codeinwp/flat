@@ -1,4 +1,20 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Static page display
+ *
+ * For entries outside of the "blog" chronology, this template will be used.
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	die();
+}
+
+get_header();
+?>
 			<?php flat_hook_page_before(); ?>
 			<div itemscope itemtype="http://schema.org/Article" id="content" class="site-content" role="main">
 				<?php flat_hook_page_top(); ?>

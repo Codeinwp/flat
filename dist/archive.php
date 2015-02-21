@@ -1,4 +1,21 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Archive pages.
+ *
+ * Used on generic month, category, tag, tax, and author archives if no
+ * more specific template is present (such as in a child theme).
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	die();
+}
+
+get_header();
+?>
 	<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 	<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
 	<?php if ( is_author() && get_the_author_meta( 'description' ) ) : ?>

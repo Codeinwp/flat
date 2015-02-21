@@ -47,8 +47,8 @@ if ( ! function_exists( 'flat_setup' ) ) :
 			'admin-preview-callback' => '',
 		);
 		add_theme_support( 'custom-background', $custom_background_support ); # @link http://codex.wordpress.org/Custom_Backgrounds
-		# add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
-		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
+		# @TODO Add `gallery` support to this; will require various CSS tweaks
+		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'caption' ) ); # @link http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
 		add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status' ) ); # @link http://codex.wordpress.org/Post%20Formats
 		add_theme_support( 'post-thumbnails' ); # @link http://codex.wordpress.org/Post%20Thumbnails
 		add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );

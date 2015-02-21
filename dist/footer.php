@@ -1,7 +1,15 @@
 <?php
 /**
  * The template for displaying the footer
+ *
+ * @package Flat
  */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	die();
+}
 ?>
 			<?php if ( apply_filters( 'show_flat_credits', true ) ) : ?>
 				<?php flat_hook_footer_before(); ?>

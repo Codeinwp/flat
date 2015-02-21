@@ -1,4 +1,22 @@
-<?php if ( post_password_required() || ! comments_open() ) { return; } ?>
+<?php
+/**
+ * Comments display & submission form
+ *
+ * Handles entry feedback by displaying comments and the comment submission form.
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	die();
+}
+
+if ( post_password_required() || ! comments_open() ) {
+	return;
+}
+?>
 
 <?php flat_hook_comments_before(); ?>
 

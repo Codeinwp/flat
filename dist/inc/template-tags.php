@@ -1,4 +1,18 @@
 <?php
+/**
+ * Template tags
+ *
+ * These functions are used directly within template files to produce
+ * some form of output.
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	die();
+}
 
 if ( ! function_exists( 'flat_doctype' ) ) :
 	/**
