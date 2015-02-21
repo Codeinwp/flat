@@ -8,7 +8,7 @@
 # Prevent direct access to this file
 if ( 1 == count( get_included_files() ) ) {
 	header( 'HTTP/1.1 403 Forbidden' );
-	die();
+	return;
 }
 ?>
 			<?php if ( apply_filters( 'show_flat_credits', true ) ) : ?>

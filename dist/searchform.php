@@ -10,7 +10,7 @@
 # Prevent direct access to this file
 if ( 1 == count( get_included_files() ) ) {
 	header( 'HTTP/1.1 403 Forbidden' );
-	die();
+	return;
 }
 ?>
 	<form method="get" role="search" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
