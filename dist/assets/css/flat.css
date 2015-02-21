@@ -9217,16 +9217,16 @@ fieldset[disabled] .pagination .dots.active {
 #disqus_thread {
   margin: 60px;
 }
-#searchform {
+.search-form {
   margin: 0;
 }
-#searchform .field {
+.search-form .field {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-#searchform .assistive-text,
-#searchform .submit {
+.search-form .assistive-text,
+.search-form .submit {
   display: none;
 }
 .archive .taxonomy-description {

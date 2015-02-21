@@ -13,12 +13,11 @@
 
 		<ol class="comment-list">
 			<?php
-				wp_list_comments( array(
+				wp_list_comments( apply_filters( 'flat_list_comments_parameters', array(
 					'style'       => 'ol',
-					'format'      => 'html5',
 					'short_ping'  => true,
 					'avatar_size' => 80,
-				) );
+				) ) );
 			?>
 		</ol>
 
@@ -36,7 +35,7 @@
 
 	<?php endif; ?>
 
-	<?php comment_form( array( 'format' => 'html5' ) ); ?>
+	<?php comment_form( apply_filters( 'flat_comment_form_parameters', array() ) ); ?>
 
 	<?php flat_hook_comments_bottom(); ?>
 
