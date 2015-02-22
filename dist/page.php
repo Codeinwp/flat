@@ -27,7 +27,7 @@ get_header();
 					<?php flat_hook_entry_before(); ?>
 					<div class="entry-content" itemprop="articleBody">
 						<?php flat_hook_entry_top(); ?>
-						<?php the_content( __( 'Continue reading <span class="meta-nav">...</span>', 'flat' ) ); ?>
+						<?php the_content( __( 'Continue reading<span class="meta-nav">&hellip;</span>', 'flat' ) ); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'flat' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 						<?php flat_hook_entry_bottom(); ?>
 					</div>

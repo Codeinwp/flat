@@ -219,7 +219,7 @@ function flat_customize_register( $wp_customize ) {
 
 	// Single Metadata
 	$wp_customize->add_setting( 'flat_theme_options[single_metadata]', array(
-		'default' => '0',
+		'default' => '1',
 		'capability' => 'edit_theme_options',
 		'type' => 'option',
 		'sanitize_callback' => 'flat_sanitize_checkbox',
@@ -233,7 +233,7 @@ function flat_customize_register( $wp_customize ) {
 
 	// Single Author Box
 	$wp_customize->add_setting( 'flat_theme_options[single_author_box]', array(
-		'default' => '0',
+		'default' => '1',
 		'capability' => 'edit_theme_options',
 		'type' => 'option',
 		'sanitize_callback' => 'flat_sanitize_checkbox',
@@ -247,13 +247,13 @@ function flat_customize_register( $wp_customize ) {
 
 	// Archive Settings
 	$wp_customize->add_section( 'layout_archive', array(
-		'title' => __( 'Archive Pages', 'flat' ),
+		'title' => __( 'Blog Index &amp; Archive Pages', 'flat' ),
 		'priority' => 100,
 	) );
 
 	// Archive Featured Image
 	$wp_customize->add_setting( 'flat_theme_options[archive_featured_image]', array(
-		'default' => '0',
+		'default' => '1',
 		'capability' => 'edit_theme_options',
 		'type' => 'option',
 		'sanitize_callback' => 'flat_sanitize_checkbox',
@@ -267,7 +267,7 @@ function flat_customize_register( $wp_customize ) {
 
 	// Archive Metadata
 	$wp_customize->add_setting( 'flat_theme_options[archive_metadata]', array(
-		'default' => '0',
+		'default' => '1',
 		'capability' => 'edit_theme_options',
 		'type' => 'option',
 		'sanitize_callback' => 'flat_sanitize_checkbox',
@@ -281,7 +281,7 @@ function flat_customize_register( $wp_customize ) {
 
 	// Archive Content
 	$wp_customize->add_setting( 'flat_theme_options[archive_content]', array(
-		'default' => '0',
+		'default' => '1',
 		'capability' => 'edit_theme_options',
 		'type' => 'option',
 		'sanitize_callback' => 'flat_sanitize_checkbox',

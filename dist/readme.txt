@@ -1,10 +1,10 @@
-# Flat
-
-* Author: YoArts
-* Author URL: http://www.yoarts.com
-* Contributor: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
-* License: GNU General Public License v3.0
-* License URI: http://www.gnu.org/licenses/gpl-3.0.html
+=== Flat ===
+Author: YoArts
+Author URL: http://www.yoarts.com/
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: black, blue, gray, white, light, two-columns, left-sidebar, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Tested up to: 4.1.1
 
 ## Description
 
