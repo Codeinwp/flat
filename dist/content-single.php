@@ -20,7 +20,7 @@ $author_postbox = ( get_the_author_meta( 'description' ) && 1 != flat_get_theme_
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1>
-		<?php $single_metadata = flat_get_theme_option( 'single_metadata', 1); ?>
+		<?php $single_metadata = flat_get_theme_option( 'single_metadata', 1 ); ?>
 		<?php if ( 1 != $single_metadata ) : ?>
 			<div class="entry-meta"><?php flat_entry_meta( true, $author_postbox ); ?></div>
 		<?php endif; ?>
