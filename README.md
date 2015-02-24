@@ -3,7 +3,7 @@
 [![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)](https://travis-ci.org/yoarts/flat) [![devDependency Status](https://david-dm.org/yoarts/flat/dev-status.svg)](https://david-dm.org/yoarts/flat#info=devDependencies) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yoarts/flat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 * Author: YoArts
 * Author URL: http://www.yoarts.com
-* Contributer: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
+* Contributor: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
 * License: GNU General Public License v3.0
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -163,4 +163,6 @@ Flat is able to be customized extensively by the [WordPress hooks & filters API]
 ### Available filters
 
 * `flat_404_title` — (string) The title of the 404 Error page.
+* `flat_comment_form_parameters` — (array) Parameters passed to `comment_form()` for customizing the comment form
+* `flat_list_comments_parameters` — (array) Parameters passed to `wp_list_comments()` for customizing comments display
 * `show_flat_credits` — (boolean) Whether to show the default `footer` credits block

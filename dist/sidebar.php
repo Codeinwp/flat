@@ -1,4 +1,20 @@
-<?php flat_hook_sidebar_before(); ?>
+<?php
+/**
+ * Sidebar display
+ *
+ * Displays the sidebar, using a couple default widgets if no dynamic ones are set.
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	return;
+}
+
+flat_hook_sidebar_before();
+?>
 					<div id="main-sidebar" class="widget-area" role="complementary">
 						<?php flat_hook_sidebar_top(); ?>
 <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>

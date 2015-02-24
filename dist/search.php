@@ -1,4 +1,20 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Search results
+ *
+ * Handles search results made using the site search engine.
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	return;
+}
+
+get_header();
+?>
 	<?php flat_hook_search_before(); ?>
 	<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'flat' ), get_search_query() ); ?></h1>
 	<div id="content" class="site-content" role="main">

@@ -1,4 +1,18 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Home page/blog template
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	return;
+}
+
+get_header();
+?>
 	<?php flat_hook_index_before(); ?>
 	<div id="content" class="site-content" role="main">
 		<?php flat_hook_index_top(); ?>

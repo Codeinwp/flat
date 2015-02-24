@@ -1,3 +1,20 @@
+<?php
+/**
+ * Template for no content being found
+ *
+ * Used when accessing empty archives, null searches, or for when there is no
+ * public content whatsoever to display (while not strictly being a "404 Not
+ * Found" error.
+ *
+ * @package Flat
+ */
+
+# Prevent direct access to this file
+if ( 1 == count( get_included_files() ) ) {
+	header( 'HTTP/1.1 403 Forbidden' );
+	return;
+}
+?>
 <h2 class="page-title">
 <?php
 if ( is_home() && current_user_can( 'publish_posts' ) ) :
