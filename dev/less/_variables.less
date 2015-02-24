@@ -1,109 +1,146 @@
-@font-family-sans-serif:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-condensed:   "Roboto Condensed";
-@headings-font-family:    "Roboto Slab";
+//== Colors
+//
 
-@brand-primary:         #3699dc;
-@brand-success:         #37d078;
-@brand-info:            #1abc9c;
-@brand-warning:         #f39c12;
-@brand-danger:          #e74c3c;
-@brand-darken:          #34495e;
+@brand-primary:           #3498db;
+@brand-primary-dark:      #2980b9;
+@brand-success:           #2ecc71;
+@brand-success-dark:      #27ae60;
+@brand-info:              #1dd2af;
+@brand-info-dark:         #16a085;
+@brand-warning:           #f39c12;
+@brand-warning-dark:      #e67e22;
+@brand-danger:            #e74c3c;
+@brand-danger-dark:       #c0392b;
+@brand-inverse:           #34495e;
+@brand-inverse-dark:      #2c3e50;
 
-// Font Awesome path
-// -------------------------
-@fa-font-path:          "../fonts";
+@brand-facebook:          #3b5998;
+@brand-twitter:           #00aced;
+@brand-google-plus:       #dd4b39;
+@brand-youtube:           #b00;
+@brand-instagram:         #517fa4;
+@brand-steam:             #262626;
+@brand-soundcloud:        #f50;
+
+//== Scaffolding
+//
+
+@text-color:              @gray;
+@link-color:              @brand-danger;
+@link-hover-color:        darken(@link-color, 15%);
 
 //== Typography
 //
-//## Font, line-height, and color for body text, headings, and more.
+
+@font-family-sans-serif:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-secondary:   "Poiret One";
+
 @font-size-base:          16px;
-@font-size-large:         ceil((@font-size-base * 1.125)); // ~18px
-@font-size-small:         ceil((@font-size-base * 0.75)); // ~12px
-@font-size-h1:            floor((@font-size-base * 2.25)); // ~36px
-@font-size-h2:            floor((@font-size-base * 1.875)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.5)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.125)); // ~18px
+@font-size-large:         ceil((@font-size-base * 1.125)); // 18px
+@font-size-small:         ceil((@font-size-base * 0.875)); // 14px
+
+@font-size-h1:            floor((@font-size-base * 3.75)); // 60px
+@font-size-h2:            floor((@font-size-base * 3)); // 48px
+@font-size-h3:            ceil((@font-size-base * 2.25)); // 36px
+@font-size-h4:            ceil((@font-size-base * 1.125)); // 18px
 @font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.75)); // ~12px
+@font-size-h6:            ceil((@font-size-base * 0.875)); // 14px
 
-@font-size-entry-title:   floor((@font-size-base * 3)); // ~50px
-
-@text-color:              @gray;
 @line-height-base:        1.625;
+@line-height-computed:    floor((@font-size-base * @line-height-base));
 
-@headings-line-height:    1.2;
-@headings-font-weight:    300;
+@headings-font-family:    inherit;
+@headings-font-weight:    @font-weight-base;
+@headings-line-height:    1.5;
+@headings-color:          inherit;
+
+@font-weight-light:       300;
+@font-weight-base:        400;
+@font-weight-bold:        700;
 
 //== Components
 //
-//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+@padding-base-vertical:     @line-height-computed / 4;
+@padding-base-horizontal:   @line-height-computed / 2;
 
-@padding-base-vertical:     6px;
-@padding-base-horizontal:   12px;
+@padding-large-vertical:    @line-height-computed / 2;
+@padding-large-horizontal:  @line-height-computed / 2;
 
-@padding-large-vertical:    10px;
-@padding-large-horizontal:  16px;
+@padding-small-vertical:    @line-height-computed / 4;
+@padding-small-horizontal:  @line-height-computed / 2;
 
-@padding-small-vertical:    5px;
-@padding-small-horizontal:  10px;
+@padding-xs-vertical:       0;
+@padding-xs-horizontal:     @line-height-computed / 4;
 
-@padding-xs-vertical:       1px;
-@padding-xs-horizontal:     5px;
-
-@line-height-large:         1.33;
-@line-height-small:         1.5;
+@line-height-large:         @line-height-computed;
+@line-height-small:         @line-height-computed;
 
 @border-radius-base:        3px;
 @border-radius-large:       4px;
 @border-radius-small:       2px;
 
-
-@container-large-desktop: 1200px;
-@container-lg:            1200px;
-
-@btn-default-bg:                 @brand-darken;
-@btn-default-color:              #fff;
-@btn-default-border:             @brand-darken;
-
-@btn-primary-bg:                 @brand-primary;
-@btn-primary-border:             @brand-primary;
-
-@btn-success-bg:                 @brand-success;
-@btn-success-border:             @brand-success;
-
-@btn-info-bg:                    @brand-info;
-@btn-info-border:                @brand-info;
-
-@btn-warning-bg:                 @brand-warning;
-@btn-warning-border:             @brand-warning;
-
-@btn-danger-bg:                  @brand-danger;
-@btn-danger-border:              @brand-danger;
-
-
-//== Form states and alerts
+//== Buttons
 //
-//## Define colors for form feedback states and, by default, alerts.
+//## For each of Bootstrap's buttons, define text, background and border color.
 
-@state-success-text:             #2ecc71;
-@state-success-bg:               #f0faf8;
-@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+@btn-font-weight:                @font-weight-light;
 
-@state-info-text:                #3498DB;
-@state-info-bg:                  #f9fafb;
-@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+@btn-default-color:              #fff;
+@btn-default-bg:                 @brand-inverse-dark;
+@btn-default-border:             @brand-inverse;
 
-@state-warning-text:             #E67E22;
-@state-warning-bg:               #faf9f7;
-@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 @brand-primary;
+@btn-primary-border:             @brand-primary-dark;
 
-@state-danger-text:              #E74C3C;
-@state-danger-bg:                #faf8f7;
-@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+@btn-success-color:              #fff;
+@btn-success-bg:                 @brand-success;
+@btn-success-border:             @brand-success-dark;
 
-//@input-border-radius:            @border-radius-large;
+@btn-info-color:                 #fff;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                @brand-info-dark;
 
-// Point at which the navbar becomes uncollapsed
-@grid-float-breakpoint:     @screen-lg-min;
-// Point at which the navbar begins collapsing
-@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+@btn-warning-color:              #fff;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             @brand-warning-dark;
+
+@btn-danger-color:               #fff;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              @brand-danger-dark;
+
+@btn-link-disabled-color:        @gray-light;
+
+//== Forms
+//
+//##
+
+@input-bg:                       #fff;
+@input-bg-disabled:              @gray-lighter;
+@input-color:                    @gray;
+@input-border:                   #ccc;
+@input-border-radius:            @border-radius-base;
+@input-border-focus:             #66afe9;
+@input-color-placeholder:        @gray-light;
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2));
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2));
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2));
+@legend-color:                   @gray-dark;
+@legend-border-color:            #e5e5e5;
+
+//** Background color for textual input addons
+@input-group-addon-bg:           @gray-lighter;
+//** Border color for textual input addons
+@input-group-addon-border-color: @input-border;
+
+//== Container sizes
+//
+
+@container-tablet:             ((720px + @grid-gutter-width));
+@container-sm:                 @container-tablet;
+
+@container-desktop:            ((940px + @grid-gutter-width));
+@container-md:                 @container-desktop;
+
+@container-large-desktop:      ((1170px + @grid-gutter-width));
+@container-lg:                 @container-large-desktop;

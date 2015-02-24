@@ -5,69 +5,60 @@ module.exports = function(grunt) {
 
 	var jsFileList = [
 		'dev/vendor/bootstrap/js/transition.js',
-    'dev/vendor/bootstrap/js/alert.js',
-    'dev/vendor/bootstrap/js/button.js',
-    'dev/vendor/bootstrap/js/carousel.js',
-    'dev/vendor/bootstrap/js/collapse.js',
-    'dev/vendor/bootstrap/js/dropdown.js',
-    'dev/vendor/bootstrap/js/modal.js',
-    'dev/vendor/bootstrap/js/tooltip.js',
-    'dev/vendor/bootstrap/js/popover.js',
-    'dev/vendor/bootstrap/js/scrollspy.js',
-    'dev/vendor/bootstrap/js/tab.js',
-    'dev/vendor/bootstrap/js/affix.js',
-		'dev/js/*.js'
+		'dev/vendor/bootstrap/js/alert.js',
+		'dev/vendor/bootstrap/js/button.js',
+		'dev/vendor/bootstrap/js/carousel.js',
+		'dev/vendor/bootstrap/js/collapse.js',
+		'dev/vendor/bootstrap/js/dropdown.js',
+		'dev/vendor/bootstrap/js/modal.js',
+		'dev/vendor/bootstrap/js/tooltip.js',
+		'dev/vendor/bootstrap/js/popover.js',
+		'dev/vendor/bootstrap/js/scrollspy.js',
+		'dev/vendor/bootstrap/js/tab.js',
+		'dev/vendor/bootstrap/js/affix.js',
+		'dev/js/<%= pkg.name %>.js',
 	];
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
-		compress: {
-			main: {
-				options: {
-					archive: 'release/<%= pkg.name %>.zip'
-				},
-				files: [
-					{ expand: true, cwd: 'dist/', src: ['**'], dest: '<%= pkg.name %>/' }
-				]
-			}
-		},
 		jshint: {
 			options: {
 				jshintrc: '.jshintrc'
 			},
 			all: [
 				'Gruntfile.js',
-				'dev/js/*.js'
+				'dev/js/**'
 			]
 		},
+
 		less: {
-			dev: {
-				files: {
-					'dist/assets/css/<%= pkg.name %>.css': [
-						'dev/less/<%= pkg.name %>.less'
-					]
-				},
-				options: {
-					compress: false,
-					// LESS source map
-					// To enable, set sourceMap to true and update sourceMapRootpath based on your install
-					sourceMap: true,
-					sourceMapFilename: 'dist/assets/css/<%= pkg.name %>.css.map'
-				}
-			},
-			build: {
-				files: {
-					'dist/assets/css/<%= pkg.name %>.min.css': [
-						'dev/less/<%= pkg.name %>.less'
-					]
-				},
-				options: {
-					compress: true
-				}
-			}
-		},
-		concat: {
+      dev: {
+        files: {
+          'dist/assets/css/<%= pkg.name %>.css': [
+            'dev/less/<%= pkg.name %>.less'
+          ]
+        },
+        options: {
+          compress: false,
+          sourceMap: true,
+          sourceMapFilename: 'dist/assets/css/<%= pkg.name %>.css.map'
+        }
+      },
+
+      build: {
+        files: {
+          'dist/assets/css/<%= pkg.name %>.min.css': [
+            'dev/less/<%= pkg.name %>.less'
+          ]
+        },
+        options: {
+          compress: true
+        }
+      }
+    },
+
+    concat: {
 			options: {
 				separator: ';',
 			},
@@ -76,6 +67,7 @@ module.exports = function(grunt) {
 				dest: 'dist/assets/js/<%= pkg.name %>.js',
 			},
 		},
+
 		uglify: {
 			dist: {
 				files: {
@@ -83,66 +75,59 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+
 		autoprefixer: {
 			options: {
-				browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+				browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
 			},
-			dev: {
-				options: {
-					map: {
-						prev: 'dist/assets/css/'
-					}
-				},
-				src: 'dist/assets/css/<%= pkg.name %>.css'
-			},
-			build: {
-				src: 'dist/assets/css/<%= pkg.name %>.min.css'
-			}
+			src: 'dist/assets/css/<%= pkg.name %>.min.css'
 		},
+
 		watch: {
 			less: {
 				files: [
-					'dev/less/*.less',
-					'dev/less/**/*.less'
+					'dev/less/**'
 				],
-				tasks: ['less:dev', 'autoprefixer:dev']
+				tasks: ['less:dev', 'autoprefixer']
 			},
 			js: {
 				files: [
 					jsFileList,
 					'<%= jshint.all %>'
 				],
-				tasks: ['jshint', 'concat']
+				tasks: ['concat']
 			},
 			livereload: {
 				options: {
-					livereload: true
+					livereload: false
 				},
 				files: [
-					'dev/**',
-					'dist/*.php',
-					'dist/**/*.php'
+					'dist/assets/css/**',
+					'dist/assets/js/**',
+					'dist/*.html'
 				]
 			}
-		}
+		},
+
+		copy: {
+			assets: {
+				expand: true,
+				cwd: 'dev/vendor/fontawesome/font/',
+				src: ['**'],
+				dest: 'dist/assets/font/',
+				filter: 'isFile'
+			}
+		},
 	});
 
 	// Register tasks
 	grunt.registerTask('default', [
 		'dev'
 	]);
-	grunt.registerTask('dev', [
+	grunt.registerTask('dev',[
+		'copy:assets',
 		'jshint',
 		'less:build',
-		'autoprefixer:build',
 		'uglify'
-	]);
-	grunt.registerTask('build', [
-		'jshint',
-		'less',
-		'autoprefixer',
-		'uglify',
-		'concat',
-		'compress'
 	]);
 };

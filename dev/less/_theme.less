@@ -1,282 +1,193 @@
-html {
-	overflow-x: hidden;
-}
-
-body {
-	background-size: cover;
-	overflow-x: hidden;
+* {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-a {
-	text-decoration: none !important;
-	outline: none !important;
+//
+// Typography
+// --------------------------------------------------
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: @line-height-computed;
+  margin-bottom: @line-height-computed;
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: (@line-height-computed / 2);
+  margin-bottom: (@line-height-computed / 2);
 }
 
-table {
-	.table();
-	.table-bordered();
-
-	th {
-		border-bottom-width: 1px !important;
-		background: @gray-lighter;
-	}
+h1, .h1 {
+  line-height: @line-height-computed * 3;
 }
 
-select {
-	.form-control();
-	box-shadow: none !important;
-
-	&:focus {
-		border-color: @gray-light !important;
-	}
+h2, .h2 {
+  line-height: @line-height-computed * 2;
 }
 
-blockquote {
-	padding: 0 20px;
-	font-size: @font-size-base;
-	color: @gray-light;
+h3, .h3 {
+  line-height: @line-height-computed * 2;
 }
 
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-	.form-control();
-	box-shadow: none !important;
-	border-color: @gray-lighter;
-	min-height: 40px;
-	font-size: 14px;
-	-webkit-appearance: none;
-
-	&:focus {
-		border-color: @gray-dark !important;
-	}
-
-	#secondary & {
-		border-color: #fff;
-	}
+h4, .h4 {
+  line-height: @line-height-computed;
 }
 
-textarea {
-	min-height: 120px;
+h5, .h5 {
+  line-height: @line-height-computed;
 }
 
-.checkbox,
-.radio {
-	font-weight: normal;
+h6, .h6 {
+  line-height: @line-height-computed;
 }
 
-.input[type=checkbox],
-.input[type=radio] {
-	float: left;
-	margin: 6px 10px 0 0;
+p {
+  margin: 0 0 @line-height-computed;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
+@media (max-width: @screen-lg) {
+  h1 { font-size: @font-size-h2; line-height: @line-height-computed * 2; }
+  h2 { font-size: @font-size-h3 }
+  h3 { font-size: @font-size-h4; line-height: @line-height-computed; margin-top: (@line-height-computed / 2); margin-bottom: (@line-height-computed / 2); }
+  h4 { font-size: @font-size-h5 }
+  h5 { font-size: @font-size-h6 }
 }
+
+@media (max-width: @screen-sm) {
+  h1, h2 { font-size: 24px; line-height: @line-height-computed; }
+  h3 {
+    font-size: @font-size-h4;
+  }
+}
+
+//
+// Buttons
+// --------------------------------------------------
 
 .btn {
-	outline: none !important;
+  border: none;
+  text-transform: uppercase;
+  font-size: @font-size-small;
+  line-height: @line-height-computed;
+  background-color: #fff;
+  font-weight: @font-weight-bold;
+
+  &:hover,
+  &:focus {
+    color: @brand-inverse-dark;
+    text-decoration: none;
+  }
+}
+
+.btn-block + .btn-block {
+  margin-top: @line-height-computed / 4;
+}
+
+.btn-rounded {
+  border-radius: 9999px;
+}
+
+.btn-xs,
+.btn-sm {
+  font-size: 12px;
 }
 
 .button-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background !important;
+  border-color: @border;
+
   &:hover,
   &:focus,
   &:active,
   &.active,
   .open .dropdown-toggle& {
-    color: @color;
-    background-color: lighten(@background, 5%);
-        border-color: lighten(@border, 5%);
+    color: @color !important;
+    background-color: @border !important;
   }
-
   &:active,
-  &.active {
-    background-color: lighten(@border, 5%);
+  &.active,
+  .open .dropdown-toggle& {
+    background-image: none !important;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background !important;
+          border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background !important;
+    background-color: @color !important;
   }
 }
 
-input#submit {
-	.btn();
-	.btn-primary();
+//
+// Form
+// --------------------------------------------------
+.form-control {
+  font-size: @font-size-small;
 }
 
-.screen-reader-text {
-	.sr-only;
+.form-group {
+  margin-bottom: @line-height-computed;
 }
 
-.nav-tabs {
-	margin-bottom: 15px;
+.input-lg {
+  height: @line-height-computed * 2;
+  font-size: @font-size-base;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.panel-title {
-	font-size: @font-size-base;
+//
+// Modal
+// --------------------------------------------------
+.modal-content {
+  border: none;
+  border-radius: @border-radius-small;
+  .box-shadow(none);
 }
 
-.wp-caption {
-	text-align: center;
-	padding: 4px 4px 0;
-	border: 1px solid @gray-lighter;
-	max-width: 100%;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	.box-sizing(border-box);
-}
+//
+// Custom Elements
+// --------------------------------------------------
+.social-links {
+  .list-inline;
+  margin-bottom: 0;
 
-.wp-caption-text {
-	font-size: @font-size-small;
-	margin: 5px 0;
-}
+  li {
+    margin: 6px 4px;
+    padding: 0;
+  }
 
-.carousel-caption {
-	color: #fff;
-}
+  a {
+    display: block;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    background: @brand-primary;
+    font-size: @font-size-small;
+  }
 
-.gallery {
-	margin-bottom: 20px;
-}
+  li.facebook a     { background: @brand-facebook     }
+  li.twitter a      { background: @brand-twitter      }
+  li.google-plus a  { background: @brand-google-plus  }
+  li.youtube a      { background: @brand-youtube      }
+  li.instagram a    { background: @brand-instagram    }
+  li.steam a        { background: @brand-steam        }
+  li.soundcloud a   { background: @brand-soundcloud   }
 
-.gallery-item {
-	float: left;
-	margin: 0 4px 4px 0;
-	overflow: hidden;
-	position: relative;
-}
-
-.gallery-columns-1 .gallery-item {
-	max-width: 100%;
-}
-
-.gallery-columns-2 .gallery-item {
-	max-width: 48%;
-	max-width: -webkit-calc(50% - 4px);
-	max-width:         calc(50% - 4px);
-}
-
-.gallery-columns-3 .gallery-item {
-	max-width: 32%;
-	max-width: -webkit-calc(33.3% - 4px);
-	max-width:         calc(33.3% - 4px);
-}
-
-.gallery-columns-4 .gallery-item {
-	max-width: 23%;
-	max-width: -webkit-calc(25% - 4px);
-	max-width:         calc(25% - 4px);
-}
-
-.gallery-columns-5 .gallery-item {
-	max-width: 19%;
-	max-width: -webkit-calc(20% - 4px);
-	max-width:         calc(20% - 4px);
-}
-
-.gallery-columns-6 .gallery-item {
-	max-width: 15%;
-	max-width: -webkit-calc(16.7% - 4px);
-	max-width:         calc(16.7% - 4px);
-}
-
-.gallery-columns-7 .gallery-item {
-	max-width: 13%;
-	max-width: -webkit-calc(14.28% - 4px);
-	max-width:         calc(14.28% - 4px);
-}
-
-.gallery-columns-8 .gallery-item {
-	max-width: 11%;
-	max-width: -webkit-calc(12.5% - 4px);
-	max-width:         calc(12.5% - 4px);
-}
-
-.gallery-columns-9 .gallery-item {
-	max-width: 9%;
-	max-width: -webkit-calc(11.1% - 4px);
-	max-width:         calc(11.1% - 4px);
-}
-
-.gallery-columns-1 .gallery-item:nth-of-type(1n),
-.gallery-columns-2 .gallery-item:nth-of-type(2n),
-.gallery-columns-3 .gallery-item:nth-of-type(3n),
-.gallery-columns-4 .gallery-item:nth-of-type(4n),
-.gallery-columns-5 .gallery-item:nth-of-type(5n),
-.gallery-columns-6 .gallery-item:nth-of-type(6n),
-.gallery-columns-7 .gallery-item:nth-of-type(7n),
-.gallery-columns-8 .gallery-item:nth-of-type(8n),
-.gallery-columns-9 .gallery-item:nth-of-type(9n) {
-	margin-right: 0;
-}
-
-.gallery-caption {
-	background-color: rgba(0, 0, 0, 0.7);
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:    border-box;
-	box-sizing:         border-box;
-	color: #fff;
-	font-size: 12px;
-	line-height: 1.5;
-	margin: 0;
-	max-height: 50%;
-	opacity: 0;
-	padding: 6px 8px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	text-align: left;
-	width: 100%;
-}
-
-.gallery-caption:before {
-	content: "";
-	height: 100%;
-	min-height: 49px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-}
-
-.gallery-item:hover .gallery-caption {
-	opacity: 1;
-}
-
-.gallery-columns-7 .gallery-caption,
-.gallery-columns-8 .gallery-caption,
-.gallery-columns-9 .gallery-caption {
-	display: none;
-}
-
-.alignright {
-	float: right;
-	margin: 5px 0 5px 20px;
-}
-
-.alignleft {
-	float: left;
-	margin: 5px 20px 5px 0;
-}
-
-.aligncenter {
-	margin: 5px auto;
-}
-
-.carousel-control {
-	top: 50%;
-	border: none;
-	font-size: 32px;
 }
