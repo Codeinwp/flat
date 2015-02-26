@@ -500,7 +500,7 @@ function flat_customize_hooks_register( $wp_customize ) {
 		) );
 
 		# Create options for each individual hook
-		foreach( $section['hooks'] as $hook ) {
+		foreach ( $section['hooks'] as $hook ) {
 			# Register hook's action
 			$wp_customize->add_setting( "flat_hook_options[{$hook}_action]", array(
 				'default' => '',
@@ -554,7 +554,7 @@ function flat_add_actions_to_hooks() {
 
 	# Go through each of our hooks, doing stuff if needed
 	foreach ( $all_hooks as $section ) {
-		foreach( $section['hooks'] as $hook ) {
+		foreach ( $section['hooks'] as $hook ) {
 			# Get hook options
 			$action = flat_get_hook_option( $hook . '_action' );
 
@@ -577,13 +577,14 @@ function flat_execute_custom_action() {
 	$hook_php = flat_get_hook_option( $hook . '_php' );
 
 	# Bail out if we have neither a hook nor options to work with
-	if( ! $hook || ! $hook_action ) {
+	if ( ! $hook || ! $hook_action ) {
 		return;
 	}
 
 	# Output our action, with or w/o PHP as needed
-	if ( $hook_php )
+	if ( $hook_php ) {
 		eval( "?>$hook_action<?php " ); //xss ok
-	else
+	} else {
 		echo $hook_action; //xss ok
+	}
 }

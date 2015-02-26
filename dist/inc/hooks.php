@@ -58,7 +58,7 @@ function flat_get_hooks() {
 				'page_after',
 				'page_top',
 				'page_bottom',
-				'404_content'
+				'404_content',
 			),
 		),
 		'index_archive' => array(
