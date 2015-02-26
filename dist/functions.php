@@ -16,8 +16,8 @@ if ( 1 == count( get_included_files() ) ) {
 /**
  * File inclusions
  */
-require get_template_directory() . '/inc/customize.php'; # Enables user customization via admin panel
 require get_template_directory() . '/inc/hooks.php'; # Enables user customization via WordPress plugin API
+require get_template_directory() . '/inc/customize.php'; # Enables user customization via admin panel
 require get_template_directory() . '/inc/template-tags.php'; # Contains functions that output HTML
 
 /**
