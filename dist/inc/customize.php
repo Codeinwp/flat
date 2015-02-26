@@ -582,10 +582,10 @@ function flat_execute_custom_action() {
 	}
 
 	# Output our action, with or w/o PHP as needed
-/*	if ( $hook_php ) {
+	/* if ( $hook_php ) {
 		eval( "?>$hook_action<?php " ); //xss ok
 	} else {
 		echo $hook_action; //xss ok
-	}*/
+	} */
 	echo $hook_action; //xss ok
 }
