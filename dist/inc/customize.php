@@ -484,7 +484,7 @@ function flat_customize_hooks_register( $wp_customize ) {
 	$wp_customize->add_panel( 'flat_hooks', array(
 		'capability' => 'edit_themes',
 		'title' => __( 'Hooks &amp; Custom Actions', 'flat' ),
-		'description' => sprintf( __( 'Throughout Flat&apos;s various temples, <i>hooks</i> are placed which provide an insertion point for custom behavior and output. Using this customization panel, you can add whatever you want &mdash; within the realms of <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> anyway &mdash; to just about anywhere in the theme. Hooks can also be customized via the <a href="%s">WordPress plugin <abbr title="Application Programming Interface">API</abbr></a> as well, via a <code>functions.php</code> file in a child theme, for example. Due to the nature of these customizations, only site administrators have access to them.', 'flat' ), 'http://codex.wordpress.org/Plugin_API' ),
+		'description' => sprintf( __( 'Throughout Flat&apos;s various temples, <i>hooks</i> are placed which provide an insertion point for custom behavior and output. Using this customization panel, you can add whatever you want &mdash; within the realms of <abbr title="Hypertext Markup Language">HTML</abbr> anyway &mdash; to just about anywhere in the theme. Hooks can also be customized via the <a href="%s">WordPress plugin <abbr title="Application Programming Interface">API</abbr></a> as well, via a <code>functions.php</code> file in a child theme, for example. Due to the powerful nature of these customizations, only site administrators have access to them.', 'flat' ), 'http://codex.wordpress.org/Plugin_API' ),
 	) );
 
 	# Fetch an array of all of Flat's hooks
@@ -496,7 +496,7 @@ function flat_customize_hooks_register( $wp_customize ) {
 			'title' => $section['name'],
 			'panel' => 'flat_hooks',
 			'priority' => 100,
-			'description' => __( '<abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> (if enabled) will be processed <strong>as is</strong> without validation of any kind. If you enable <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> on an action, your <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> code must be wrapped in <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> tags to be recognized as <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>.', 'flat' ),
+			# 'description' => __( '<abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> (if enabled) will be processed <strong>as is</strong> without validation of any kind. If you enable <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> on an action, your <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> code must be wrapped in <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> tags to be recognized as <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>.', 'flat' ),
 		) );
 
 		# Create options for each individual hook
@@ -514,7 +514,7 @@ function flat_customize_hooks_register( $wp_customize ) {
 				'settings' => "flat_hook_options[{$hook}_action]",
 				'type' => 'textarea',
 			) );
-			# Register whether PHP will be used on the hook
+			/* # Register whether PHP will be used on the hook
 			$wp_customize->add_setting( "flat_hook_options[{$hook}_php]", array(
 				'default' => false,
 				'capability' => 'edit_themes',
@@ -527,7 +527,7 @@ function flat_customize_hooks_register( $wp_customize ) {
 				'section' => $name,
 				'settings' => "flat_hook_options[{$hook}_php]",
 				'type' => 'checkbox',
-			) );
+			) ); */
 		}
 	}
 }
@@ -574,7 +574,7 @@ function flat_execute_custom_action() {
 	# Determine the current hook/filter we're acting upon & get our options to act
 	$hook = str_replace( 'flat_', '', current_filter() );
 	$hook_action = flat_get_hook_option( $hook . '_action' );
-	$hook_php = flat_get_hook_option( $hook . '_php' );
+	# $hook_php = flat_get_hook_option( $hook . '_php' );
 
 	# Bail out if we have neither a hook nor options to work with
 	if ( ! $hook || ! $hook_action ) {
@@ -582,9 +582,10 @@ function flat_execute_custom_action() {
 	}
 
 	# Output our action, with or w/o PHP as needed
-	if ( $hook_php ) {
+/*	if ( $hook_php ) {
 		eval( "?>$hook_action<?php " ); //xss ok
 	} else {
 		echo $hook_action; //xss ok
-	}
+	}*/
+	echo $hook_action; //xss ok
 }
