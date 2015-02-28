@@ -8669,6 +8669,7 @@ input#submit.active {
 .hentry .entry-content,
 .hentry .entry-summary {
   padding: 30px 0 0;
+  text-align: justify;
 }
 @media (max-width: 767px) {
   .hentry .entry-content,
