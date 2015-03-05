@@ -1,6 +1,6 @@
 # Flat
 
-[![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)](https://travis-ci.org/yoarts/flat) [![devDependency Status](https://david-dm.org/yoarts/flat/dev-status.svg)](https://david-dm.org/yoarts/flat#info=devDependencies) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yoarts/flat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+[![Travis CI Build Status](https://travis-ci.org/codeinwp/flat.svg?branch=master)](https://travis-ci.org/codeinwp/flat) [![devDependency Status](https://david-dm.org/codeinwp/flat/dev-status.svg)](https://david-dm.org/codeinwp/flat#info=devDependencies) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/codeinwp/flat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 * Author: YoArts
 * Author URL: http://www.yoarts.com
 * Contributor: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
