@@ -14,6 +14,89 @@ if ( 1 == count( get_included_files() ) ) {
 }
 
 /**
+ * Returns array of Flat's unique hooks
+ *
+ * @return array Flat's hooks
+ */
+function flat_get_hooks() {
+	$hooks = array(
+		'boilerplate' => array(
+			'name' => __( 'Boilerplate Hooks', 'flat' ),
+			'hooks' => array(
+				'html_before',
+				'head_top',
+				'head_bottom',
+				'body_top',
+				'body_bottom',
+			),
+		),
+		'header_footer' => array(
+			'name' => __( 'Header &amp; Footer Hooks', 'flat' ),
+			'hooks' => array(
+				'header_before',
+				'header_top',
+				'header_bottom',
+				'header_after',
+				'footer_before',
+				'footer_after',
+				'footer_top',
+				'footer_bottom',
+			),
+		),
+		'content' => array(
+			'name' => __( 'Content Hooks', 'flat' ),
+			'hooks' => array(
+				'content_before',
+				'content_after',
+				'content_top',
+				'content_bottom',
+				'entry_before',
+				'entry_after',
+				'entry_top',
+				'entry_bottom',
+				'page_before',
+				'page_after',
+				'page_top',
+				'page_bottom',
+				'404_content',
+			),
+		),
+		'index_archive' => array(
+			'name' => __( 'Index &amp; Archive Hooks', 'flat' ),
+			'hooks' => array(
+				'index_before',
+				'index_after',
+				'index_top',
+				'index_bottom',
+				'archive_before',
+				'archive_after',
+				'archive_top',
+				'archive_bottom',
+				'search_before',
+				'search_after',
+				'search_top',
+				'search_bottom',
+			),
+		),
+		'comments_sidebar' => array(
+			'name' => __( 'Comments &amp; Sidebar Hooks', 'flat' ),
+			'hooks' => array(
+				'comments_before',
+				'comments_after',
+				'comments_top',
+				'comments_bottom',
+				'sidebar_before',
+				'sidebar_after',
+				'sidebar_top',
+				'sidebar_bottom',
+			),
+		),
+	);
+
+	return $hooks;
+}
+
+/**
  * Before HTML
  *
  * HTML context: just before `html`
