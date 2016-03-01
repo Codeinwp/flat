@@ -1,4 +1,10 @@
+2.0.0
+=====
+
+* Updated dependencies
+
 1.5.7
+=====
 
 * Fix: Missing Hook on Pages
 * Add: Load main stylesheet for childtheme supports

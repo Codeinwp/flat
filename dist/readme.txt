@@ -1,5 +1,5 @@
-=== Flat ===
-Author: YoArts
+=== Pacific ===
+Author: Rick Beckman
 Author URL: http://www.yoarts.com/
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -8,7 +8,7 @@ Tested up to: 4.1.1
 
 ## Description
 
-Flat is a responsive WordPress theme designed by YoArts. We would like to say that Flat is both beautiful and charming at the same time.
+Pacific is a responsive WordPress theme designed by YoArts. We would like to say that Pacific is both beautiful and charming at the same time.
 
 ## Features
 
@@ -45,7 +45,7 @@ Flat is a responsive WordPress theme designed by YoArts. We would like to say th
 
 ## Resources
 
-Flat is built with the following resources:
+Pacific is built with the following resources:
 
 * **Code based on [DW Minion](http://www.designwall.com/wordpress/themes/dw-minion/)**
   * Copyright: [DesignWall](http://www.designwall.com/)
@@ -60,81 +60,63 @@ Flat is built with the following resources:
   * @afarkas @jdalton @jon_neal @rem
   * Licensed under [MIT/GPL2](https://github.com/aFarkas/html5shiv/blob/master/MIT%20and%20GPL2%20licenses.md)
 
-## Contributers
-
-* [TobsCore](https://github.com/TobsCore)
-* [Marcus Michaels](https://github.com/marcusmichaels)
-* [Creative-mind](https://github.com/creative-mind)
-* [Mrinal Kanti Roy](https://github.com/mkrdip)
-* [Victor Perin](https://github.com/victorperin)
-* [Victor Tsaran](https://github.com/vick08)
-* [Darshan Sawardekar](https://github.com/dsawardekar)
-* [Teddy Rilliot](https://github.com/TeddyRilliot)
-* [Richard Alexander von Moltke Necochea](http://twitter.com/ravmn)
-* Фарух Джапаркулов
-* [Didier](http://www.wptrads.com/theme/flat-2/)
-* [abovethewater](https://github.com/abovethewater)
-* [Kevin Papst](http://www.kevinpapst.de/wordpress-flat-theme/)
-* [Ashfame](https://github.com/ashfame)
-* [Rick Beckman](http://www.rickbeckman.com/)
-
 ## Customization
 
-Flat is able to be customized extensively by the [WordPress hooks & filters API](http://codex.wordpress.org/Plugin_API), which is a fancy way of saying that without creating a child theme, you have the freedom to add, remove, and change a lot of what makes Flat _Flat_. In addition to the default hooks & filters that just about any WordPress theme has available, Flat is equipped with the following:
+Pacific is able to be customized extensively by the [WordPress hooks & filters API](http://codex.wordpress.org/Plugin_API), which is a fancy way of saying that without creating a child theme, you have the freedom to add, remove, and change a lot of what makes Pacific _Pacific_. In addition to the default hooks & filters that just about any WordPress theme has available, Pacific is equipped with the following:
 
 ### Available hooks
 
-* `flat_html_before`
-* `flat_head_top`
-* `flat_head_bottom`
-* `flat_body_top`
-* `flat_body_bottom`
-* `flat_header_before`
-* `flat_header_after`
-* `flat_header_top`
-* `flat_header_bottom`
-* `flat_content_before`
-* `flat_content_after`
-* `flat_content_top`
-* `flat_content_bottom`
-* `flat_entry_before`
-* `flat_entry_after`
-* `flat_entry_top`
-* `flat_entry_bottom`
-* `flat_page_before`
-* `flat_page_after`
-* `flat_page_top`
-* `flat_page_bottom`
-* `flat_index_before`
-* `flat_index_after`
-* `flat_index_top`
-* `flat_index_bottom`
-* `flat_archive_before`
-* `flat_archive_after`
-* `flat_archive_top`
-* `flat_archive_bottom`
-* `flat_search_before`
-* `flat_search_after`
-* `flat_search_top`
-* `flat_search_bottom`
-* `flat_comments_before`
-* `flat_comments_after`
-* `flat_comments_top`
-* `flat_comments_bottom`
-* `flat_sidebar_before`
-* `flat_sidebar_after`
-* `flat_sidebar_top`
-* `flat_sidebar_bottom`
-* `flat_404_content`
-* `flat_footer_before`
-* `flat_footer_after`
-* `flat_footer_top`
-* `flat_footer_bottom`
+* `pacific_html_before`
+* `pacific_head_top`
+* `pacific_head_bottom`
+* `pacific_body_top`
+* `pacific_body_bottom`
+* `pacific_header_before`
+* `pacific_header_after`
+* `pacific_header_top`
+* `pacific_header_bottom`
+* `pacific_content_before`
+* `pacific_content_after`
+* `pacific_content_top`
+* `pacific_content_bottom`
+* `pacific_entry_before`
+* `pacific_entry_after`
+* `pacific_entry_top`
+* `pacific_entry_bottom`
+* `pacific_page_before`
+* `pacific_page_after`
+* `pacific_page_top`
+* `pacific_page_bottom`
+* `pacific_index_before`
+* `pacific_index_after`
+* `pacific_index_top`
+* `pacific_index_bottom`
+* `pacific_archive_before`
+* `pacific_archive_after`
+* `pacific_archive_top`
+* `pacific_archive_bottom`
+* `pacific_search_before`
+* `pacific_search_after`
+* `pacific_search_top`
+* `pacific_search_bottom`
+* `pacific_comments_before`
+* `pacific_comments_after`
+* `pacific_comments_top`
+* `pacific_comments_bottom`
+* `pacific_sidebar_before`
+* `pacific_sidebar_after`
+* `pacific_sidebar_top`
+* `pacific_sidebar_bottom`
+* `pacific_404_content`
+* `pacific_footer_before`
+* `pacific_footer_after`
+* `pacific_footer_top`
+* `pacific_footer_bottom`
 * BONUS! All Theme Hook Alliance hooks are included!
 
 ### Available filters
 
-* `flat_404_title` — (string) The title of the 404 Error page.
-* `flat_comment_form_parameters` — (array) Parameters passed to `comment_form()` for customizing the comment form
-* `flat_list_comments_parameters` — (array) Parameters passed to `wp_list_comments()` for customizing comments display
-* `show_flat_credits` — (boolean) Whether to show the default `footer` credits block
+* `pacific_404_title` — (string) The title of the 404 Error page.
+* `pacific_comment_form_parameters` — (array) Parameters passed to `comment_form()` for customizing the comment form
+* `pacific_list_comments_parameters` — (array) Parameters passed to `wp_list_comments()` for customizing comments display
+* `show_pacific_credits` — (boolean) Whether to show the default `footer` credits block

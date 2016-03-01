@@ -1,10 +1,10 @@
 <?php
 /**
- * Flat initiation
+ * Pacific initiation
  *
- * Initializes Flat's features and includes all necessary files.
+ * Initializes Pacific's features and includes all necessary files.
  *
- * @package Flat
+ * @package Pacific
  */
 
 # Prevent direct access to this file
@@ -29,13 +29,13 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 720;
 }
 
-if ( ! function_exists( 'flat_setup' ) ) :
+if ( ! function_exists( 'pacific_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 */
-	function flat_setup() {
+	function pacific_setup() {
 		# Localization
-		load_theme_textdomain( 'flat', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'pacific', get_template_directory() . '/languages' );
 
 		# Enable WordPress theme features
 		add_theme_support( 'automatic-feed-links' ); # @link http://codex.wordpress.org/Automatic_Feed_Links
@@ -58,34 +58,34 @@ if ( ! function_exists( 'flat_setup' ) ) :
 		# Add style to the post editor for a more WYSIWYG experience
 		add_editor_style( array( 'assets/css/editor-style.css' ) );
 
-		# Flat has one navigation menu; register it with WordPress
-		register_nav_menu( 'primary', __( 'Navigation Menu', 'flat' ) );
+		# Pacific has one navigation menu; register it with WordPress
+		register_nav_menu( 'primary', __( 'Navigation Menu', 'pacific' ) );
 
 		# Add filters
 		add_filter( 'comments_popup_link_attributes', function() { return ' itemprop="discussionUrl"'; } ); # schema.org property on comments links
 		add_filter( 'current_theme_supports-tha_hooks', '__return_true' ); # Enables checking for THA hooks
-		add_filter( 'style_loader_tag', 'flat_filter_styles', 10, 2 ); # Filters style tags as needed
+		add_filter( 'style_loader_tag', 'pacific_filter_styles', 10, 2 ); # Filters style tags as needed
 		add_filter( 'the_content_more_link', 'modify_read_more_link' ); # Enhances appearance of "Read more..." link
 		add_filter( 'use_default_gallery_style', '__return_false' ); # Disable default WordPress gallery styling
 
 		# Add actions
-		add_action( 'flat_html_before', 'flat_doctype' ); # Outputs HTML doctype
-		add_action( 'flat_404_content', 'flat_output_404_content' ); # Outputs a helpful message on 404 pages
-		add_action( 'widgets_init', 'flat_widgets_init' ); # Registers Flat's sidebar
-		add_action( 'wp_enqueue_scripts', 'flat_scripts_styles' ); # Enqueue's Flat's scripts & styles
+		add_action( 'pacific_html_before', 'pacific_doctype' ); # Outputs HTML doctype
+		add_action( 'pacific_404_content', 'pacific_output_404_content' ); # Outputs a helpful message on 404 pages
+		add_action( 'widgets_init', 'pacific_widgets_init' ); # Registers Pacific's sidebar
+		add_action( 'wp_enqueue_scripts', 'pacific_scripts_styles' ); # Enqueue's Pacific's scripts & styles
 	}
 endif;
-add_action( 'after_setup_theme', 'flat_setup' );
+add_action( 'after_setup_theme', 'pacific_setup' );
 
-if ( ! function_exists( 'flat_widgets_init' ) ) :
+if ( ! function_exists( 'pacific_widgets_init' ) ) :
 	/**
 	 * Registers our sidebar with WordPress
 	 */
-	function flat_widgets_init() {
+	function pacific_widgets_init() {
 		register_sidebar( array(
-			'name'          => __( 'Main Widget Area', 'flat' ),
+			'name'          => __( 'Main Widget Area', 'pacific' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Appears in the sidebar section of the site', 'flat' ),
+			'description'   => __( 'Appears in the sidebar section of the site', 'pacific' ),
 			'before_widget' => "\t\t\t\t\t" . '<aside id="%1$s" class="widget %2$s">' . "\n",
 			'after_widget'  => "\t\t\t\t\t</aside>\n",
 			'before_title'  => "\t\t\t\t\t\t<h3 class='widget-title'>",
@@ -94,14 +94,14 @@ if ( ! function_exists( 'flat_widgets_init' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'flat_scripts_styles' ) ) :
+if ( ! function_exists( 'pacific_scripts_styles' ) ) :
 	/**
 	 * Sets up necessary scripts and styles
 	 */
-	function flat_scripts_styles() {
+	function pacific_scripts_styles() {
 		global $wp_version;
 
-		# Get the current version of Flat, even if a child theme is being used
+		# Get the current version of Pacific, even if a child theme is being used
 		$version = wp_get_theme( wp_get_theme()->template )->get( 'Version' );
 
 		# When needed, enqueue comment-reply script
@@ -112,20 +112,20 @@ if ( ! function_exists( 'flat_scripts_styles' ) ) :
 		# Minified versions of CSS & JS are used, unless a development constant is set
 		if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
 			$assets = array(
-				'css' => '/assets/css/flat.css',
-				'js'  => '/assets/js/flat.js',
+				'css' => '/assets/css/pacific.css',
+				'js'  => '/assets/js/pacific.js',
 			);
 		} else {
 			$assets = array(
-				'css' => '/assets/css/flat.min.css',
-				'js'  => '/assets/js/flat.min.js',
+				'css' => '/assets/css/pacific.min.css',
+				'js'  => '/assets/js/pacific.min.js',
 			);
 		}
 
-		wp_enqueue_style( 'flat-fonts', flat_fonts_url(), array(), null ); # Web fonts
-		wp_enqueue_style( 'flat-theme', get_template_directory_uri() . $assets['css'], array(), $version ); # Flat's styling
-		wp_enqueue_script( 'flat-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, false ); # Flat's scripting
-		wp_enqueue_style( 'flat-style', get_stylesheet_uri() ); # Load main stylesheet, for child theme supports
+		wp_enqueue_style( 'pacific-fonts', pacific_fonts_url(), array(), null ); # Web fonts
+		wp_enqueue_style( 'pacific-theme', get_template_directory_uri() . $assets['css'], array(), $version ); # Pacific's styling
+		wp_enqueue_script( 'pacific-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, false ); # Pacific's scripting
+		wp_enqueue_style( 'pacific-style', get_stylesheet_uri() ); # Load main stylesheet, for child theme supports
 
 		# If the `script_loader_tag` filter is unavailable, this script will be added via the `wp_head` hook
 		if ( version_compare( '4.1', $wp_version, '<=' ) ) {
@@ -136,11 +136,11 @@ endif;
 
 # The following function uses a filter introduced in WP 4.1
 if ( version_compare( '4.1', $wp_version, '<=' ) ) :
-	if ( ! function_exists( 'flat_filter_scripts' ) ) :
+	if ( ! function_exists( 'pacific_filter_scripts' ) ) :
 		/**
-		 * Filters enqueued script output to better suit Flat's needs
+		 * Filters enqueued script output to better suit Pacific's needs
 		 */
-		function flat_filter_scripts( $tag, $handle, $src ) {
+		function pacific_filter_scripts( $tag, $handle, $src ) {
 			# Remove `type` attribute (unneeded in HTML5)
 			$tag = str_replace( ' type=\'text/javascript\'', '', $tag );
 
@@ -152,22 +152,22 @@ if ( version_compare( '4.1', $wp_version, '<=' ) ) :
 			return $tag;
 		}
 	endif;
-	add_filter( 'script_loader_tag', 'flat_filter_scripts', 10, 3 );
+	add_filter( 'script_loader_tag', 'pacific_filter_scripts', 10, 3 );
 else : # If the `script_loader_tag` filter is unavailable...
 	/**
 	 * Adds html5shiv the "old" way (WP < 4.1)
 	 */
-	function flat_add_html5shiv() {
+	function pacific_add_html5shiv() {
 		echo "<!--[if lt IE 9]>\n<scr" . 'ipt src="' . esc_url( get_template_directory_uri() ) . '/assets/js/html5shiv.min.js"></scr' . "ipt>\n<![endif]-->"; # This is a hack to disguise adding the script without using WordPress' enqueue function
 	}
-	add_action( 'wp_head', 'flat_add_html5shiv' );
+	add_action( 'wp_head', 'pacific_add_html5shiv' );
 endif;
 
-if ( ! function_exists( 'flat_filter_styles' ) ) :
+if ( ! function_exists( 'pacific_filter_styles' ) ) :
 	/**
 	 * Filter enqueued style output to better suit HTML5
 	 */
-	function flat_filter_styles( $tag, $handle ) {
+	function pacific_filter_styles( $tag, $handle ) {
 		# Get rid of unnecessary `type` attribute
 		$tag = str_replace( ' type=\'text/css\'', '', $tag );
 
@@ -182,5 +182,5 @@ endif;
  * Enhances "Read more..." links with Bootstrap button styling
  */
 function modify_read_more_link() {
-	return '<a class="btn btn-default btn-sm" href="' . esc_url( get_permalink() ) . '">' . sprintf( __( 'Continue reading %s', 'flat' ), '<i class="fa fa-angle-double-right"></i></a>' );
+	return '<a class="btn btn-default btn-sm" href="' . esc_url( get_permalink() ) . '">' . sprintf( __( 'Continue reading %s', 'pacific' ), '<i class="fa fa-angle-double-right"></i></a>' );
 }

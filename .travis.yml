@@ -1,8 +1,8 @@
-# Travis CI (MIT License) configuration file for Flat WordPress Theme
+# Travis CI (MIT License) configuration file for Pacific WordPress Theme
 # @link https://travis-ci.org/
 
-# For use with the Flat WordPress Theme
-# @link https://github.com/yoarts/flat
+# For use with the Pacific WordPress Theme
+# @link https://github.com/BrazenlyGeek/Pacific
 
 # Declare project language.
 # @link http://about.travis-ci.org/docs/user/languages/php/
@@ -43,4 +43,4 @@ script:
     # -n flag: Do not print warnings (shortcut for --warning-severity=0)
     # --standard: Use WordPress as the standard.
     # --extensions: Only sniff PHP files.
-    - $(pwd)/php-codesniffer/scripts/phpcs -p -s -v -n flat --standard=WordPress --extensions=php
+    - $(pwd)/php-codesniffer/scripts/phpcs -p -s -v -n pacific --standard=WordPress --extensions=php

@@ -4,7 +4,7 @@
  *
  * Used when users get lost along the way.
  *
- * @package Flat
+ * @package Pacific
  */
 
 # Prevent direct access to this file
@@ -18,10 +18,10 @@ get_header();
 ?>
 <section id="content" class="site-content error-404 not-found" role="main">
 	<header>
-		<h2 class="page-title"><?php echo esc_html( apply_filters( 'flat_404_title', __( 'Not Found', 'flat' ) ) ); ?></h2>
+		<h2 class="page-title"><?php echo esc_html( apply_filters( 'pacific_404_title', __( 'Not Found', 'pacific' ) ) ); ?></h2>
 	</header>
 	<div class="page-content">
-		<?php flat_hook_404_content(); ?>
+		<?php pacific_hook_404_content(); ?>
 	</div>
 </section>
 <?php get_footer(); ?>

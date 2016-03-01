@@ -1,40 +1,40 @@
 {
-  "name": "flat",
-  "version": "1.5.7",
-  "author": "Thanh Luu <hi@yoarts.com>",
-  "homepage": "http://www.yoarts.com",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/yoarts/flat.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yoarts/flat/issues"
-  },
-  "licenses": [
-    {
-      "type": "GPL-3.0+",
-      "url": "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
-    }
-  ],
-  "scripts": {
-    "postinstall": "node node_modules/bower/bin/bower install && grunt dev"
-  },
-  "engines": {
-    "node": ">= 0.10.0"
-  },
-  "devDependencies": {
-    "bower": ">=1.3.12",
-    "grunt": "~0.4.5",
-    "grunt-autoprefixer": "~2.2.0",
-    "grunt-contrib-concat": "~0.5.0",
-    "grunt-contrib-jshint": "~0.11.0",
-    "grunt-contrib-less": "~1.0.0",
-    "grunt-contrib-uglify": "~0.7.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-compress": "~0.13.0",
-    "grunt-modernizr": "~0.6.0",
-    "grunt-wp-assets": "~0.2.6",
-    "load-grunt-tasks": "~3.1.0",
-    "time-grunt": "~1.0.0"
-  }
+	"name": "pacific",
+	"version": "2.0.0",
+	"author": "Rick Beckman <rick.beckman@gmail.com>",
+	"homepage": "https://rickbeckman.com",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/BrazenlyGeek/Pacific.git"
+	},
+	"bugs": {
+		"url": "https://github.com/BrazenlyGeek/Pacific/issues"
+	},
+	"licenses": [
+		{
+			"type": "GPL-3.0+",
+			"url": "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
+		}
+	],
+	"scripts": {
+		"postinstall": "node node_modules/bower/bin/bower install && grunt dev"
+	},
+	"engines": {
+		"node": ">= 0.10.0"
+	},
+	"devDependencies": {
+		"bower": ">=1.7.7",
+		"grunt": "~0.4.5",
+		"grunt-autoprefixer": "~3.0.4",
+		"grunt-contrib-concat": "~1.0.0",
+		"grunt-contrib-jshint": "~1.0.0",
+		"grunt-contrib-less": "~1.2.0",
+		"grunt-contrib-uglify": "~0.11.1",
+		"grunt-contrib-watch": "~0.6.1",
+		"grunt-contrib-compress": "~1.0.0",
+		"grunt-modernizr": "~1.0.2",
+		"grunt-wp-assets": "~0.2.6",
+		"load-grunt-tasks": "~3.4.0",
+		"time-grunt": "~1.3.0"
+	}
 }

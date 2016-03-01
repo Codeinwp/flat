@@ -2,9 +2,9 @@
 /**
  * Hook definitions
  *
- * Contains a list of all of Flat's hooks via which custom code can be inserted.
+ * Contains a list of all of Pacific's hooks via which custom code can be inserted.
  *
- * @package Flat
+ * @package Pacific
  */
 
 # Prevent direct access to this file
@@ -14,14 +14,14 @@ if ( 1 == count( get_included_files() ) ) {
 }
 
 /**
- * Returns array of Flat's unique hooks
+ * Returns array of Pacific's unique hooks
  *
- * @return array Flat's hooks
+ * @return array Pacific's hooks
  */
-function flat_get_hooks() {
+function pacific_get_hooks() {
 	$hooks = array(
 		'boilerplate' => array(
-			'name' => __( 'Boilerplate Hooks', 'flat' ),
+			'name' => __( 'Boilerplate Hooks', 'pacific' ),
 			'hooks' => array(
 				'html_before',
 				'head_top',
@@ -31,7 +31,7 @@ function flat_get_hooks() {
 			),
 		),
 		'header_footer' => array(
-			'name' => __( 'Header &amp; Footer Hooks', 'flat' ),
+			'name' => __( 'Header &amp; Footer Hooks', 'pacific' ),
 			'hooks' => array(
 				'header_before',
 				'header_top',
@@ -44,7 +44,7 @@ function flat_get_hooks() {
 			),
 		),
 		'content' => array(
-			'name' => __( 'Content Hooks', 'flat' ),
+			'name' => __( 'Content Hooks', 'pacific' ),
 			'hooks' => array(
 				'content_before',
 				'content_after',
@@ -62,7 +62,7 @@ function flat_get_hooks() {
 			),
 		),
 		'index_archive' => array(
-			'name' => __( 'Index &amp; Archive Hooks', 'flat' ),
+			'name' => __( 'Index &amp; Archive Hooks', 'pacific' ),
 			'hooks' => array(
 				'index_before',
 				'index_after',
@@ -79,7 +79,7 @@ function flat_get_hooks() {
 			),
 		),
 		'comments_sidebar' => array(
-			'name' => __( 'Comments &amp; Sidebar Hooks', 'flat' ),
+			'name' => __( 'Comments &amp; Sidebar Hooks', 'pacific' ),
 			'hooks' => array(
 				'comments_before',
 				'comments_after',
@@ -102,8 +102,8 @@ function flat_get_hooks() {
  * HTML context: just before `html`
  * THA hook: tha_html_before
  */
-function flat_hook_html_before() {
-	do_action( 'flat_html_before' );
+function pacific_hook_html_before() {
+	do_action( 'pacific_html_before' );
 	do_action( 'tha_html_before' );
 }
 
@@ -113,8 +113,8 @@ function flat_hook_html_before() {
  * HTML context: top of `head`
  * THA hook: tha_head_top
  */
-function flat_hook_head_top() {
-	do_action( 'flat_head_top' );
+function pacific_hook_head_top() {
+	do_action( 'pacific_head_top' );
 	do_action( 'tha_head_top' );
 }
 
@@ -124,8 +124,8 @@ function flat_hook_head_top() {
  * HTML context: bottom of `head`
  * THA hook: tha_head_bottom
  */
-function flat_hook_head_bottom() {
-	do_action( 'flat_head_bottom' );
+function pacific_hook_head_bottom() {
+	do_action( 'pacific_head_bottom' );
 	do_action( 'tha_head_bottom' );
 }
 
@@ -135,8 +135,8 @@ function flat_hook_head_bottom() {
  * HTML context: within `div#content`, just before `header.site-header`
  * THA hook: tha_header_before
  */
-function flat_hook_header_before() {
-	do_action( 'flat_header_before' );
+function pacific_hook_header_before() {
+	do_action( 'pacific_header_before' );
 	do_action( 'tha_header_before' );
 }
 
@@ -146,8 +146,8 @@ function flat_hook_header_before() {
  * HTML context: top of `header`
  * THA hook: tha_header_top
  */
-function flat_hook_header_top() {
-	do_action( 'flat_header_top' );
+function pacific_hook_header_top() {
+	do_action( 'pacific_header_top' );
 	do_action( 'tha_header_top' );
 }
 
@@ -157,8 +157,8 @@ function flat_hook_header_top() {
  * HTML context: bottom of `header`
  * THA hook: tha_header_bottom
  */
-function flat_hook_header_bottom() {
-	do_action( 'flat_header_bottom' );
+function pacific_hook_header_bottom() {
+	do_action( 'pacific_header_bottom' );
 	do_action( 'tha_header_bottom' );
 }
 
@@ -168,8 +168,8 @@ function flat_hook_header_bottom() {
  * HTML context: within `div#content`, just after `header.site-header`
  * THA hook: tha_header_after
  */
-function flat_hook_header_after() {
-	do_action( 'flat_header_after' );
+function pacific_hook_header_after() {
+	do_action( 'pacific_header_after' );
 	do_action( 'tha_header_after' );
 }
 
@@ -179,8 +179,8 @@ function flat_hook_header_after() {
  * HTML context: within `body` just before `div#page`
  * THA hook: tha_body_top
  */
-function flat_hook_body_top() {
-	do_action( 'flat_body_top' );
+function pacific_hook_body_top() {
+	do_action( 'pacific_body_top' );
 	do_action( 'tha_body_top' );
 }
 
@@ -190,8 +190,8 @@ function flat_hook_body_top() {
  * HTML context: within `body` just after `div#page`
  * THA hook: tha_body_bottom
  */
-function flat_hook_body_bottom() {
-	do_action( 'flat_body_bottom' );
+function pacific_hook_body_bottom() {
+	do_action( 'pacific_body_bottom' );
 	do_action( 'tha_body_bottom' );
 }
 
@@ -201,8 +201,8 @@ function flat_hook_body_bottom() {
  * HTML context: within `div.row`, just before div#primary
  * THA hook: tha_content_before
  */
-function flat_hook_content_before() {
-	do_action( 'flat_content_before' );
+function pacific_hook_content_before() {
+	do_action( 'pacific_content_before' );
 	do_action( 'tha_content_before' );
 }
 
@@ -212,8 +212,8 @@ function flat_hook_content_before() {
  * HTML context: within `div.row`, just after `div#primary`
  * THA hook: tha_content_after
  */
-function flat_hook_content_after() {
-	do_action( 'flat_content_after' );
+function pacific_hook_content_after() {
+	do_action( 'pacific_content_after' );
 	do_action( 'tha_content_after' );
 }
 
@@ -223,8 +223,8 @@ function flat_hook_content_after() {
  * HTML context: top of `div#primary`
  * THA hook: tha_content_top
  */
-function flat_hook_content_top() {
-	do_action( 'flat_content_top' );
+function pacific_hook_content_top() {
+	do_action( 'pacific_content_top' );
 	do_action( 'tha_content_top' );
 }
 
@@ -234,8 +234,8 @@ function flat_hook_content_top() {
  * HTML context: bottom of `div#primary`
  * THA hook: tha_content_bottom
  */
-function flat_hook_content_bottom() {
-	do_action( 'flat_content_bottom' );
+function pacific_hook_content_bottom() {
+	do_action( 'pacific_content_bottom' );
 	do_action( 'tha_content_bottom' );
 }
 
@@ -245,8 +245,8 @@ function flat_hook_content_bottom() {
  * HTML context: within `article`, before `div.entry-content`
  * THA hook: tha_entry_before
  */
-function flat_hook_entry_before() {
-	do_action( 'flat_entry_before' );
+function pacific_hook_entry_before() {
+	do_action( 'pacific_entry_before' );
 	do_action( 'tha_entry_before' );
 }
 
@@ -256,8 +256,8 @@ function flat_hook_entry_before() {
  * HTML context: within `article`, after `div.entry-content`
  * THA hook: tha_entry_after
  */
-function flat_hook_entry_after() {
-	do_action( 'flat_entry_after' );
+function pacific_hook_entry_after() {
+	do_action( 'pacific_entry_after' );
 	do_action( 'tha_entry_after' );
 }
 
@@ -267,8 +267,8 @@ function flat_hook_entry_after() {
  * HTML context: top of `div.entry-content`
  * THA hook: tha_entry_top
  */
-function flat_hook_entry_top() {
-	do_action( 'flat_entry_top' );
+function pacific_hook_entry_top() {
+	do_action( 'pacific_entry_top' );
 	do_action( 'tha_entry_top' );
 }
 
@@ -278,8 +278,8 @@ function flat_hook_entry_top() {
  * HTML context: bottom of `div.entry-content`
  * THA hook: tha_entry_bottom
  */
-function flat_hook_entry_bottom() {
-	do_action( 'flat_entry_bottom' );
+function pacific_hook_entry_bottom() {
+	do_action( 'pacific_entry_bottom' );
 	do_action( 'tha_entry_bottom' );
 }
 
@@ -288,8 +288,8 @@ function flat_hook_entry_bottom() {
  *
  * HTML context: within `div#primary`, just before `div#content`
  */
-function flat_hook_page_before() {
-	do_action( 'flat_page_before' );
+function pacific_hook_page_before() {
+	do_action( 'pacific_page_before' );
 }
 
 /**
@@ -297,8 +297,8 @@ function flat_hook_page_before() {
  *
  * HTML context: within `div#primary`, just after `div#content`
  */
-function flat_hook_page_after() {
-	do_action( 'flat_page_after' );
+function pacific_hook_page_after() {
+	do_action( 'pacific_page_after' );
 }
 
 /**
@@ -306,8 +306,8 @@ function flat_hook_page_after() {
  *
  * HTMl context: top of `div#content`
  */
-function flat_hook_page_top() {
-	do_action( 'flat_page_top' );
+function pacific_hook_page_top() {
+	do_action( 'pacific_page_top' );
 }
 
 /**
@@ -315,8 +315,8 @@ function flat_hook_page_top() {
  *
  * HTML context: bottom of `div#content`
  */
-function flat_hook_page_bottom() {
-	do_action( 'flat_page_bottom' );
+function pacific_hook_page_bottom() {
+	do_action( 'pacific_page_bottom' );
 }
 
 /**
@@ -324,8 +324,8 @@ function flat_hook_page_bottom() {
  *
  * HTML context: within `div#primary`, just before `div#content`
  */
-function flat_hook_index_before() {
-	do_action( 'flat_index_before' );
+function pacific_hook_index_before() {
+	do_action( 'pacific_index_before' );
 }
 
 /**
@@ -333,8 +333,8 @@ function flat_hook_index_before() {
  *
  * HTML context: within `div#primary`, just after `div#content`
  */
-function flat_hook_index_after() {
-	do_action( 'flat_index_after' );
+function pacific_hook_index_after() {
+	do_action( 'pacific_index_after' );
 }
 
 /**
@@ -342,8 +342,8 @@ function flat_hook_index_after() {
  *
  * HTMl context: top of `div#content`
  */
-function flat_hook_index_top() {
-	do_action( 'flat_index_top' );
+function pacific_hook_index_top() {
+	do_action( 'pacific_index_top' );
 }
 
 /**
@@ -351,8 +351,8 @@ function flat_hook_index_top() {
  *
  * HTML context: bottom of `div#content`
  */
-function flat_hook_index_bottom() {
-	do_action( 'flat_index_bottom' );
+function pacific_hook_index_bottom() {
+	do_action( 'pacific_index_bottom' );
 }
 
 /**
@@ -360,8 +360,8 @@ function flat_hook_index_bottom() {
  *
  * HTML context: within `div#primary`, just before `div#content`
  */
-function flat_hook_archive_before() {
-	do_action( 'flat_archive_before' );
+function pacific_hook_archive_before() {
+	do_action( 'pacific_archive_before' );
 }
 
 /**
@@ -369,8 +369,8 @@ function flat_hook_archive_before() {
  *
  * HTML context: within `div#primary`, just after `div#content`
  */
-function flat_hook_archive_after() {
-	do_action( 'flat_archive_after' );
+function pacific_hook_archive_after() {
+	do_action( 'pacific_archive_after' );
 }
 
 /**
@@ -378,8 +378,8 @@ function flat_hook_archive_after() {
  *
  * HTMl context: top of `div#content`
  */
-function flat_hook_archive_top() {
-	do_action( 'flat_archive_top' );
+function pacific_hook_archive_top() {
+	do_action( 'pacific_archive_top' );
 }
 
 /**
@@ -387,8 +387,8 @@ function flat_hook_archive_top() {
  *
  * HTML context: bottom of `div#content`
  */
-function flat_hook_archive_bottom() {
-	do_action( 'flat_archive_bottom' );
+function pacific_hook_archive_bottom() {
+	do_action( 'pacific_archive_bottom' );
 }
 
 /**
@@ -396,8 +396,8 @@ function flat_hook_archive_bottom() {
  *
  * HTML context: within `div#primary`, just before `div#content`
  */
-function flat_hook_search_before() {
-	do_action( 'flat_search_before' );
+function pacific_hook_search_before() {
+	do_action( 'pacific_search_before' );
 }
 
 /**
@@ -405,8 +405,8 @@ function flat_hook_search_before() {
  *
  * HTML context: within `div#primary`, just after `div#content`
  */
-function flat_hook_search_after() {
-	do_action( 'flat_search_after' );
+function pacific_hook_search_after() {
+	do_action( 'pacific_search_after' );
 }
 
 /**
@@ -414,8 +414,8 @@ function flat_hook_search_after() {
  *
  * HTMl context: top of `div#content`
  */
-function flat_hook_search_top() {
-	do_action( 'flat_search_top' );
+function pacific_hook_search_top() {
+	do_action( 'pacific_search_top' );
 }
 
 /**
@@ -423,8 +423,8 @@ function flat_hook_search_top() {
  *
  * HTML context: bottom of `div#content`
  */
-function flat_hook_search_bottom() {
-	do_action( 'flat_search_bottom' );
+function pacific_hook_search_bottom() {
+	do_action( 'pacific_search_bottom' );
 }
 
 /**
@@ -433,8 +433,8 @@ function flat_hook_search_bottom() {
  * HTML context: within `div#primary`, just before `div#comments`
  * THA hook: `tha_comments_before`
  */
-function flat_hook_comments_before() {
-	do_action( 'flat_comments_before' );
+function pacific_hook_comments_before() {
+	do_action( 'pacific_comments_before' );
 	do_action( 'tha_comments_before' );
 }
 
@@ -444,8 +444,8 @@ function flat_hook_comments_before() {
  * HTML context: within `div#primary`, just after `div#comments`
  * THA hook: `tha_comments_before`
  */
-function flat_hook_comments_after() {
-	do_action( 'flat_comments_after' );
+function pacific_hook_comments_after() {
+	do_action( 'pacific_comments_after' );
 	do_action( 'tha_comments_after' );
 }
 
@@ -454,8 +454,8 @@ function flat_hook_comments_after() {
  *
  * HTML context: top of `div#comments`
  */
-function flat_hook_comments_top() {
-	do_action( 'flat_comments_top' );
+function pacific_hook_comments_top() {
+	do_action( 'pacific_comments_top' );
 }
 
 /**
@@ -463,8 +463,8 @@ function flat_hook_comments_top() {
  *
  * HTML context: bottom of `div#comments`
  */
-function flat_hook_comments_bottom() {
-	do_action( 'flat_comments_bottom' );
+function pacific_hook_comments_bottom() {
+	do_action( 'pacific_comments_bottom' );
 }
 
 /**
@@ -473,8 +473,8 @@ function flat_hook_comments_bottom() {
  * HTML context: within `div.sidebar-offcanvas`, just before `div#main-sidebar`
  * THA hook: tha_sidebars_before
  */
-function flat_hook_sidebar_before() {
-	do_action( 'flat_sidebar_before' );
+function pacific_hook_sidebar_before() {
+	do_action( 'pacific_sidebar_before' );
 	do_action( 'tha_sidebars_before' ); # Pluralization is intentional
 }
 
@@ -484,8 +484,8 @@ function flat_hook_sidebar_before() {
  * HTML context: within `div.sidebar-offcanvas`, just after `div#main-sidebar`
  * THA hook: tha_sidebars_after
  */
-function flat_hook_sidebar_after() {
-	do_action( 'flat_sidebar_after' );
+function pacific_hook_sidebar_after() {
+	do_action( 'pacific_sidebar_after' );
 	do_action( 'tha_sidebars_after' ); # Pluralization is intentional
 }
 
@@ -495,8 +495,8 @@ function flat_hook_sidebar_after() {
  * HTML context: top of div#main-sidebar
  * THA hook: tha_sidebar_top
  */
-function flat_hook_sidebar_top() {
-	do_action( 'flat_sidebar_top' );
+function pacific_hook_sidebar_top() {
+	do_action( 'pacific_sidebar_top' );
 	do_action( 'tha_sidebar_top' );
 }
 
@@ -506,8 +506,8 @@ function flat_hook_sidebar_top() {
  * HTML context: bottom of div#main-sidebar
  * THA hook: tha_sidebar_bottom
  */
-function flat_hook_sidebar_bottom() {
-	do_action( 'flat_sidebar_bottom' );
+function pacific_hook_sidebar_bottom() {
+	do_action( 'pacific_sidebar_bottom' );
 	do_action( 'tha_sidebar_bottom' );
 }
 
@@ -516,8 +516,8 @@ function flat_hook_sidebar_bottom() {
  *
  * HTML context: within `div.page-content`
  */
-function flat_hook_404_content() {
-	do_action( 'flat_404_content' );
+function pacific_hook_404_content() {
+	do_action( 'pacific_404_content' );
 }
 
 /**
@@ -526,8 +526,8 @@ function flat_hook_404_content() {
  * HTML context: within `div#content`, just before `footer.site-info`
  * THA hook: tha_footer_before
  */
-function flat_hook_footer_before() {
-	do_action( 'flat_footer_before' );
+function pacific_hook_footer_before() {
+	do_action( 'pacific_footer_before' );
 	do_action( 'tha_footer_before' );
 }
 
@@ -537,8 +537,8 @@ function flat_hook_footer_before() {
  * HTML context: within `div#content`, just after `footer.site-info`
  * THA hook: tha_footer_after
  */
-function flat_hook_footer_after() {
-	do_action( 'flat_footer_after' );
+function pacific_hook_footer_after() {
+	do_action( 'pacific_footer_after' );
 	do_action( 'tha_footer_after' );
 }
 
@@ -548,9 +548,9 @@ function flat_hook_footer_after() {
  * HTML context: top of footer.site-info
  * THA hook: tha_footer_top
  */
-function flat_hook_footer_top() {
-	do_action( 'flat_footer_top' );
-	do_action( 'flat_credits' ); # Backwards compatibility
+function pacific_hook_footer_top() {
+	do_action( 'pacific_footer_top' );
+	do_action( 'pacific_credits' ); # Backwards compatibility
 	do_action( 'tha_footer_top' );
 }
 
@@ -560,7 +560,7 @@ function flat_hook_footer_top() {
  * HTML context: bottom of footer.site-info
  * THA hook: tha_footer_bottom
  */
-function flat_hook_footer_bottom() {
-	do_action( 'flat_footer_bottom' );
+function pacific_hook_footer_bottom() {
+	do_action( 'pacific_footer_bottom' );
 	do_action( 'tha_footer_bottom' );
 }

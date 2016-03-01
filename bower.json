@@ -1,19 +1,19 @@
 {
-  "name": "flat",
-  "version": "1.5.7",
-  "homepage": "http://www.yoarts.com",
-  "authors": [
-    "Thanh Luu <hi@yoarts.com>"
-  ],
-  "license": "GPL-3.0+",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "assets/vendor"
-  ],
-  "dependencies": {
-    "fontawesome": "4.3.0",
-    "bootstrap": "3.3.2"
-  }
+	"name": "Pacific",
+	"version": "2.0.0",
+	"homepage": "https://rickbeckman.com",
+	"authors": [
+		"Rick Beckman <rick.beckman@gmail.com>"
+	],
+	"license": "GPL-3.0+",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"assets/vendor"
+	],
+	"dependencies": {
+		"fontawesome": "4.5.0",
+		"bootstrap": "3.3.6"
+	}
 }

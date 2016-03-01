@@ -4,7 +4,7 @@
  *
  * Displays the sidebar, using a couple default widgets if no dynamic ones are set.
  *
- * @package Flat
+ * @package Pacific
  */
 
 # Prevent direct access to this file
@@ -13,21 +13,21 @@ if ( 1 == count( get_included_files() ) ) {
 	return;
 }
 
-flat_hook_sidebar_before();
+pacific_hook_sidebar_before();
 ?>
 					<div id="main-sidebar" class="widget-area" role="complementary">
-						<?php flat_hook_sidebar_top(); ?>
+						<?php pacific_hook_sidebar_top(); ?>
 <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 						<aside id="archives" class="widget">
-							<h3 class="widget-title"><?php _e( 'Archives', 'flat' ); ?></h3>
+							<h3 class="widget-title"><?php _e( 'Archives', 'pacific' ); ?></h3>
 							<ul>
 								<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 							</ul>
 						</aside>
 
 						<aside id="meta" class="widget">
-							<h3 class="widget-title"><?php _e( 'Meta', 'flat' ); ?></h3>
+							<h3 class="widget-title"><?php _e( 'Meta', 'pacific' ); ?></h3>
 							<ul>
 								<?php wp_register(); ?>
 								<li><?php wp_loginout(); ?></li>
@@ -36,6 +36,6 @@ flat_hook_sidebar_before();
 						</aside>
 
 <?php endif; ?>
-						<?php flat_hook_sidebar_bottom(); ?>
+						<?php pacific_hook_sidebar_bottom(); ?>
 					</div>
-<?php flat_hook_sidebar_after(); ?>
+<?php pacific_hook_sidebar_after(); ?>

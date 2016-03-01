@@ -5,7 +5,7 @@
  * Handles the overall scheme of single posts, calling more specific single
  * templates, such as `content-single.php` to handle the entry itself.
  *
- * @package Flat
+ * @package Pacific
  */
 
 # Prevent direct access to this file
@@ -22,11 +22,11 @@ get_header();
 				get_template_part( 'content', 'single' );
 
 				the_post_navigation( array(
-					'next_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html__( 'Next', 'flat' ) . '</span> ' .
-						'<span class="screen-reader-text">' . esc_html__( 'Next post:', 'flat' ) . '</span> ' .
+					'next_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html__( 'Next', 'pacific' ) . '</span> ' .
+						'<span class="screen-reader-text">' . esc_html__( 'Next post:', 'pacific' ) . '</span> ' .
 						'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html__( 'Previous', 'flat' ) . '</span> ' .
-						'<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'flat' ) . '</span> ' .
+					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . esc_html__( 'Previous', 'pacific' ) . '</span> ' .
+						'<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'pacific' ) . '</span> ' .
 						'<span class="post-title">%title</span>',
 				) );
 

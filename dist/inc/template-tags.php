@@ -5,7 +5,7 @@
  * These functions are used directly within template files to produce
  * some form of output.
  *
- * @package Flat
+ * @package Pacific
  */
 
 # Prevent direct access to this file
@@ -14,32 +14,32 @@ if ( 1 == count( get_included_files() ) ) {
 	return;
 }
 
-if ( ! function_exists( 'flat_doctype' ) ) :
+if ( ! function_exists( 'pacific_doctype' ) ) :
 	/**
 	 * Template tag to output doctype
 	 */
-	function flat_doctype() {
+	function pacific_doctype() {
 		echo "<!DOCTYPE html>\n";
 	}
 endif;
 
-if ( ! function_exists( 'flat_entry_meta' ) ) :
+if ( ! function_exists( 'pacific_entry_meta' ) ) :
 	/**
 	 * Template tag to output entry metadata
 	 *
 	 * @param bool $show_sep Whether to show a separator between meta items
 	 * @param bool $author_postbox Whether an author box will be used on posts
 	 */
-	function flat_entry_meta( $show_sep = true, $author_postbox = false ) {
+	function pacific_entry_meta( $show_sep = true, $author_postbox = false ) {
 		if ( true === $author_postbox ) {
 			# translators: 1: Date linked to permalink, 2: Author linked to author archive
-			printf( esc_html__( '%1$s by %2$s', 'flat' ),
+			printf( esc_html__( '%1$s by %2$s', 'pacific' ),
 				'<span class="entry-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><time class="entry-date published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '" itemprop="datepublished">' . esc_html( get_the_date() ) . '</time></a></span>',
 				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author" itemprop="url">' . esc_html( get_the_author() ) . '</a></span>'
 			);
 		} else {
 			# translators: 1: Date linked to permalink, 2: Author linked to author archive
-			printf( esc_html__( '%1$s by %2$s', 'flat' ),
+			printf( esc_html__( '%1$s by %2$s', 'pacific' ),
 				'<span class="entry-date"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><time class="entry-date published" datetime="' . esc_attr( get_the_date( 'c' ) ) . '" itemprop="datepublished">' . esc_html( get_the_date() ) . '</time></a></span>',
 				'<span class="author vcard" itemscope itemprop="author" itemtype="http://schema.org/Person"><a class="url fn n" itemprop="url" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author" itemprop="url"><span itemprop="name">' . esc_html( get_the_author() ) . '</span></a></span>'
 			);
@@ -50,7 +50,7 @@ if ( ! function_exists( 'flat_entry_meta' ) ) :
 		}
 
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( '0 Comments', 'flat' ), esc_html__( '1 Comment', 'flat' ), esc_html__( '% Comments', 'flat' ) );
+		comments_popup_link( esc_html__( '0 Comments', 'pacific' ), esc_html__( '1 Comment', 'pacific' ), esc_html__( '% Comments', 'pacific' ) );
 		echo '</span>';
 	}
 endif;
@@ -68,45 +68,45 @@ if ( ! function_exists( 'the_archive_title' ) ) :
 	 */
 	function the_archive_title( $before = '', $after = '' ) {
 		if ( is_category() ) {
-			$title = sprintf( __( 'Category: %s', 'flat' ), single_cat_title( '', false ) );
+			$title = sprintf( __( 'Category: %s', 'pacific' ), single_cat_title( '', false ) );
 		} elseif ( is_tag() ) {
-			$title = sprintf( __( 'Tag: %s', 'flat' ), single_tag_title( '', false ) );
+			$title = sprintf( __( 'Tag: %s', 'pacific' ), single_tag_title( '', false ) );
 		} elseif ( is_author() ) {
-			$title = sprintf( __( 'Author: %s', 'flat' ), '<span class="vcard">' . get_the_author() . '</span>' );
+			$title = sprintf( __( 'Author: %s', 'pacific' ), '<span class="vcard">' . get_the_author() . '</span>' );
 		} elseif ( is_year() ) {
-			$title = sprintf( __( 'Year: %s', 'flat' ), get_the_date( _x( 'Y', 'yearly archives date format', 'flat' ) ) );
+			$title = sprintf( __( 'Year: %s', 'pacific' ), get_the_date( _x( 'Y', 'yearly archives date format', 'pacific' ) ) );
 		} elseif ( is_month() ) {
-			$title = sprintf( __( 'Month: %s', 'flat' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'flat' ) ) );
+			$title = sprintf( __( 'Month: %s', 'pacific' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'pacific' ) ) );
 		} elseif ( is_day() ) {
-			$title = sprintf( __( 'Day: %s', 'flat' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'flat' ) ) );
+			$title = sprintf( __( 'Day: %s', 'pacific' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'pacific' ) ) );
 		} elseif ( is_tax( 'post_format' ) ) {
 			if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-				$title = _x( 'Asides', 'post format archive title', 'flat' );
+				$title = _x( 'Asides', 'post format archive title', 'pacific' );
 			} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-				$title = _x( 'Galleries', 'post format archive title', 'flat' );
+				$title = _x( 'Galleries', 'post format archive title', 'pacific' );
 			} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-				$title = _x( 'Images', 'post format archive title', 'flat' );
+				$title = _x( 'Images', 'post format archive title', 'pacific' );
 			} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-				$title = _x( 'Videos', 'post format archive title', 'flat' );
+				$title = _x( 'Videos', 'post format archive title', 'pacific' );
 			} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-				$title = _x( 'Quotes', 'post format archive title', 'flat' );
+				$title = _x( 'Quotes', 'post format archive title', 'pacific' );
 			} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-				$title = _x( 'Links', 'post format archive title', 'flat' );
+				$title = _x( 'Links', 'post format archive title', 'pacific' );
 			} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-				$title = _x( 'Statuses', 'post format archive title', 'flat' );
+				$title = _x( 'Statuses', 'post format archive title', 'pacific' );
 			} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-				$title = _x( 'Audio', 'post format archive title', 'flat' );
+				$title = _x( 'Audio', 'post format archive title', 'pacific' );
 			} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-				$title = _x( 'Chats', 'post format archive title', 'flat' );
+				$title = _x( 'Chats', 'post format archive title', 'pacific' );
 			}
 		} elseif ( is_post_type_archive() ) {
-			$title = sprintf( __( 'Archives: %s', 'flat' ), post_type_archive_title( '', false ) );
+			$title = sprintf( __( 'Archives: %s', 'pacific' ), post_type_archive_title( '', false ) );
 		} elseif ( is_tax() ) {
 			$tax = get_taxonomy( get_queried_object()->taxonomy );
 			/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-			$title = sprintf( __( '%1$s: %2$s', 'flat' ), $tax->labels->singular_name, single_term_title( '', false ) );
+			$title = sprintf( __( '%1$s: %2$s', 'pacific' ), $tax->labels->singular_name, single_term_title( '', false ) );
 		} else {
-			$title = __( 'Archives', 'flat' );
+			$title = __( 'Archives', 'pacific' );
 		}
 		/**
 		 * Filter the archive title.
@@ -165,7 +165,7 @@ if ( ! function_exists( 'get_the_post_navigation' ) ) :
 		$args = wp_parse_args( $args, array(
 			'prev_text'          => '%title',
 			'next_text'          => '%title',
-			'screen_reader_text' => __( 'Post navigation', 'flat' ),
+			'screen_reader_text' => __( 'Post navigation', 'pacific' ),
 		) );
 
 		$navigation = '';
@@ -217,9 +217,9 @@ if ( ! function_exists( 'get_the_posts_pagination' ) ) :
 		if ( $GLOBALS['wp_query']->max_num_pages > 1 ) {
 			$args = wp_parse_args( $args, array(
 				'mid_size'           => 1,
-				'prev_text'          => __( 'Previous', 'flat' ),
-				'next_text'          => __( 'Next', 'flat' ),
-				'screen_reader_text' => __( 'Posts navigation', 'flat' ),
+				'prev_text'          => __( 'Previous', 'pacific' ),
+				'next_text'          => __( 'Next', 'pacific' ),
+				'screen_reader_text' => __( 'Posts navigation', 'pacific' ),
 			) );
 
 			// Make sure we get a string back. Plain is the next best thing.
@@ -254,12 +254,12 @@ if ( ! function_exists( 'the_posts_pagination' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'flat_output_404_content' ) ) :
+if ( ! function_exists( 'pacific_output_404_content' ) ) :
 	/**
 	 * The default content of a 404 page
 	 */
-	function flat_output_404_content() {
-		echo balanceTags( '<p>' . __( 'It looks like nothing was found at this location. Maybe try a search?', 'flat' ) . "</p>\n" );
+	function pacific_output_404_content() {
+		echo balanceTags( '<p>' . __( 'It looks like nothing was found at this location. Maybe try a search?', 'pacific' ) . "</p>\n" );
 
 		get_search_form();
 	}

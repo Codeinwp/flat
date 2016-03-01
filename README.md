@@ -1,15 +1,15 @@
-# Flat
+# Pacific
 
-[![Travis CI Build Status](https://travis-ci.org/yoarts/flat.svg?branch=master)](https://travis-ci.org/yoarts/flat) [![devDependency Status](https://david-dm.org/yoarts/flat/dev-status.svg)](https://david-dm.org/yoarts/flat#info=devDependencies) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yoarts/flat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
-* Author: YoArts
-* Author URL: http://www.yoarts.com
+[![Travis CI Build Status](https://travis-ci.org/BrazenlyGeek/Pacific.svg?branch=master)](https://travis-ci.org/BrazenlyGeek/Pacific) [![devDependency Status](https://david-dm.org/BrazenlyGeek/Pacific/dev-status.svg)](https://david-dm.org/BrazenlyGeek/Pacific#info=devDependencies) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/BrazenlyGeek/Pacific)
+* Author: Rick Beckman
+* Author URL: https://rickbeckman.com
 * Contributor: @yoarts, @ghost, @ashfame, @kevinpapst, @abovethewater
 * License: GNU General Public License v3.0
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 ## Description
 
-Flat is a responsive WordPress theme designed by YoArts. We would like to say that Flat is both beautiful and charming at the same time.
+Pacific is a responsive WordPress theme designed by YoArts. We would like to say that Pacific is both beautiful and charming at the same time.
 
 ## Features
 
@@ -46,7 +46,7 @@ Flat is a responsive WordPress theme designed by YoArts. We would like to say th
 
 ## Resources
 
-Flat is built with the following resources:
+Pacific is built with the following resources:
 
 * **Code based on [DW Minion](http://www.designwall.com/wordpress/themes/dw-minion/)**
   * Copyright: [DesignWall](http://www.designwall.com/)
@@ -81,7 +81,7 @@ Flat is built with the following resources:
 
 ## Theme development
 
-Flat uses [Grunt](http://gruntjs.com/) for compiling LESS to CSS, checking for JS errors, live reloading, concatenating and minifying files.
+Pacific uses [Grunt](http://gruntjs.com/) for compiling LESS to CSS, checking for JS errors, live reloading, concatenating and minifying files.
 
 Add the following to your `wp-config.php` on your development installation:
 
@@ -108,7 +108,7 @@ When completed, you'll be able to run the various Grunt commands provided from t
 
 ## Customization
 
-Flat is able to be customized extensively by the [WordPress hooks & filters API](http://codex.wordpress.org/Plugin_API), which is a fancy way of saying that without creating a child theme, you have the freedom to add, remove, and change a lot of what makes Flat _Flat_. In addition to the default hooks & filters that just about any WordPress theme has available, Flat is equipped with the following:
+Pacific is able to be customized extensively by the [WordPress hooks & filters API](http://codex.wordpress.org/Plugin_API), which is a fancy way of saying that without creating a child theme, you have the freedom to add, remove, and change a lot of what makes Pacific _Pacific_. In addition to the default hooks & filters that just about any WordPress theme has available, Pacific is equipped with the following:
 
 ### Available hooks
 
